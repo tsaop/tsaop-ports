@@ -1,0 +1,7 @@
+You can customize the driver behavior by modifying the file
+/etc/amd/amdPalSettings.cfg.
+
+See https://github.com/GPUOpen-Drivers/AMDVLK for details.
+
+Please note you also need Vulkan loader and validation layers.
+See https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers
