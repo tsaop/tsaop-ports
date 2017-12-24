@@ -1,0 +1,26 @@
+# Description: Mono open source ECMA CLI, C# and .NET implementation
+# URL: http://www.mono-project.com/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake  
+
+name=mono
+version=5.4.1.6
+release=1
+source=(https://download.mono-project.com/sources/$name/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr \
+		--libdir=/usr/lib \
+		--sysconfdir=/usr/etc \
+		--with-mcs-docs=no \
+		--disable-nls
+
+	make
+	make -C mcs/jay
+
+	make DESTDIR=$PKG install
+	make -C mcs/jay DESTDIR=$PKG prefix=/usr INSTALL=../../install-sh install
+	find $PKG -name "README*" -delete
+}
