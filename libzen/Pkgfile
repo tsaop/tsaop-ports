@@ -1,0 +1,20 @@
+# Description: Small C++ derivate classes to have an easier life
+# URL: https://github.com/MediaArea/ZenLib
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glibc
+
+name=libzen
+_realname=ZenLib
+version=0.4.37
+release=1
+source=(https://mediaarea.net/download/source/$name/$version/${name}_$version.tar.xz)
+
+build() {
+	cd $_realname/Project/GNU/Library
+
+	./autogen.sh
+	./configure --prefix=/usr
+
+	make
+	make DESTDIR=$PKG install
+}
