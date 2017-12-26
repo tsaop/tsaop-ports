@@ -1,0 +1,21 @@
+# Description: GTK+2 bindings for mono
+# URL: http://www.mono-project.com/docs/gui/gtksharp/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libglade mono
+
+name=gtk2-sharp
+version=2.12.45
+release=1
+source=(https://download.mono-project.com/sources/${name/2/}212/${name/2/}-$version.tar.gz)
+
+build() {
+	cd ${name/2/}-$version
+
+	./configure --prefix=/usr \
+		--sysconfdir=/usr/etc \
+		--libdir=/usr/lib \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+}
