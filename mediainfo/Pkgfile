@@ -1,0 +1,20 @@
+# Description: Convenient unified display of the most relevant technical and tag data for video and audio files (CLI version)
+# URL: https://github.com/MediaArea/MediaInfo
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libmediainfo
+
+name=mediainfo
+_realname=MediaInfo
+version=17.12
+release=1
+source=(https://mediaarea.net/download/source/$name/$version/${name}_$version.tar.xz)
+
+build() {
+	cd $_realname/Project/GNU/CLI
+
+	./autogen.sh
+	./configure --prefix=/usr
+
+	make
+	make DESTDIR=$PKG install
+}
