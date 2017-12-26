@@ -1,0 +1,23 @@
+# Description: Convenient unified display of the most relevant technical and tag data for video and audio files (library)
+# URL: https://github.com/MediaArea/MediaInfoLib
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libmms libzen tinyxml2
+
+name=libmediainfo
+_realname=MediaInfoLib
+version=17.12
+release=1
+source=(https://mediaarea.net/download/source/$name/$version/${name}_$version.tar.xz)
+
+build() {
+	cd $_realname/Project/GNU/Library
+
+	./autogen.sh
+	./configure --prefix=/usr \
+		--with-libtinyxml2 \
+		--with-libcurl \
+		--with-libmms
+
+	make
+	make DESTDIR=$PKG install
+}
