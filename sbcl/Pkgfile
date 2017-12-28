@@ -1,0 +1,36 @@
+# Description: High performance Common Lisp compiler.
+# URL: http://www.sbcl.org
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: 
+
+name=sbcl
+version=1.4.2
+release=1
+source=(http://prdownloads.sourceforge.net/$name/$name-$version-source.tar.bz2
+	http://prdownloads.sourceforge.net/$name/$name-$version-x86-64-linux-binary.tar.bz2)
+
+unpack_source() {
+	install -d $SRC/sbcl-binary
+	bsdtar -xf $PKGMK_SOURCE_DIR/$name-$version-x86-64-linux-binary.tar.bz2 \
+	-C $SRC/sbcl-binary
+	bsdtar -xf $PKGMK_SOURCE_DIR/$name-$version-source.tar.bz2 \
+	-C $SRC
+}
+
+build() {
+	# Install binary sbcl in a temporary directory
+	cd sbcl-binary/$name-$version-x86-64-linux
+	INSTALL_ROOT=$SRC/sbcl-temp sh install.sh
+	rm -rf sbcl-binary
+	cd -	
+
+	cd $name-$version
+
+	export SBCL_HOME=$SRC/sbcl-temp/lib/sbcl
+	sh make.sh $SRC/sbcl-temp/bin/sbcl --prefix=/usr --fancy
+	unset SBCL_HOME
+	INSTALL_ROOT=$PKG/usr sh install.sh
+
+	# Remove junk files
+	rm -rf $PKG/usr/share/{doc,info}
+}
