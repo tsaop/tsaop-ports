@@ -5,7 +5,7 @@
 
 name=vulkan-icd-loader
 version=1.0.65.1
-release=1
+release=2
 source=(https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers/archive/sdk-$version.tar.gz)
 
 build() {
@@ -15,7 +15,7 @@ build() {
 	mkdir build; cd build
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
 	-DBUILD_TESTS=OFF \
-	-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+	-DCMAKE_INSTALL_LIBDIR=lib \
 	-DBUILD_WSI_WAYLAND_SUPPORT=OFF \
 	-DBUILD_WSI_MIR_SUPPORT=OFF \
 	-DCMAKE_BUILD_TYPE=Release ..
