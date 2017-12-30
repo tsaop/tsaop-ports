@@ -1,0 +1,18 @@
+# Description: Machine-readable files from the SPIR-V Registry
+# URL: https://github.com/KhronosGroup/SPIRV-Headers
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: git
+
+name=spirv-headers
+version=98b0151
+release=1
+source=()
+
+build() {
+	git clone --depth=1 https://github.com/KhronosGroup/SPIRV-Headers
+
+	cd SPIRV-Headers
+
+	install -dm755 $PKG/usr/include
+	cp -r include/spirv/ $PKG/usr/include
+}
