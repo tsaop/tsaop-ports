@@ -11,8 +11,6 @@ drwxr-xr-x	root/root	usr/etc/vulkan/explicit_layer.d/
 -rw-r--r--	root/root	usr/etc/vulkan/explicit_layer.d/VkLayer_standard_validation.json
 -rw-r--r--	root/root	usr/etc/vulkan/explicit_layer.d/VkLayer_threading.json
 -rw-r--r--	root/root	usr/etc/vulkan/explicit_layer.d/VkLayer_unique_objects.json
-drwxr-xr-x	root/root	usr/etc/vulkan/icd.d/
--rw-r--r--	root/root	usr/etc/vulkan/icd.d/VkICD_mock_icd.json
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/vulkan/
 -rw-r--r--	root/root	usr/include/vulkan/vk_icd.h
