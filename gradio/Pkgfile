@@ -1,0 +1,24 @@
+# Description: Find and listen to internet radio stations
+# URL: https://github.com/haecker-felix/gradio
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: desktop-file-utils gst-plugins-base gtk gtk3 json-glib libsoup meson ninja vala xorg-xrandr
+
+name=gradio
+version=7.1
+release=1
+source=(https://github.com/haecker-felix/$name/archive/v${version}.tar.gz)
+
+build() {
+	cd $name-$version
+
+	meson --prefix /usr \
+		--buildtype=plain \
+		build
+
+	ninja -C build
+	DESTDIR=$PKG ninja -C build install
+
+	# remove useless stuff
+	rm -rf $PKG/usr/share/locale
+	rm -rf $PKG/usr/share/gnome-shell
+}
