@@ -1,0 +1,24 @@
+# Description: Qt5 Graphical MPD Client for Linux, Windows, macOS, Haiku
+# URL: https://github.com/CDrummond/cantata
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: desktop-file-utils ffmpeg gtk libcdio-paranoia mpg123 qt5 taglib udisks
+
+name=cantata
+version=2.2.0
+release=1
+source=(https://github.com/CDrummond/$name/archive/v${version}.tar.gz)
+
+build() {
+	cd $name-$version
+	mkdir build; cd build
+
+	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DENABLE_LIBVLC=OFF \
+		..
+
+	make
+	make DESTDIR=$PKG install
+
+	find $PKG \( -name "AUTHORS" -o -name "LICENSE" \) -delete
+}
