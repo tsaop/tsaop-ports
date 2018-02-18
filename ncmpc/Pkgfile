@@ -1,0 +1,24 @@
+# Description: curses client for MPD
+# URL: https://www.musicpd.org/clients/ncmpc/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glib libmpdclient python ruby
+
+name=ncmpc
+version=0.29
+release=1
+source=(https://www.musicpd.org/download/$name/0/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+#	sed "s/curses == 'ncursesw'/false/g" -i meson.build
+
+	meson . build --prefix /usr \
+		-Dcurses=ncurses \
+		-Dcolors=ncurses \
+		-Dlyrics_screen=true \
+		-Dnls=false
+
+	DESTDIR=$PKG ninja -C build -j ${JOBS:-1} install
+
+	rm -rf $PKG/usr/share/doc
+}

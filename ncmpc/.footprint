@@ -1,0 +1,12 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/ncmpc
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/ncmpc/
+drwxr-xr-x	root/root	usr/lib/ncmpc/lyrics/
+-rwxrwxr-x	root/root	usr/lib/ncmpc/lyrics/10-hd.sh
+-rwxrwxr-x	root/root	usr/lib/ncmpc/lyrics/20-lyricwiki.rb
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-rw-r--	root/root	usr/share/man/man1/ncmpc.1.gz
