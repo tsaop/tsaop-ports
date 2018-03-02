@@ -4,14 +4,13 @@
 # Depends on: cmake spirv-headers
 
 name=spirv-tools
-version=v2017.3
+version=2018.1
 release=1
-source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/$version.tar.gz)
+source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/v${version}.tar.gz)
 
 build() {
-	cd SPIRV-Tools-${version/v/}
-	mkdir build
-	cd build
+	cd SPIRV-Tools-$version
+	mkdir build; cd build
 
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
