@@ -1,11 +1,11 @@
 # Description:  Music playback daemon
 # URL:          http://www.musicpd.org/
 # Maintainer:   Tsaop, leeroy at cock dot li
-# Depends on: alsa-libs audiofile boost faad2 ffmpeg glib lame libcdio-paranoia libid3tag libmad libsamplerate mpg123 opus wavpack
+# Depends on: audiofile boost faad2 ffmpeg glib lame libcdio-paranoia libid3tag libmad libsamplerate mpg123 opus wavpack
 
 name=mpd
-version=0.20.17
-release=1
+version=0.20.18
+release=2
 source=(https://www.musicpd.org/download/mpd/0.20/$name-$version.tar.xz mpd)
 
 build() {
