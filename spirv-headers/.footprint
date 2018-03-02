@@ -38,3 +38,15 @@ drwxr-xr-x	root/root	usr/include/spirv/1.2/
 -rw-r--r--	root/root	usr/include/spirv/1.2/spirv.lua
 -rwxr-xr-x	root/root	usr/include/spirv/1.2/spirv.py
 -rw-r--r--	root/root	usr/include/spirv/spir-v.xml
+drwxr-xr-x	root/root	usr/include/spirv/unified1/
+-rw-r--r--	root/root	usr/include/spirv/unified1/GLSL.std.450.h
+-rw-r--r--	root/root	usr/include/spirv/unified1/OpenCL.std.h
+-rw-r--r--	root/root	usr/include/spirv/unified1/extinst.glsl.std.450.grammar.json
+-rw-r--r--	root/root	usr/include/spirv/unified1/extinst.opencl.std.100.grammar.json
+-rw-r--r--	root/root	usr/include/spirv/unified1/spirv.core.grammar.json
+-rw-r--r--	root/root	usr/include/spirv/unified1/spirv.h
+-rw-r--r--	root/root	usr/include/spirv/unified1/spirv.hpp
+-rw-r--r--	root/root	usr/include/spirv/unified1/spirv.hpp11
+-rw-r--r--	root/root	usr/include/spirv/unified1/spirv.json
+-rw-r--r--	root/root	usr/include/spirv/unified1/spirv.lua
+-rwxr-xr-x	root/root	usr/include/spirv/unified1/spirv.py

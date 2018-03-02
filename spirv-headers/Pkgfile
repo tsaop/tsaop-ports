@@ -4,7 +4,7 @@
 # Depends on: git
 
 name=spirv-headers
-version=98b0151
+version=5dac992
 release=1
 source=()
 
