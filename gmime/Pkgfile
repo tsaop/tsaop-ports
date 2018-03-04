@@ -1,0 +1,19 @@
+# Description: GMime is a C/C++ library which may be used for the creation and parsing of messages using the Multipurpose Internet Mail Extension (MIME)
+# URL: http://spruce.sourceforge.net/gmime/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glib gpgme libidn
+
+name=gmime
+version=3.2.0
+release=1
+source=(https://download.gnome.org/sources/$name/${version%.0}/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/gtk-doc
+}
