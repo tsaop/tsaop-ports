@@ -20,6 +20,17 @@ drwxr-xr-x	root/root	usr/include/vulkan/
 -rw-r--r--	root/root	usr/include/vulkan/vk_sdk_platform.h
 -rw-r--r--	root/root	usr/include/vulkan/vulkan.h
 -rw-r--r--	root/root	usr/include/vulkan/vulkan.hpp
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_android.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_core.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_ios.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_macos.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_mir.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_vi.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_wayland.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_win32.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_xcb.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_xlib.h
+-rw-r--r--	root/root	usr/include/vulkan/vulkan_xlib_xrandr.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libVkLayer_core_validation.so
 -rwxr-xr-x	root/root	usr/lib/libVkLayer_object_tracker.so
@@ -28,7 +39,7 @@ drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libVkLayer_unique_objects.so
 -rwxr-xr-x	root/root	usr/lib/libVkLayer_utils.so
 lrwxrwxrwx	root/root	usr/lib/libvulkan.so -> libvulkan.so.1
-lrwxrwxrwx	root/root	usr/lib/libvulkan.so.1 -> libvulkan.so.1.0.68
--rwxr-xr-x	root/root	usr/lib/libvulkan.so.1.0.68
+lrwxrwxrwx	root/root	usr/lib/libvulkan.so.1 -> libvulkan.so.1.1.70
+-rwxr-xr-x	root/root	usr/lib/libvulkan.so.1.1.70
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/vulkan.pc
