@@ -77,7 +77,6 @@ lrwxrwxrwx	root/root	usr/bin/mono -> mono-sgen
 -rwxr-xr-x	root/root	usr/bin/pedump
 -rwxr-xr-x	root/root	usr/bin/permview
 -rwxr-xr-x	root/root	usr/bin/peverify
--rwxr-xr-x	root/root	usr/bin/prj2make
 -rwxr-xr-x	root/root	usr/bin/resgen
 -rwxr-xr-x	root/root	usr/bin/resgen2
 -rwxr-xr-x	root/root	usr/bin/secutil
@@ -146,6 +145,7 @@ drwxr-xr-x	root/root	usr/include/mono-2.0/mono/metadata/
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/mono-gc.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/object.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/opcodes.h
+-rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/profiler-events.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/profiler.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/reflection.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/row-indexes.h
@@ -182,6 +182,13 @@ lrwxrwxrwx	root/root	usr/lib/libmono-2.0.so.1.0.0 -> libmonosgen-2.0.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libmono-profiler-aot.so -> libmono-profiler-aot.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libmono-profiler-aot.so.0 -> libmono-profiler-aot.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libmono-profiler-aot.so.0.0.0
+-rw-r--r--	root/root	usr/lib/libmono-profiler-coverage-static.a
+-rwxr-xr-x	root/root	usr/lib/libmono-profiler-coverage-static.la
+-rw-r--r--	root/root	usr/lib/libmono-profiler-coverage.a
+-rwxr-xr-x	root/root	usr/lib/libmono-profiler-coverage.la
+lrwxrwxrwx	root/root	usr/lib/libmono-profiler-coverage.so -> libmono-profiler-coverage.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libmono-profiler-coverage.so.0 -> libmono-profiler-coverage.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libmono-profiler-coverage.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libmono-profiler-iomap-static.a
 -rwxr-xr-x	root/root	usr/lib/libmono-profiler-iomap-static.la
 -rw-r--r--	root/root	usr/lib/libmono-profiler-iomap.a
@@ -228,10 +235,11 @@ drwxr-xr-x	root/root	usr/lib/mono/2.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Microsoft.Build.Utilities.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Microsoft.VisualBasic.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Microsoft.VisualC.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Microsoft.Web.Infrastructure.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Cairo.dll
--rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Cecil.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.CodeContracts.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.CompilerServices.SymbolWriter.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Data.Sqlite.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Data.Tds.dll
@@ -240,16 +248,18 @@ drwxr-xr-x	root/root	usr/lib/mono/2.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Management.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Messaging.RabbitMQ.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Options.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Parallel.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Posix.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Security.Win32.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Security.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Simd.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.Tasklets.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.WebBrowser.dll
--rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Mono.XBuild.Tasks.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/Novell.Directory.Ldap.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/PEAPI.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/RabbitMQ.Client.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/SMDiagnostics.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.ComponentModel.DataAnnotations.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Configuration.Install.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Configuration.dll
@@ -268,10 +278,24 @@ drwxr-xr-x	root/root	usr/lib/mono/2.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.EnterpriseServices.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.IdentityModel.Selectors.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.IdentityModel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Json.Microsoft.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Json.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Management.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Net.Http.Formatting.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Net.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Numerics.Vectors.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Core.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Debugger.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Experimental.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Interfaces.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Linq.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Observable.Aliases.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.PlatformServices.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Providers.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Runtime.Remoting.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Windows.Forms.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Reactive.Windows.Threading.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Runtime.Remoting.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Runtime.Serialization.Formatters.Soap.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Runtime.Serialization.dll
@@ -279,19 +303,28 @@ drwxr-xr-x	root/root	usr/lib/mono/2.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.ServiceModel.Web.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.ServiceModel.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.ServiceProcess.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Threading.Tasks.Dataflow.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Transactions.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Abstractions.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.DynamicData.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Extensions.Design.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Extensions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Http.SelfHost.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Http.WebHost.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Http.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Mvc.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Razor.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Routing.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.Services.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.WebPages.Deployment.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.WebPages.Razor.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.WebPages.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Web.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Windows.Forms.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Xml.Linq.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.Xml.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/System.dll
+-rwxr-xr-x	root/root	usr/lib/mono/2.0-api/WebMatrix.Data.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/WindowsBase.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/cscompmgd.dll
 -rwxr-xr-x	root/root	usr/lib/mono/2.0-api/mscorlib.dll
@@ -300,7 +333,6 @@ drwxr-xr-x	root/root	usr/lib/mono/3.5-api/
 -rwxr-xr-x	root/root	usr/lib/mono/3.5-api/Microsoft.Build.Framework.dll
 -rwxr-xr-x	root/root	usr/lib/mono/3.5-api/Microsoft.Build.Tasks.v3.5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/3.5-api/Microsoft.Build.Utilities.v3.5.dll
--rwxr-xr-x	root/root	usr/lib/mono/3.5-api/Mono.XBuild.Tasks.dll
 drwxr-xr-x	root/root	usr/lib/mono/4.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Accessibility.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Commons.Xml.Relaxng.dll
@@ -325,7 +357,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Cairo.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Cecil.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.CodeContracts.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.CompilerServices.SymbolWriter.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Data.Sqlite.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Data.Tds.dll
@@ -334,6 +366,8 @@ drwxr-xr-x	root/root	usr/lib/mono/4.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Management.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Messaging.RabbitMQ.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Options.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Parallel.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Posix.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Security.Win32.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Mono.Security.dll
@@ -343,6 +377,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/Novell.Directory.Ldap.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/PEAPI.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/RabbitMQ.Client.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/SMDiagnostics.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.ComponentModel.Composition.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.ComponentModel.DataAnnotations.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Configuration.Install.dll
@@ -367,8 +402,21 @@ drwxr-xr-x	root/root	usr/lib/mono/4.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Json.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Management.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Net.Http.Formatting.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Net.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Numerics.Vectors.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Numerics.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Core.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Debugger.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Experimental.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Interfaces.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Linq.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Observable.Aliases.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.PlatformServices.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Providers.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Runtime.Remoting.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Windows.Forms.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Reactive.Windows.Threading.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Runtime.Caching.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Runtime.DurableInstancing.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Runtime.Remoting.dll
@@ -381,14 +429,23 @@ drwxr-xr-x	root/root	usr/lib/mono/4.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.ServiceModel.Web.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.ServiceModel.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.ServiceProcess.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Threading.Tasks.Dataflow.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Transactions.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Abstractions.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.ApplicationServices.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.DynamicData.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Extensions.Design.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Extensions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Http.SelfHost.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Http.WebHost.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Http.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Mvc.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Razor.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Routing.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.Services.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.WebPages.Deployment.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.WebPages.Razor.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.WebPages.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Web.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Windows.Forms.DataVisualization.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/System.Windows.Forms.dll
@@ -399,7 +456,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.0-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/WebMatrix.Data.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/WindowsBase.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/cscompmgd.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.0-api/monodoc.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.0-api/mscorlib.dll
 drwxr-xr-x	root/root	usr/lib/mono/4.0/
 lrwxrwxrwx	root/root	usr/lib/mono/4.0/Mono.Posix.dll -> ../4.0-api/Mono.Posix.dll
@@ -479,7 +535,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.Cairo.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.Cecil.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.CodeContracts.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.CompilerServices.SymbolWriter.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.Data.Sqlite.dll
@@ -497,7 +552,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.Simd.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.Tasklets.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.WebBrowser.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Mono.XBuild.Tasks.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/Novell.Directory.Ldap.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/PEAPI.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/RabbitMQ.Client.dll
@@ -533,6 +587,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/System.Net.Http.WebRequest.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/System.Net.Http.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/System.Net.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5-api/System.Numerics.Vectors.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/System.Numerics.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/System.Reactive.Core.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/System.Reactive.Debugger.dll
@@ -587,7 +642,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/WebMatrix.Data.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/WindowsBase.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/cscompmgd.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5-api/monodoc.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5-api/mscorlib.dll
 drwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Accessibility.dll
@@ -664,7 +718,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.Cairo.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.Cecil.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.CodeContracts.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.CompilerServices.SymbolWriter.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.Data.Sqlite.dll
@@ -682,7 +735,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.Simd.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.Tasklets.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.WebBrowser.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Mono.XBuild.Tasks.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Novell.Directory.Ldap.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/PEAPI.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/RabbitMQ.Client.dll
@@ -718,6 +770,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/System.Net.Http.WebRequest.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/System.Net.Http.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/System.Net.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/System.Numerics.Vectors.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/System.Numerics.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/System.Reactive.Core.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/System.Reactive.Debugger.dll
@@ -772,7 +825,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/WebMatrix.Data.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/WindowsBase.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/cscompmgd.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/monodoc.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.1-api/mscorlib.dll
 drwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Accessibility.dll
@@ -849,7 +901,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.Cairo.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.Cecil.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.CodeContracts.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.CompilerServices.SymbolWriter.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.Data.Sqlite.dll
@@ -867,7 +918,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.Simd.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.Tasklets.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.WebBrowser.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Mono.XBuild.Tasks.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Novell.Directory.Ldap.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/PEAPI.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/RabbitMQ.Client.dll
@@ -903,6 +953,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/System.Net.Http.WebRequest.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/System.Net.Http.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/System.Net.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/System.Numerics.Vectors.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/System.Numerics.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/System.Reactive.Core.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/System.Reactive.Debugger.dll
@@ -957,7 +1008,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/WebMatrix.Data.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/WindowsBase.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/cscompmgd.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/monodoc.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5.2-api/mscorlib.dll
 drwxr-xr-x	root/root	usr/lib/mono/4.5/
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Accessibility.dll -> ../gac/Accessibility/4.0.0.0__b03f5f7f11d50a3a/Accessibility.dll
@@ -1150,6 +1200,7 @@ lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Messaging.RabbitMQ.dll -> ../gac/Mono
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Messaging.dll -> ../gac/Mono.Messaging/4.0.0.0__0738eb9f132ed756/Mono.Messaging.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Parallel.dll -> ../gac/Mono.Parallel/4.0.0.0__0738eb9f132ed756/Mono.Parallel.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Posix.dll -> ../gac/Mono.Posix/4.0.0.0__0738eb9f132ed756/Mono.Posix.dll
+lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Profiler.Log.dll -> ../gac/Mono.Profiler.Log/4.0.0.0__0738eb9f132ed756/Mono.Profiler.Log.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Security.Win32.dll -> ../gac/Mono.Security.Win32/4.0.0.0__0738eb9f132ed756/Mono.Security.Win32.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Security.dll -> ../gac/Mono.Security/4.0.0.0__0738eb9f132ed756/Mono.Security.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Simd.dll -> ../gac/Mono.Simd/4.0.0.0__0738eb9f132ed756/Mono.Simd.dll
@@ -1478,6 +1529,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.6-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Microsoft.VisualBasic.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Microsoft.VisualC.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Microsoft.Web.Infrastructure.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.Cairo.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.CodeContracts.dll
@@ -1489,6 +1541,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.6-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.Management.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.Messaging.RabbitMQ.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.Options.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.Parallel.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.Posix.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6-api/Mono.Security.Win32.dll
@@ -1670,6 +1723,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Microsoft.VisualBasic.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Microsoft.VisualC.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Microsoft.Web.Infrastructure.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.Cairo.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.CodeContracts.dll
@@ -1681,6 +1735,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.Management.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.Messaging.RabbitMQ.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.Options.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.Parallel.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.Posix.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.1-api/Mono.Security.Win32.dll
@@ -1862,6 +1917,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Microsoft.VisualBasic.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Microsoft.VisualC.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Microsoft.Web.Infrastructure.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.Cairo.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.CodeContracts.dll
@@ -1873,6 +1929,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.Management.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.Messaging.RabbitMQ.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.Options.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.Parallel.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.Posix.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.6.2-api/Mono.Security.Win32.dll
@@ -2054,6 +2111,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.7-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Microsoft.VisualBasic.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Microsoft.VisualC.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Microsoft.Web.Infrastructure.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.C5.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.CSharp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.Cairo.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.CodeContracts.dll
@@ -2065,6 +2123,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.7-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.Management.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.Messaging.RabbitMQ.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.Options.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.Parallel.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.Posix.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/Mono.Security.Win32.dll
@@ -2171,6 +2230,249 @@ drwxr-xr-x	root/root	usr/lib/mono/4.7-api/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/WindowsBase.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/cscompmgd.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.7-api/mscorlib.dll
+drwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Accessibility.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Commons.Xml.Relaxng.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/CustomMarshalers.dll
+drwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.AppContext.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Collections.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Console.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Data.Common.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Globalization.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.IO.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Linq.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.Security.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Reflection.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Runtime.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Threading.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Facades/netstandard.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/I18N.CJK.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/I18N.MidEast.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/I18N.Other.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/I18N.Rare.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/I18N.West.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/I18N.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/IBM.Data.DB2.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.Build.Engine.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.Build.Framework.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.Build.Tasks.v4.0.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.Build.Utilities.v4.0.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.Build.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.CSharp.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.VisualBasic.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.VisualC.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Microsoft.Web.Infrastructure.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.C5.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.CSharp.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Cairo.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.CodeContracts.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.CompilerServices.SymbolWriter.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Data.Sqlite.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Data.Tds.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Debugger.Soft.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Http.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Management.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Messaging.RabbitMQ.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Options.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Parallel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Posix.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Security.Win32.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Security.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Simd.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.Tasklets.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Mono.WebBrowser.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/Novell.Directory.Ldap.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/PEAPI.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/RabbitMQ.Client.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/SMDiagnostics.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.ComponentModel.Composition.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.ComponentModel.DataAnnotations.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Configuration.Install.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Configuration.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Core.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Data.DataSetExtensions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Data.Entity.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Data.Linq.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Data.OracleClient.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Data.Services.Client.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Data.Services.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Data.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Deployment.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Design.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Diagnostics.Tracing.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.DirectoryServices.Protocols.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.DirectoryServices.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Drawing.Design.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Drawing.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Dynamic.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.EnterpriseServices.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.IO.Compression.FileSystem.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.IO.Compression.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.IdentityModel.Selectors.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.IdentityModel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Json.Microsoft.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Json.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Management.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Messaging.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Net.Http.Formatting.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Net.Http.WebRequest.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Net.Http.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Net.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Numerics.Vectors.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Numerics.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Core.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Debugger.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Experimental.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Interfaces.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Linq.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Observable.Aliases.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.PlatformServices.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Providers.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Runtime.Remoting.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Windows.Forms.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reactive.Windows.Threading.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Reflection.Context.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Runtime.Caching.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Runtime.DurableInstancing.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Runtime.Remoting.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Runtime.Serialization.Formatters.Soap.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Runtime.Serialization.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Security.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.ServiceModel.Activation.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.ServiceModel.Discovery.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.ServiceModel.Routing.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.ServiceModel.Web.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.ServiceModel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.ServiceProcess.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Threading.Tasks.Dataflow.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Transactions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Abstractions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.ApplicationServices.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.DynamicData.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Extensions.Design.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Extensions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Http.SelfHost.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Http.WebHost.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Http.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Mobile.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Mvc.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Razor.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.RegularExpressions.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Routing.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.Services.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.WebPages.Deployment.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.WebPages.Razor.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.WebPages.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Web.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Windows.Forms.DataVisualization.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Windows.Forms.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Windows.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Workflow.Activities.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Workflow.ComponentModel.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Workflow.Runtime.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Xaml.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Xml.Linq.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Xml.Serialization.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.Xml.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/System.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/WebMatrix.Data.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/WindowsBase.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/cscompmgd.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.7.1-api/mscorlib.dll
 drwxr-xr-x	root/root	usr/lib/mono/gac/
 drwxr-xr-x	root/root	usr/lib/mono/gac/Accessibility/
 drwxr-xr-x	root/root	usr/lib/mono/gac/Accessibility/4.0.0.0__b03f5f7f11d50a3a/
@@ -2345,6 +2647,10 @@ drwxr-xr-x	root/root	usr/lib/mono/gac/Mono.Posix/
 drwxr-xr-x	root/root	usr/lib/mono/gac/Mono.Posix/4.0.0.0__0738eb9f132ed756/
 -rw-r--r--	root/root	usr/lib/mono/gac/Mono.Posix/4.0.0.0__0738eb9f132ed756/Mono.Posix.dll
 -rw-r--r--	root/root	usr/lib/mono/gac/Mono.Posix/4.0.0.0__0738eb9f132ed756/Mono.Posix.pdb
+drwxr-xr-x	root/root	usr/lib/mono/gac/Mono.Profiler.Log/
+drwxr-xr-x	root/root	usr/lib/mono/gac/Mono.Profiler.Log/4.0.0.0__0738eb9f132ed756/
+-rw-r--r--	root/root	usr/lib/mono/gac/Mono.Profiler.Log/4.0.0.0__0738eb9f132ed756/Mono.Profiler.Log.dll
+-rw-r--r--	root/root	usr/lib/mono/gac/Mono.Profiler.Log/4.0.0.0__0738eb9f132ed756/Mono.Profiler.Log.pdb
 drwxr-xr-x	root/root	usr/lib/mono/gac/Mono.Security.Win32/
 drwxr-xr-x	root/root	usr/lib/mono/gac/Mono.Security.Win32/4.0.0.0__0738eb9f132ed756/
 -rw-r--r--	root/root	usr/lib/mono/gac/Mono.Security.Win32/4.0.0.0__0738eb9f132ed756/Mono.Security.Win32.dll
@@ -2821,12 +3127,16 @@ drwxr-xr-x	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll -> ../../../../4.5/Microsoft.CodeAnalysis.CSharp.Scripting.dll
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis.CSharp.dll -> ../../../../4.5/Microsoft.CodeAnalysis.CSharp.dll
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis.Scripting.dll -> ../../../../4.5/Microsoft.CodeAnalysis.Scripting.dll
+lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis.VisualBasic.dll -> ../../../../4.5/Microsoft.CodeAnalysis.VisualBasic.dll
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis.dll -> ../../../../4.5/Microsoft.CodeAnalysis.dll
 -rwxr-xr-x	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.VisualBasic.Core.targets
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/System.Collections.Immutable.dll -> ../../../../4.5/System.Collections.Immutable.dll
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/System.Reflection.Metadata.dll -> ../../../../4.5/System.Reflection.Metadata.dll
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/VBCSCompiler.exe -> ../../../../4.5/VBCSCompiler.exe
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/VBCSCompiler.exe.config -> ../../../../4.5/VBCSCompiler.exe.config
+lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csc.exe -> ../../../../4.5/csc.exe
+lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csc.exe.config -> ../../../../4.5/csc.exe.config
+lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csc.rsp -> ../../../../4.5/csc.rsp
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csi.exe -> ../../../../4.5/csi.exe
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csi.exe.config -> ../../../../4.5/csi.exe.config
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csi.rsp -> ../../../../4.5/csi.rsp
@@ -2866,6 +3176,9 @@ drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.6.2/RedistL
 drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.6/
 drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.6/RedistList/
 -rw-r--r--	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.6/RedistList/FrameworkList.xml
+drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.7.1/
+drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.7.1/RedistList/
+-rw-r--r--	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.7.1/RedistList/FrameworkList.xml
 drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.7/
 drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.7/RedistList/
 -rw-r--r--	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v4.7/RedistList/FrameworkList.xml
@@ -2926,6 +3239,14 @@ lrwxrwxrwx	root/root	usr/lib/mono/xbuild/14.0/bin/Mono.XBuild.Tasks.dll -> ../..
 -rw-r--r--	root/root	usr/lib/mono/xbuild/14.0/bin/xbuild.exe.config
 -rwxr-xr-x	root/root	usr/lib/mono/xbuild/14.0/bin/xbuild.pdb
 -rw-r--r--	root/root	usr/lib/mono/xbuild/14.0/bin/xbuild.rsp
+drwxr-xr-x	root/root	usr/lib/mono/xbuild/15.0/
+drwxr-xr-x	root/root	usr/lib/mono/xbuild/15.0/Imports/
+drwxr-xr-x	root/root	usr/lib/mono/xbuild/15.0/Imports/Microsoft.Common.props/
+drwxr-xr-x	root/root	usr/lib/mono/xbuild/15.0/Imports/Microsoft.Common.props/ImportBefore/
+-rw-r--r--	root/root	usr/lib/mono/xbuild/15.0/Imports/Microsoft.Common.props/ImportBefore/Microsoft.NuGet.ImportBefore.props
+drwxr-xr-x	root/root	usr/lib/mono/xbuild/15.0/Microsoft.Common.targets/
+drwxr-xr-x	root/root	usr/lib/mono/xbuild/15.0/Microsoft.Common.targets/ImportAfter/
+-rw-r--r--	root/root	usr/lib/mono/xbuild/15.0/Microsoft.Common.targets/ImportAfter/Microsoft.NuGet.ImportAfter.targets
 drwxr-xr-x	root/root	usr/lib/mono/xbuild/Microsoft/
 drwxr-xr-x	root/root	usr/lib/mono/xbuild/Microsoft/NuGet/
 -rwxr-xr-x	root/root	usr/lib/mono/xbuild/Microsoft/NuGet/Microsoft.NuGet.Build.Tasks.dll
