@@ -39,7 +39,7 @@ drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libVkLayer_unique_objects.so
 -rwxr-xr-x	root/root	usr/lib/libVkLayer_utils.so
 lrwxrwxrwx	root/root	usr/lib/libvulkan.so -> libvulkan.so.1
-lrwxrwxrwx	root/root	usr/lib/libvulkan.so.1 -> libvulkan.so.1.1.70
--rwxr-xr-x	root/root	usr/lib/libvulkan.so.1.1.70
+lrwxrwxrwx	root/root	usr/lib/libvulkan.so.1 -> libvulkan.so.1.1.73
+-rwxr-xr-x	root/root	usr/lib/libvulkan.so.1.1.73
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/vulkan.pc

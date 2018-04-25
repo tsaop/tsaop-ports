@@ -4,7 +4,7 @@
 # Depends on: git mesa3d xorg-libxrandr
 
 name=vulkan-icd-loader
-version=1.1.70.0
+version=1.1.73.0
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers/archive/sdk-$version.tar.gz)
 
