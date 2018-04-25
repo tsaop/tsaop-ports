@@ -5,11 +5,16 @@
 
 name=cantata
 version=2.2.0
-release=1
-source=(https://github.com/CDrummond/$name/archive/v${version}.tar.gz)
+release=2
+source=(https://github.com/CDrummond/$name/archive/v${version}.tar.gz
+	ffmpeg4.0.patch)
 
 build() {
 	cd $name-$version
+
+	# Fix compilation with ffmpeg 4.0
+	patch -Np1 -i $SRC/ffmpeg4.0.patch
+
 	mkdir build; cd build
 
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
