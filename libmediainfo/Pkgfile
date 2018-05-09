@@ -5,7 +5,7 @@
 
 name=libmediainfo
 _realname=MediaInfoLib
-version=18.03.1
+version=18.05
 release=1
 source=(https://mediaarea.net/download/source/$name/$version/${name}_$version.tar.xz)
 
