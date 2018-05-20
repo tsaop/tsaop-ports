@@ -11,6 +11,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/chktrust
 -rwxr-xr-x	root/root	usr/bin/crlupdate
 -rwxr-xr-x	root/root	usr/bin/csc
+-rwxr-xr-x	root/root	usr/bin/csc-dim
 -rwxr-xr-x	root/root	usr/bin/csharp
 -rwxr-xr-x	root/root	usr/bin/csi
 -rwxr-xr-x	root/root	usr/bin/disco
@@ -23,6 +24,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/httpcfg
 -rwxr-xr-x	root/root	usr/bin/ikdasm
 -rwxr-xr-x	root/root	usr/bin/ilasm
+-rwxr-xr-x	root/root	usr/bin/illinkanalyzer
 -rwxr-xr-x	root/root	usr/bin/installvst
 -rwxr-xr-x	root/root	usr/bin/jay
 -rwxr-xr-x	root/root	usr/bin/lc
@@ -89,6 +91,7 @@ lrwxrwxrwx	root/root	usr/bin/mono -> mono-sgen
 -rwxr-xr-x	root/root	usr/bin/sqlmetal
 -rwxr-xr-x	root/root	usr/bin/sqlsharp
 -rwxr-xr-x	root/root	usr/bin/svcutil
+-rwxr-xr-x	root/root	usr/bin/vbc
 -rwxr-xr-x	root/root	usr/bin/wsdl
 -rwxr-xr-x	root/root	usr/bin/wsdl2
 -rwxr-xr-x	root/root	usr/bin/xbuild
@@ -157,6 +160,7 @@ drwxr-xr-x	root/root	usr/include/mono-2.0/mono/utils/
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/utils/mono-counters.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/utils/mono-dl-fallback.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/utils/mono-error.h
+-rw-r--r--	root/root	usr/include/mono-2.0/mono/utils/mono-jemalloc.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/utils/mono-logger.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/utils/mono-publib.h
 drwxr-xr-x	root/root	usr/lib/
@@ -189,13 +193,6 @@ lrwxrwxrwx	root/root	usr/lib/libmono-profiler-aot.so.0 -> libmono-profiler-aot.s
 lrwxrwxrwx	root/root	usr/lib/libmono-profiler-coverage.so -> libmono-profiler-coverage.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libmono-profiler-coverage.so.0 -> libmono-profiler-coverage.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libmono-profiler-coverage.so.0.0.0
--rw-r--r--	root/root	usr/lib/libmono-profiler-iomap-static.a
--rwxr-xr-x	root/root	usr/lib/libmono-profiler-iomap-static.la
--rw-r--r--	root/root	usr/lib/libmono-profiler-iomap.a
--rwxr-xr-x	root/root	usr/lib/libmono-profiler-iomap.la
-lrwxrwxrwx	root/root	usr/lib/libmono-profiler-iomap.so -> libmono-profiler-iomap.so.0.0.0
-lrwxrwxrwx	root/root	usr/lib/libmono-profiler-iomap.so.0 -> libmono-profiler-iomap.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/libmono-profiler-iomap.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libmono-profiler-log-static.a
 -rwxr-xr-x	root/root	usr/lib/libmono-profiler-log-static.la
 -rw-r--r--	root/root	usr/lib/libmono-profiler-log.a
@@ -1066,10 +1063,12 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Linq.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.AuthenticationManager.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.Cache.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.Http.Rtc.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.HttpListener.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.Mail.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.NameResolution.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.NetworkInformation.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.Ping.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.Primitives.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.Requests.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Net.Security.dll
@@ -1088,16 +1087,18 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Reflection.TypeExtensions.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Reflection.TypeExtensions.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Reflection.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Resources.Reader.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Resources.ReaderWriter.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Resources.ResourceManager.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Resources.Writer.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.CompilerServices.VisualC.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Extensions.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Handles.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.InteropServices.RuntimeInformation.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.InteropServices.RuntimeInformation.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.InteropServices.WindowsRuntime.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.InteropServices.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Numerics.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Serialization.Formatters.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Serialization.Json.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Serialization.Primitives.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Serialization.Xml.dll
@@ -1107,6 +1108,7 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Claims.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Algorithms.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Algorithms.pdb
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Csp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.DeriveBytes.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Encoding.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Encryption.Aes.dll
@@ -1233,7 +1235,7 @@ lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.DirectoryServices.Protocols.dll -> 
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.DirectoryServices.dll -> ../gac/System.DirectoryServices/4.0.0.0__b03f5f7f11d50a3a/System.DirectoryServices.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Drawing.Design.dll -> ../gac/System.Drawing.Design/4.0.0.0__b03f5f7f11d50a3a/System.Drawing.Design.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Drawing.dll -> ../gac/System.Drawing/4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll
-lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Dynamic.dll -> ../gac/System.Dynamic/4.0.0.0__b77a5c561934e089/System.Dynamic.dll
+lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Dynamic.dll -> ../gac/System.Dynamic/4.0.0.0__b03f5f7f11d50a3a/System.Dynamic.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.EnterpriseServices.dll -> ../gac/System.EnterpriseServices/4.0.0.0__b03f5f7f11d50a3a/System.EnterpriseServices.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.IO.Compression.FileSystem.dll -> ../gac/System.IO.Compression.FileSystem/4.0.0.0__b77a5c561934e089/System.IO.Compression.FileSystem.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.IO.Compression.dll -> ../gac/System.IO.Compression/4.0.0.0__b77a5c561934e089/System.IO.Compression.dll
@@ -1260,7 +1262,7 @@ lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Reactive.Providers.dll -> ../gac/Sy
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Reactive.Runtime.Remoting.dll -> ../gac/System.Reactive.Runtime.Remoting/2.2.0.0__31bf3856ad364e35/System.Reactive.Runtime.Remoting.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Reactive.Windows.Forms.dll -> ../gac/System.Reactive.Windows.Forms/2.2.0.0__31bf3856ad364e35/System.Reactive.Windows.Forms.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Reactive.Windows.Threading.dll -> ../gac/System.Reactive.Windows.Threading/2.2.0.0__31bf3856ad364e35/System.Reactive.Windows.Threading.dll
-lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Reflection.Context.dll -> ../gac/System.Reflection.Context/4.0.0.0__b03f5f7f11d50a3a/System.Reflection.Context.dll
+lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Reflection.Context.dll -> ../gac/System.Reflection.Context/4.0.0.0__b77a5c561934e089/System.Reflection.Context.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/System.Reflection.Metadata.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/System.Reflection.Metadata.dll.so
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/System.Runtime.Caching.dll -> ../gac/System.Runtime.Caching/4.0.0.0__b03f5f7f11d50a3a/System.Runtime.Caching.dll
@@ -1343,6 +1345,14 @@ lrwxrwxrwx	root/root	usr/lib/mono/4.5/cscompmgd.dll -> ../gac/cscompmgd/0.0.0.0_
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/csi.rsp
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/culevel.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/culevel.pdb
+drwxr-xr-x	root/root	usr/lib/mono/4.5/dim/
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/dim/Microsoft.CodeAnalysis.CSharp.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/dim/Microsoft.CodeAnalysis.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/dim/System.Collections.Immutable.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/dim/System.Reflection.Metadata.dll
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/dim/csc.exe
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/dim/csc.exe.config
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/dim/csc.rsp
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/disco.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/disco.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/dtd2rng.exe
@@ -1361,14 +1371,14 @@ lrwxrwxrwx	root/root	usr/lib/mono/4.5/cscompmgd.dll -> ../gac/cscompmgd/0.0.0.0_
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/ikdasm.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/ilasm.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/ilasm.pdb
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/illinkanalyzer.exe
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/illinkanalyzer.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/installutil.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/installutil.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/installvst.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/installvst.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/lc.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/lc.pdb
--rwxr-xr-x	root/root	usr/lib/mono/4.5/linkeranalyzer.exe
--rwxr-xr-x	root/root	usr/lib/mono/4.5/linkeranalyzer.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/macpack.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/macpack.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/makecert.exe
@@ -1446,6 +1456,9 @@ lrwxrwxrwx	root/root	usr/lib/mono/4.5/nunit.util.dll -> ../gac/nunit.util/2.4.8.
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/sqlsharp.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/svcutil.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/svcutil.pdb
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/vbc.exe
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/vbc.exe.config
+-rwxr-xr-x	root/root	usr/lib/mono/4.5/vbc.rsp
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/wsdl.exe
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/wsdl.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/xbuild.exe
@@ -2770,9 +2783,9 @@ drwxr-xr-x	root/root	usr/lib/mono/gac/System.Drawing/4.0.0.0__b03f5f7f11d50a3a/
 -rw-r--r--	root/root	usr/lib/mono/gac/System.Drawing/4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll
 -rw-r--r--	root/root	usr/lib/mono/gac/System.Drawing/4.0.0.0__b03f5f7f11d50a3a/System.Drawing.pdb
 drwxr-xr-x	root/root	usr/lib/mono/gac/System.Dynamic/
-drwxr-xr-x	root/root	usr/lib/mono/gac/System.Dynamic/4.0.0.0__b77a5c561934e089/
--rw-r--r--	root/root	usr/lib/mono/gac/System.Dynamic/4.0.0.0__b77a5c561934e089/System.Dynamic.dll
--rw-r--r--	root/root	usr/lib/mono/gac/System.Dynamic/4.0.0.0__b77a5c561934e089/System.Dynamic.pdb
+drwxr-xr-x	root/root	usr/lib/mono/gac/System.Dynamic/4.0.0.0__b03f5f7f11d50a3a/
+-rw-r--r--	root/root	usr/lib/mono/gac/System.Dynamic/4.0.0.0__b03f5f7f11d50a3a/System.Dynamic.dll
+-rw-r--r--	root/root	usr/lib/mono/gac/System.Dynamic/4.0.0.0__b03f5f7f11d50a3a/System.Dynamic.pdb
 drwxr-xr-x	root/root	usr/lib/mono/gac/System.EnterpriseServices/
 drwxr-xr-x	root/root	usr/lib/mono/gac/System.EnterpriseServices/4.0.0.0__b03f5f7f11d50a3a/
 -rw-r--r--	root/root	usr/lib/mono/gac/System.EnterpriseServices/4.0.0.0__b03f5f7f11d50a3a/System.EnterpriseServices.dll
@@ -2878,9 +2891,9 @@ drwxr-xr-x	root/root	usr/lib/mono/gac/System.Reactive.Windows.Threading/2.2.0.0_
 -rw-r--r--	root/root	usr/lib/mono/gac/System.Reactive.Windows.Threading/2.2.0.0__31bf3856ad364e35/System.Reactive.Windows.Threading.dll
 -rw-r--r--	root/root	usr/lib/mono/gac/System.Reactive.Windows.Threading/2.2.0.0__31bf3856ad364e35/System.Reactive.Windows.Threading.pdb
 drwxr-xr-x	root/root	usr/lib/mono/gac/System.Reflection.Context/
-drwxr-xr-x	root/root	usr/lib/mono/gac/System.Reflection.Context/4.0.0.0__b03f5f7f11d50a3a/
--rw-r--r--	root/root	usr/lib/mono/gac/System.Reflection.Context/4.0.0.0__b03f5f7f11d50a3a/System.Reflection.Context.dll
--rw-r--r--	root/root	usr/lib/mono/gac/System.Reflection.Context/4.0.0.0__b03f5f7f11d50a3a/System.Reflection.Context.pdb
+drwxr-xr-x	root/root	usr/lib/mono/gac/System.Reflection.Context/4.0.0.0__b77a5c561934e089/
+-rw-r--r--	root/root	usr/lib/mono/gac/System.Reflection.Context/4.0.0.0__b77a5c561934e089/System.Reflection.Context.dll
+-rw-r--r--	root/root	usr/lib/mono/gac/System.Reflection.Context/4.0.0.0__b77a5c561934e089/System.Reflection.Context.pdb
 drwxr-xr-x	root/root	usr/lib/mono/gac/System.Runtime.Caching/
 drwxr-xr-x	root/root	usr/lib/mono/gac/System.Runtime.Caching/4.0.0.0__b03f5f7f11d50a3a/
 -rw-r--r--	root/root	usr/lib/mono/gac/System.Runtime.Caching/4.0.0.0__b03f5f7f11d50a3a/System.Runtime.Caching.dll
@@ -3140,6 +3153,9 @@ lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csc.rsp -> ../../../..
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csi.exe -> ../../../../4.5/csi.exe
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csi.exe.config -> ../../../../4.5/csi.exe.config
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/csi.rsp -> ../../../../4.5/csi.rsp
+lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/vbc.exe -> ../../../../4.5/vbc.exe
+lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/vbc.exe.config -> ../../../../4.5/vbc.exe.config
+lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/vbc.rsp -> ../../../../4.5/vbc.rsp
 drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/
 drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/
 drwxr-xr-x	root/root	usr/lib/mono/xbuild-frameworks/.NETFramework/v2.0/
@@ -3348,6 +3364,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/genxs.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/httpcfg.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ilasm.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/illinkanalyzer.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/jay.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/lc.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/macpack.1.gz
@@ -3367,6 +3384,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/mono-api-info.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mono-cil-strip.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mono-configuration-crypto.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mono-profilers.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mono-service.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mono-shlib-cop.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mono-symbolicate.1.gz
@@ -3400,4 +3418,5 @@ drwxr-xr-x	root/root	usr/share/mono-2.0/mono/
 drwxr-xr-x	root/root	usr/share/mono-2.0/mono/cil/
 -rw-r--r--	root/root	usr/share/mono-2.0/mono/cil/cil-opcodes.xml
 drwxr-xr-x	root/root	usr/share/mono-2.0/mono/profiler/
+-rw-r--r--	root/root	usr/share/mono-2.0/mono/profiler/mono-profiler-coverage.suppression
 -rw-r--r--	root/root	usr/share/mono-2.0/mono/profiler/mono-profiler-log.suppression
