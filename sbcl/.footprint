@@ -9,6 +9,8 @@ drwxr-xr-x	root/root	usr/lib/sbcl/contrib/
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-aclrepl.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-bsd-sockets.asd
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-bsd-sockets.fasl
+-rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-capstone.asd
+-rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-capstone.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-cltl2.asd
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-cltl2.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-concurrency.asd
