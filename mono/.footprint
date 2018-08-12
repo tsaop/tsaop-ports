@@ -146,6 +146,7 @@ drwxr-xr-x	root/root	usr/include/mono-2.0/mono/metadata/
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/mono-config.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/mono-debug.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/mono-gc.h
+-rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/object-forward.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/object.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/opcodes.h
 -rw-r--r--	root/root	usr/include/mono-2.0/mono/metadata/profiler-events.h
@@ -1033,7 +1034,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Diagnostics.FileVersionInfo.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Diagnostics.Process.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Diagnostics.StackTrace.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Diagnostics.StackTrace.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Diagnostics.TextWriterTraceListener.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Diagnostics.Tools.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Diagnostics.TraceEvent.dll
@@ -1043,7 +1043,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Dynamic.Runtime.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Globalization.Calendars.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Globalization.Extensions.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Globalization.Extensions.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Globalization.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.IO.Compression.ZipFile.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.IO.FileSystem.AccessControl.dll
@@ -1102,12 +1101,10 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Serialization.Json.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Serialization.Primitives.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Serialization.Xml.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.Serialization.Xml.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Runtime.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.AccessControl.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Claims.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Algorithms.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Algorithms.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Csp.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.DeriveBytes.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Cryptography.Encoding.dll
@@ -1125,7 +1122,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Principal.Windows.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.Principal.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.SecureString.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Security.SecureString.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.ServiceModel.Duplex.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.ServiceModel.Http.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.ServiceModel.NetTcp.dll
@@ -1151,7 +1147,6 @@ drwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Xml.ReaderWriter.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Xml.XDocument.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Xml.XPath.XDocument.dll
--rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Xml.XPath.XDocument.pdb
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Xml.XPath.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Xml.XmlDocument.dll
 -rwxr-xr-x	root/root	usr/lib/mono/4.5/Facades/System.Xml.XmlSerializer.dll
@@ -1186,7 +1181,7 @@ lrwxrwxrwx	root/root	usr/lib/mono/4.5/Microsoft.CSharp.dll -> ../gac/Microsoft.C
 -rw-r--r--	root/root	usr/lib/mono/4.5/Microsoft.Common.targets
 -rw-r--r--	root/root	usr/lib/mono/4.5/Microsoft.Common.tasks
 -rw-r--r--	root/root	usr/lib/mono/4.5/Microsoft.VisualBasic.targets
-lrwxrwxrwx	root/root	usr/lib/mono/4.5/Microsoft.VisualC.dll -> ../gac/Microsoft.VisualC/0.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.dll
+lrwxrwxrwx	root/root	usr/lib/mono/4.5/Microsoft.VisualC.dll -> ../gac/Microsoft.VisualC/10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Microsoft.Web.Infrastructure.dll -> ../gac/Microsoft.Web.Infrastructure/1.0.0.0__31bf3856ad364e35/Microsoft.Web.Infrastructure.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.Btls.Interface.dll -> ../gac/Mono.Btls.Interface/4.0.0.0__0738eb9f132ed756/Mono.Btls.Interface.dll
 lrwxrwxrwx	root/root	usr/lib/mono/4.5/Mono.CSharp.dll -> ../gac/Mono.CSharp/4.0.0.0__0738eb9f132ed756/Mono.CSharp.dll
@@ -2590,9 +2585,9 @@ drwxr-xr-x	root/root	usr/lib/mono/gac/Microsoft.CSharp/4.0.0.0__b03f5f7f11d50a3a
 -rw-r--r--	root/root	usr/lib/mono/gac/Microsoft.CSharp/4.0.0.0__b03f5f7f11d50a3a/Microsoft.CSharp.dll
 -rw-r--r--	root/root	usr/lib/mono/gac/Microsoft.CSharp/4.0.0.0__b03f5f7f11d50a3a/Microsoft.CSharp.pdb
 drwxr-xr-x	root/root	usr/lib/mono/gac/Microsoft.VisualC/
-drwxr-xr-x	root/root	usr/lib/mono/gac/Microsoft.VisualC/0.0.0.0__b03f5f7f11d50a3a/
--rw-r--r--	root/root	usr/lib/mono/gac/Microsoft.VisualC/0.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.dll
--rw-r--r--	root/root	usr/lib/mono/gac/Microsoft.VisualC/0.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.pdb
+drwxr-xr-x	root/root	usr/lib/mono/gac/Microsoft.VisualC/10.0.0.0__b03f5f7f11d50a3a/
+-rw-r--r--	root/root	usr/lib/mono/gac/Microsoft.VisualC/10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.dll
+-rw-r--r--	root/root	usr/lib/mono/gac/Microsoft.VisualC/10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.pdb
 drwxr-xr-x	root/root	usr/lib/mono/gac/Microsoft.Web.Infrastructure/
 drwxr-xr-x	root/root	usr/lib/mono/gac/Microsoft.Web.Infrastructure/1.0.0.0__31bf3856ad364e35/
 -rw-r--r--	root/root	usr/lib/mono/gac/Microsoft.Web.Infrastructure/1.0.0.0__31bf3856ad364e35/Microsoft.Web.Infrastructure.dll
@@ -3419,4 +3414,3 @@ drwxr-xr-x	root/root	usr/share/mono-2.0/mono/cil/
 -rw-r--r--	root/root	usr/share/mono-2.0/mono/cil/cil-opcodes.xml
 drwxr-xr-x	root/root	usr/share/mono-2.0/mono/profiler/
 -rw-r--r--	root/root	usr/share/mono-2.0/mono/profiler/mono-profiler-coverage.suppression
--rw-r--r--	root/root	usr/share/mono-2.0/mono/profiler/mono-profiler-log.suppression

@@ -4,7 +4,7 @@
 # Depends on: cmake python
 
 name=mono
-version=5.12.0.226
+version=5.14.0.177
 release=1
 source=(https://download.mono-project.com/sources/$name/$name-$version.tar.bz2)
 
