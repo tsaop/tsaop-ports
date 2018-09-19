@@ -4,6 +4,6 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/ncmpc/
 drwxr-xr-x	root/root	usr/lib/ncmpc/lyrics/
--rwxrwxr-x	root/root	usr/lib/ncmpc/lyrics/10-hd.sh
--rwxrwxr-x	root/root	usr/lib/ncmpc/lyrics/20-lyricwiki.rb
+-rwxr-xr-x	root/root	usr/lib/ncmpc/lyrics/10-hd.sh
+-rwxr-xr-x	root/root	usr/lib/ncmpc/lyrics/20-lyricwiki.rb
 drwxr-xr-x	root/root	usr/share/

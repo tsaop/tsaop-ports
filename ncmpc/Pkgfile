@@ -4,18 +4,18 @@
 # Depends on: glib libmpdclient ruby
 
 name=ncmpc
-version=0.30
+version=0.31
 release=1
 source=(https://www.musicpd.org/download/$name/0/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
-#	sed "s/curses == 'ncursesw'/false/g" -i meson.build
 
 	meson . build --prefix /usr \
 		-Dcurses=ncurses \
-		-Dcolors=ncurses \
+		-Dcolors=true \
 		-Dlyrics_screen=true \
+		-Ddocumentation=false \
 		-Dnls=false
 
 	DESTDIR=$PKG ninja -C build -j ${JOBS:-1} install
