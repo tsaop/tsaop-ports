@@ -201,6 +201,11 @@ lrwxrwxrwx	root/root	usr/lib/libmono-profiler-coverage.so.0 -> libmono-profiler-
 lrwxrwxrwx	root/root	usr/lib/libmono-profiler-log.so -> libmono-profiler-log.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libmono-profiler-log.so.0 -> libmono-profiler-log.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libmono-profiler-log.so.0.0.0
+-rw-r--r--	root/root	usr/lib/libmono-system-native.a
+-rwxr-xr-x	root/root	usr/lib/libmono-system-native.la
+lrwxrwxrwx	root/root	usr/lib/libmono-system-native.so -> libmono-system-native.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libmono-system-native.so.0 -> libmono-system-native.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libmono-system-native.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libmonoboehm-2.0.a
 -rwxr-xr-x	root/root	usr/lib/libmonoboehm-2.0.la
 lrwxrwxrwx	root/root	usr/lib/libmonoboehm-2.0.so -> libmonoboehm-2.0.so.1.0.0
@@ -3137,6 +3142,7 @@ lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis.Scripting.dll -> ../../../../4.5/Microsoft.CodeAnalysis.Scripting.dll
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis.VisualBasic.dll -> ../../../../4.5/Microsoft.CodeAnalysis.VisualBasic.dll
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CodeAnalysis.dll -> ../../../../4.5/Microsoft.CodeAnalysis.dll
+-rwxr-xr-x	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.Managed.Core.targets
 -rwxr-xr-x	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.VisualBasic.Core.targets
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/System.Collections.Immutable.dll -> ../../../../4.5/System.Collections.Immutable.dll
 lrwxrwxrwx	root/root	usr/lib/mono/msbuild/15.0/bin/Roslyn/System.Reflection.Metadata.dll -> ../../../../4.5/System.Reflection.Metadata.dll
