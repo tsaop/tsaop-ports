@@ -4,7 +4,7 @@
 # Depends on: boost glib libmpdclient ruby
 
 name=ncmpc
-version=0.32
+version=0.33
 release=1
 source=(https://www.musicpd.org/download/$name/0/$name-$version.tar.xz)
 
@@ -15,8 +15,8 @@ build() {
 		-Dcurses=ncurses \
 		-Dcolors=true \
 		-Dlyrics_screen=true \
-		-Ddocumentation=false \
-		-Dnls=false
+		-Ddocumentation=disabled \
+		-Dnls=disabled
 
 	DESTDIR=$PKG ninja -C build -j ${JOBS:-1} install
 
