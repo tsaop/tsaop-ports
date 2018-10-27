@@ -4,9 +4,9 @@
 # Depends on: glib gpgme libidn
 
 name=gmime
-version=3.2.0
+version=3.2.1
 release=1
-source=(https://download.gnome.org/sources/$name/${version%.0}/$name-$version.tar.xz)
+source=(https://download.gnome.org/sources/$name/${version:0:3}/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version

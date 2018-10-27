@@ -67,9 +67,9 @@ drwxr-xr-x	root/root	usr/include/gmime-3.0/gmime/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libgmime-3.0.a
 -rwxr-xr-x	root/root	usr/lib/libgmime-3.0.la
-lrwxrwxrwx	root/root	usr/lib/libgmime-3.0.so -> libgmime-3.0.so.0.200.0
-lrwxrwxrwx	root/root	usr/lib/libgmime-3.0.so.0 -> libgmime-3.0.so.0.200.0
--rwxr-xr-x	root/root	usr/lib/libgmime-3.0.so.0.200.0
+lrwxrwxrwx	root/root	usr/lib/libgmime-3.0.so -> libgmime-3.0.so.0.201.0
+lrwxrwxrwx	root/root	usr/lib/libgmime-3.0.so.0 -> libgmime-3.0.so.0.201.0
+-rwxr-xr-x	root/root	usr/lib/libgmime-3.0.so.0.201.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gmime-3.0.pc
 drwxr-xr-x	root/root	usr/share/
