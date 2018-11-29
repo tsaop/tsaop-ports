@@ -4,7 +4,7 @@
 # Depends on: glibc
 
 name=sbcl
-version=1.4.13
+version=1.4.14
 release=1
 source=(http://prdownloads.sourceforge.net/$name/$name-$version-source.tar.bz2
 	http://prdownloads.sourceforge.net/$name/$name-$version-x86-64-linux-binary.tar.bz2)
@@ -27,7 +27,7 @@ build() {
 	cd $name-$version
 
 	export SBCL_HOME=$SRC/sbcl-temp/lib/sbcl
-	sh make.sh $SRC/sbcl-temp/bin/sbcl --prefix=/usr --fancy
+	sh make.sh $SRC/sbcl-temp/bin/sbcl --prefix=/usr
 	unset SBCL_HOME
 	INSTALL_ROOT=$PKG/usr sh install.sh
 
