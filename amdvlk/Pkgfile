@@ -1,7 +1,7 @@
 # Description: AMD Open Source Driver For Vulkan
 # URL: https://github.com/GPUOpen-Drivers/AMDVLK
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: cmake git gnupg xorg-dri2proto xorg-dri3proto xorg-libx11 xorg-libxshmfence xorg-libxrandr
+# Depends on: cmake git gnupg xorg-xorgproto xorg-libx11 xorg-libxshmfence xorg-libxrandr
 
 name=amdvlk
 version=9999
