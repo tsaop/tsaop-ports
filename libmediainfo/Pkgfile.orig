@@ -1,7 +1,7 @@
 # Description: Convenient unified display of the most relevant technical and tag data for video and audio files (library)
 # URL: https://github.com/MediaArea/MediaInfoLib
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: libmms libzen tinyxml2
+# Depends on:# Depends glib libmms libzen on:libmediainfo tinyxml2
 
 name=libmediainfo
 _realname=MediaInfoLib
