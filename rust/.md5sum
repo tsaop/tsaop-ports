@@ -1,0 +1,6 @@
+b3229879d93765ebbd0520f309ad26eb  cargo-0.31.0-x86_64-unknown-linux-gnu.tar.gz
+d6978370bddae0c85b5f246c31730d6b  config.toml
+0e8831c2b916b2391734a3f46dd586b0  rust-std-1.30.0-x86_64-unknown-linux-gnu.tar.gz
+262fe55e3261ecf601d3a434afdc6832  rustc-1.30.0-x86_64-unknown-linux-gnu.tar.gz
+f6ef68a5cf5c420943228750e33b691a  rustc-1.31.1-src.tar.gz
+6dc6a4a609c3c92e179c144a3b524796  system-llvm-with-enabled-ffi.patch
