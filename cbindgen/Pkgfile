@@ -4,7 +4,7 @@
 # Depends on: rust
 
 name=cbindgen
-version=0.6.7
+version=0.6.8
 release=1
 source=(https://github.com/eqrion/cbindgen/archive/v$version/$name-v$version.tar.gz)
 
