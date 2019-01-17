@@ -4,12 +4,12 @@
 # Depends on:	llvm
 
 name=rust
-version=1.31.1
+version=1.32.0
 release=1
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.gz \
-	https://static.rust-lang.org/dist/2018-10-25/rust-std-1.30.0-x86_64-unknown-linux-gnu.tar.gz \
-	https://static.rust-lang.org/dist/2018-10-25/rustc-1.30.0-x86_64-unknown-linux-gnu.tar.gz \
-	https://static.rust-lang.org/dist/2018-10-25/cargo-0.31.0-x86_64-unknown-linux-gnu.tar.gz
+	https://static.rust-lang.org/dist/2018-12-20/rust-std-1.31.1-x86_64-unknown-linux-gnu.tar.gz \
+	https://static.rust-lang.org/dist/2018-12-20/rustc-1.31.1-x86_64-unknown-linux-gnu.tar.gz \
+	https://static.rust-lang.org/dist/2018-12-20/cargo-0.32.0-x86_64-unknown-linux-gnu.tar.gz
 	config.toml
 	system-llvm-with-enabled-ffi.patch)
  
@@ -21,10 +21,10 @@ build() {
 	# Workaround for rust-lang/rust#39880
 	patch -Np1 -i $SRC/system-llvm-with-enabled-ffi.patch
 	
-	mkdir -p build/cache/2018-10-25
-	cp $PKGMK_SOURCE_DIR/rust-std-1.30.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-10-25/
-	cp $PKGMK_SOURCE_DIR/rustc-1.30.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-10-25/
-	cp $PKGMK_SOURCE_DIR/cargo-0.31.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-10-25/
+	mkdir -p build/cache/2018-12-20
+	cp $PKGMK_SOURCE_DIR/rust-std-1.31.1-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-12-20/
+	cp $PKGMK_SOURCE_DIR/rustc-1.31.1-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-12-20/
+	cp $PKGMK_SOURCE_DIR/cargo-0.32.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-12-20/
 
 	/usr/bin/python ./x.py build -j$(nproc)
 	DESTDIR=$PKG /usr/bin/python ./x.py install
