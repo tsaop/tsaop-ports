@@ -1,0 +1,26 @@
+# Description: Snowball is a small string processing language designed for creating stemming algorithms for use in Information Retrieval
+# URL: http://snowballstem.org/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glibc
+
+name=libstemmer
+version=20140325
+release=1
+source=(http://snowball.tartarus.org/dist/${name}_c.tgz
+	libstemmer_c-shared-library.patch)
+
+build() {
+	cd ${name}_c
+
+	# Build shared library
+	patch -Np0 -i $SRC/libstemmer_c-shared-library.patch
+	
+	make
+
+	install -dm755 $PKG/usr/{lib,include,bin}
+	install -Dm644 include/libstemmer.h $PKG/usr/include/libstemmer.h
+	install -Dm755 stemwords $PKG/usr/bin/stemwords
+	install -Dm755 libstemmer.so.0d.0.0 $PKG/usr/lib/libstemmer.so.0d.0.0
+	ln -svf libstemmer.so.0d.0.0 $PKG/usr/lib/libstemmer.so.0d
+	ln -svf libstemmer.so.0d $PKG/usr/lib/libstemmer.so
+}
