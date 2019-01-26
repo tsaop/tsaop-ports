@@ -1,7 +1,7 @@
 # Description: Operating system and container binary deployment and upgrades
 # URL: https://ostree.readthedocs.io/en/latest/
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: fuse gobject-introspection gpgme gtk-doc
+# Depends on: fuse gpgme gtk-doc libsoup
 
 name=ostree
 _realname=libostree
