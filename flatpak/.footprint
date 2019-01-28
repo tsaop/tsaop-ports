@@ -17,6 +17,7 @@ drwxr-xr-x	root/root	usr/include/flatpak/
 -rw-r--r--	root/root	usr/include/flatpak/flatpak-error.h
 -rw-r--r--	root/root	usr/include/flatpak/flatpak-installation.h
 -rw-r--r--	root/root	usr/include/flatpak/flatpak-installed-ref.h
+-rw-r--r--	root/root	usr/include/flatpak/flatpak-instance.h
 -rw-r--r--	root/root	usr/include/flatpak/flatpak-portal-error.h
 -rw-r--r--	root/root	usr/include/flatpak/flatpak-ref.h
 -rw-r--r--	root/root	usr/include/flatpak/flatpak-related-ref.h
@@ -31,12 +32,13 @@ drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/flatpak-portal
 -rwxr-xr-x	root/root	usr/lib/flatpak-session-helper
 -rwxr-xr-x	root/root	usr/lib/flatpak-system-helper
+-rwxr-xr-x	root/root	usr/lib/flatpak-validate-icon
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Flatpak-1.0.typelib
 -rwxr-xr-x	root/root	usr/lib/libflatpak.la
-lrwxrwxrwx	root/root	usr/lib/libflatpak.so -> libflatpak.so.0.10006.0
-lrwxrwxrwx	root/root	usr/lib/libflatpak.so.0 -> libflatpak.so.0.10006.0
--rwxr-xr-x	root/root	usr/lib/libflatpak.so.0.10006.0
+lrwxrwxrwx	root/root	usr/lib/libflatpak.so -> libflatpak.so.0.10200.0
+lrwxrwxrwx	root/root	usr/lib/libflatpak.so.0 -> libflatpak.so.0.10200.0
+-rwxr-xr-x	root/root	usr/lib/libflatpak.so.0.10200.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/flatpak.pc
 drwxr-xr-x	root/root	usr/share/
@@ -74,18 +76,20 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-create-usb.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-document-export.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-document-info.1.gz
--rw-r--r--	root/root	usr/share/man/man1/flatpak-document-list.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-document-unexport.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/flatpak-documents.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-enter.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/flatpak-history.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-info.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-install.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/flatpak-kill.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-list.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-make-current.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-override.1.gz
--rw-r--r--	root/root	usr/share/man/man1/flatpak-permission-list.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-permission-remove.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-permission-reset.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-permission-show.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/flatpak-permissions.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-ps.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-remote-add.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-remote-delete.1.gz
@@ -97,6 +101,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-repo.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-run.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-search.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/flatpak-spawn.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-uninstall.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak-update.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flatpak.1.gz
