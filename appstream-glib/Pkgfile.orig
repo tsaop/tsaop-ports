@@ -1,7 +1,7 @@
 # Description: This library provides objects and helper methods to help reading and writing AppStream metadata
 # URL: https://github.com/hughsie/appstream-glib
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: gdk-pixbuf gtk-doc json-glib libsoup libstemmer libyaml
+# Depends on:gdk-pixbuf glib gtk-doc json-glib libffi libidn2 libpng libpsl libsoup libstemmer libunistring libxml2 libyaml sqlite3
 
 name=appstream-glib
 version=0.7.15
