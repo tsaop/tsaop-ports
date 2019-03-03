@@ -1,22 +1,21 @@
 # Description:  Music playback daemon
 # URL:          http://www.musicpd.org/
 # Maintainer:   Tsaop, leeroy at cock dot li
-# Depends on: audiofile boost faad2 ffmpeg glib lame libcdio-paranoia libid3tag libmad libsamplerate mpg123 opus wavpack
+# Depends on: audiofile boost faad2 ffmpeg lame libcdio-paranoia libid3tag libmad libsamplerate mpg123 opus pulseaudio wavpack icu libgcrypt audiofile libmikmod libmodplug libmpdclient fluidsynth libao openal
 
 name=mpd
-version=0.20.23
+version=0.21.5
 release=1
-source=(https://www.musicpd.org/download/mpd/0.20/$name-$version.tar.xz mpd)
+source=(https://www.musicpd.org/download/mpd/0.21/$name-$version.tar.xz mpd)
 
 build() {
   cd $name-$version
+  mkdir obj; cd obj
 
-  ./configure \
-      --prefix=/usr \
-      --sysconfdir=/usr/etc
-  
-  make
-  make DESTDIR=$PKG install
+  meson -Dprefix=/usr \
+	..
+
+  DESTDIR=$PKG ninja install
 
   install -D $SRC/mpd $PKG/etc/rc.d/mpd
 
