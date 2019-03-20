@@ -1,0 +1,19 @@
+# Description: LibThai is a set of Thai language support routines aimed to ease developers' tasks to incorporate Thai language support in their applications.
+# URL: https://linux.thai.net/projects/libthai/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on:libdatrie
+
+name=libthai
+version=0.1.28
+release=1
+source=(https://github.com/tlwg/libthai/releases/download/v0.1.28/libthai-0.1.28.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+}
