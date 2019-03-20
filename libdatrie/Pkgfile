@@ -1,0 +1,21 @@
+# Description: datrie - Double-Array Trie Library
+# URL: https://linux.thai.net/~thep/datrie/datrie.html
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glibc
+
+name=libdatrie
+version=0.2.12
+release=1
+source=(https://github.com/tlwg/$name/releases/download/v${version}/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/doc
+}
