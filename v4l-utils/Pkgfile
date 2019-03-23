@@ -1,0 +1,24 @@
+# Description: media (V4L2, DVB and IR) applications and libraries 
+# URL: https://linuxtv.org
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on:alsa-lib glu hicolor-icon-theme libjpeg-turbo
+
+name=v4l-utils
+version=1.16.4
+release=1
+source=(https://linuxtv.org/downloads/$name/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	unset CFLAGS
+	unset CXXFLAGS
+
+	./configure --prefix=/usr \
+		--sysconfdir=/usr/etc \
+		--disable-nls \
+		--disable-shared
+
+	make
+	make DESTDIR=$PKG install
+}
