@@ -4,7 +4,7 @@
 # Depends on:alsa-lib glu hicolor-icon-theme libjpeg-turbo
 
 name=v4l-utils
-version=1.16.4
+version=1.16.5
 release=1
 source=(https://linuxtv.org/downloads/$name/$name-$version.tar.bz2)
 
