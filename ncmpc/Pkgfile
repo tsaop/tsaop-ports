@@ -1,10 +1,10 @@
 # Description: curses client for MPD
 # URL: https://www.musicpd.org/clients/ncmpc/
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: boost glib libmpdclient ruby
+# Depends on:boost glib libmpdclient ruby
 
 name=ncmpc
-version=0.33
+version=0.34
 release=1
 source=(https://www.musicpd.org/download/$name/0/$name-$version.tar.xz)
 
