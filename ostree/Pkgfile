@@ -5,7 +5,7 @@
 
 name=ostree
 _realname=libostree
-version=2019.1
+version=2019.2
 release=1
 source=(https://github.com/ostreedev/ostree/releases/download/v${version}/${_realname}-$version.tar.xz)
 
