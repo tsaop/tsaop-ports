@@ -1,10 +1,10 @@
 # Description: media (V4L2, DVB and IR) applications and libraries 
 # URL: https://linuxtv.org
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on:alsa-lib glu hicolor-icon-theme libjpeg-turbo
+# Depends on: glu hicolor-icon-theme libjpeg-turbo alsa-lib
 
 name=v4l-utils
-version=1.16.5
+version=1.16.6
 release=1
 source=(https://linuxtv.org/downloads/$name/$name-$version.tar.bz2)
 
