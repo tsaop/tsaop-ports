@@ -7,8 +7,8 @@ name=amdvlk
 version=9999
 release=2
 source=(https://storage.googleapis.com/git-repo-downloads/repo
-	c++14-fixes.patch
-	amdPalSettings.cfg)
+	c++14-fixes.patch)
+#	amdPalSettings.cfg)
 
 build() {
 	chmod +x repo
@@ -32,10 +32,10 @@ build() {
 	make
 
 	install -dm755 $PKG/usr/lib
-	install -dm755 $PKG/etc/amd
+#	install -dm755 $PKG/etc/amd
 	install -dm755 $PKG/usr/share/vulkan/icd.d
 
-	install -Dm644 $SRC/amdPalSettings.cfg $PKG/etc/amd/amdPalSettings.cfg
+#	install -Dm644 $SRC/amdPalSettings.cfg $PKG/etc/amd/amdPalSettings.cfg
 	install -Dm755 icd/amdvlk64.so $PKG/usr/lib/amdvlk64.so
 
 	# Fix library path in the json file
