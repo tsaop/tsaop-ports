@@ -3,7 +3,7 @@
 # Maintainer: Tsaop, leeroy at cock dot li
 # Depends on: desktop-file-utils gtk hunspell imagemagick poppler-qt5
 name=texstudio
-version=2.12.8
+version=2.12.14
 release=1
 source=(https://github.com/texstudio-org/$name/archive/$version/$name-$version.tar.gz)
 
@@ -15,12 +15,12 @@ build() {
 	make INSTALL_ROOT=$PKG install
 
 	# Generate icons
-	for res in $(/bin/ls /usr/share/icons/hicolor | grep "[0-9]\+x[0-9]\+"); do
-		mkdir -p $PKG/usr/share/icons/hicolor/$res/apps
-		convert -background none -density 1200 -resize $res \
-			$PKG/usr/share/icons/hicolor/scalable/apps/texstudio.svg \
-			$PKG/usr/share/icons/hicolor/$res/apps/texstudio.png
-	done
+#	for res in $(ls /usr/share/icons/hicolor | grep "[0-9]\+x[0-9]\+"); do
+#		mkdir -p $PKG/usr/share/icons/hicolor/$res/apps
+#		convert -background none -density 1200 -resize $res \
+#			$PKG/usr/share/icons/hicolor/scalable/apps/texstudio.svg \
+#			$PKG/usr/share/icons/hicolor/$res/apps/texstudio.png
+#	done
 
 	find $PKG \( -name "COPYING" -o -name "CHANGELOG.txt" -o -name "AUTHORS" \) -delete
 }
