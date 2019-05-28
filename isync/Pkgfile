@@ -1,10 +1,10 @@
 # Description: free IMAP and MailDir mailbox synchronizer
 # URL: http://isync.sourceforge.net/
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on:cyrus-sasl
+# Depends on: cyrus-sasl
 
 name=isync
-version=1.3.0
+version=1.3.1
 release=1
 source=(https://sourceforge.net/projects/$name/files/$name/$version/$name-$version.tar.gz)
 
