@@ -4,13 +4,13 @@
 # Depends on: cmake python
 
 name=mono
-version=5.20.1.19
+version=5.20.1.27
 release=1
 source=(https://download.mono-project.com/sources/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-
+	
 	./configure --prefix=/usr \
 		--libdir=/usr/lib \
 		--sysconfdir=/usr/etc \
