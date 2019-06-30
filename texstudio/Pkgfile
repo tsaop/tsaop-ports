@@ -3,7 +3,7 @@
 # Maintainer: Tsaop, leeroy at cock dot li
 # Depends on: desktop-file-utils gtk hunspell imagemagick poppler-qt5
 name=texstudio
-version=2.12.14
+version=2.12.16
 release=1
 source=(https://github.com/texstudio-org/$name/archive/$version/$name-$version.tar.gz)
 
