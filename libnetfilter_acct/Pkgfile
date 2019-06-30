@@ -1,0 +1,18 @@
+# Description: Userspace library providing interface to extended accounting infrastructure
+# URL: https://netfilter.org/projects/libnetfilter_acct/index.html
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on:libmnl
+
+name=libnetfilter_acct
+version=1.0.3
+release=1
+source=(http://www.netfilter.org/projects/$name/files/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+
+	make
+	make DESTDIR=$PKG install
+}
