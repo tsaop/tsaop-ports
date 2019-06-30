@@ -1,0 +1,19 @@
+# Description: Userspace Packet Logging for netfilter
+# URL: https://www.netfilter.org/projects/ulogd/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: jansson libnetfilter_conntrack libnetfilter_log libnml libpcap sqlite libnetfilter_acct
+
+name=ulogd
+version=2.0.7
+release=1
+source=(https://www.netfilter.org/projects/$name/files/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr \
+		--sysconfdir=/etc
+
+	make
+	make DESTDIR=$PKG install
+}
