@@ -4,9 +4,9 @@
 # Depends on: cmake python
 
 name=mono
-version=5.20.1.34
+version=6.0.0.313
 release=1
-source=(https://download.mono-project.com/sources/$name/$name-$version.tar.bz2)
+source=(https://download.mono-project.com/sources/$name/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
