@@ -1,0 +1,20 @@
+# Description: C-based implementation of the GDI+ API
+# URL: https://github.com/mono/libgdiplus
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cairo giflib libexif libtiff
+
+name=libgdiplus
+version=6.0.1
+release=1
+source=(https://github.com/mono/$name/archive/${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	./autogen.sh
+	./configure --prefix=/usr \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+}
