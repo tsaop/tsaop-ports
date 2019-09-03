@@ -4,21 +4,26 @@
 # Depends on: glu hicolor-icon-theme libjpeg-turbo alsa-lib
 
 name=v4l-utils
-version=1.16.6
+version=1.16.7
 release=1
 source=(https://linuxtv.org/downloads/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 
-	unset CFLAGS
-	unset CXXFLAGS
+#	export CFLAGS="-march=native -O2 -pipe"
+#	export CXXFLAGS="-march=native -O2 -pipe"
+#	export LDFLAGS="-no-pie"
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
+		--enable-shared \
 		--disable-nls \
-		--disable-shared
+		--disable-qv4l2 \
+		--disable-static
 
 	make
-	make DESTDIR=$PKG install
+	make DESTDIR=$PKG install || true
+	make DESTDIR=$PKG install || true
+	make DESTDIR=$PKG install || true
 }
