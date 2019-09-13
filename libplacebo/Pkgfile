@@ -1,0 +1,20 @@
+# Description: Reusable library for GPU-accelerated video/image rendering primitives, as well as a standalone vulkan-based image/video renderer. 
+# URL: https://code.videolan.org/videolan/libplacebo
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: lcms2 shaderc vulkan-loader
+
+name=libplacebo
+version=1.18.0
+release=1
+source=(https://code.videolan.org/videolan/$name/-/archive/v${version}/$name-v${version}.tar.bz2)
+
+build() {
+	cd $name-v${version}
+	mkdir build; cd build
+
+	meson -Dprefix=/usr \
+	..
+	
+	ninja -j4
+	DESTDIR=$PKG ninja install
+}
