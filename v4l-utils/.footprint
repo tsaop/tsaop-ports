@@ -7,6 +7,8 @@ drwxr-xr-x	root/root	lib/udev/rc_keymaps/
 -rw-r--r--	root/root	lib/udev/rc_keymaps/adstech_dvb_t_pci.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/af9005.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/alink_dtu_m.toml
+-rw-r--r--	root/root	lib/udev/rc_keymaps/allwinner_ba10_tv_box.toml
+-rw-r--r--	root/root	lib/udev/rc_keymaps/allwinner_i12_a20_tv_box.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/anysee.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/apac_viewcomp.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/astrometa_t2hybrid.toml
@@ -39,6 +41,7 @@ drwxr-xr-x	root/root	lib/udev/rc_keymaps/
 -rw-r--r--	root/root	lib/udev/rc_keymaps/digitalnow_tinytwin.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/digittrade.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/digitv.toml
+-rw-r--r--	root/root	lib/udev/rc_keymaps/dish_network.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/dm1105_nec.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/dntv_live_dvb_t.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/dntv_live_dvbt_pro.toml
@@ -76,6 +79,7 @@ drwxr-xr-x	root/root	lib/udev/rc_keymaps/
 -rw-r--r--	root/root	lib/udev/rc_keymaps/leadtek_y04g0051.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/lme2510.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/manli.toml
+-rw-r--r--	root/root	lib/udev/rc_keymaps/mce_keyboard.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/medion_x10.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/medion_x10_digitainer.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/medion_x10_or2x.toml
@@ -132,6 +136,8 @@ drwxr-xr-x	root/root	lib/udev/rc_keymaps/
 -rw-r--r--	root/root	lib/udev/rc_keymaps/vp702x.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/winfast.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/winfast_usbii_deluxe.toml
+-rw-r--r--	root/root	lib/udev/rc_keymaps/wobo_i5.toml
+-rw-r--r--	root/root	lib/udev/rc_keymaps/xbox_dvd.toml
 -rw-r--r--	root/root	lib/udev/rc_keymaps/zx_irdec.toml
 drwxr-xr-x	root/root	lib/udev/rules.d/
 -rw-r--r--	root/root	lib/udev/rules.d/70-infrared.rules
@@ -264,3 +270,5 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/ir-keytable.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/v4l2-compliance.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/v4l2-ctl.1.gz
+drwxr-xr-x	root/root	usr/share/man/man5/
+-rw-r--r--	root/root	usr/share/man/man5/rc_keymap.5.gz
