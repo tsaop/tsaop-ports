@@ -4,7 +4,7 @@
 # Depends on: glib libmpdclient boost ruby
 
 name=ncmpc
-version=0.35
+version=0.36
 release=1
 source=(https://www.musicpd.org/download/$name/0/$name-$version.tar.xz)
 
