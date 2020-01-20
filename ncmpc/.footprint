@@ -1,9 +1,0 @@
-drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/ncmpc
-drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/ncmpc/
-drwxr-xr-x	root/root	usr/lib/ncmpc/lyrics/
--rwxr-xr-x	root/root	usr/lib/ncmpc/lyrics/10-hd.sh
--rwxr-xr-x	root/root	usr/lib/ncmpc/lyrics/20-lyricwiki.rb
-drwxr-xr-x	root/root	usr/share/
