@@ -4,8 +4,8 @@
 # Depends on: desktop-file-utils ffmpeg gtk libcdio-paranoia mpg123 pulseaudio qt5 taglib udisks
 
 name=cantata
-version=2.3.3
-release=2
+version=2.4.0
+release=1
 source=(https://github.com/CDrummond/$name/archive/v${version}/$name-$version.tar.gz)
 
 build() {
@@ -19,6 +19,8 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/cantata/translations
 
 	find $PKG \( -name "AUTHORS" -o -name "LICENSE" \) -delete
 }
