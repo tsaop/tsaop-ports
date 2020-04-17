@@ -10,22 +10,19 @@ source=(https://storage.googleapis.com/git-repo-downloads/repo
 	c++14-fixes.patch)
 
 build() {
+
+	unset CFLAGS CXXFLAGS
 	chmod +x repo
 	mkdir $name; cd $name
 	$SRC/repo init -u https://github.com/GPUOpen-Drivers/AMDVLK.git -b master
 	$SRC/repo sync
 
-	cd $SRC/$name/drivers/pal
-	patch -Np1 -i $SRC/c++14-fixes.patch
+#	cd $SRC/$name/drivers/pal
+#	patch -Np1 -i $SRC/c++14-fixes.patch
 
 	cd $SRC/$name/drivers/xgl
 	cmake -H. -Bbuilds/Release64 \
 	       	-DCMAKE_BUILD_TYPE=Release \
-	       	-DCMAKE_MODULE_PATH=$PWD/../pal/cmake/Modules \
-		-DXGL_PAL_PATH:PATH=$PWD/../pal \
-		-DCMAKE_C_FLAGS="-DLINUX -D__x86_64__ -D__AMD64__" \
-		-DCMAKE_CXX_FLAGS="-DLINUX -D__x86_64__ -D__AMD64__" \
-		-DXGL_LLVM_SRC_PATH=$PWD/../llvm
 
 	cd builds/Release64
 	make
