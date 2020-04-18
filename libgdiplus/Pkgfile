@@ -4,7 +4,7 @@
 # Depends on: cairo giflib libexif libtiff
 
 name=libgdiplus
-version=6.0.4
+version=6.0.5
 release=1
 source=(https://github.com/mono/$name/archive/${version}/$name-$version.tar.gz)
 
