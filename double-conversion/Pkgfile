@@ -1,0 +1,24 @@
+# Description: Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles
+# URL: https://github.com/google/double-conversion
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on:  cmake
+
+name=double-conversion
+version=3.1.5
+release=1
+source=(https://github.com/google/$name/archive/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	mkdir build; cd build
+
+	cmake -DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
+		-DBUILD_SHARED_LIBS=ON \
+		-DBUILD_TESTING=OFF \
+		..
+
+	make
+	make DESTDIR=$PKG install
+}
