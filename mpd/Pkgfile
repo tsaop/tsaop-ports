@@ -4,7 +4,7 @@
 # Depends on: audiofile boost faad2 ffmpeg fluidsynth icu libao libgcrypt libid3tag libmad libmikmod libmms libmodplug libsamplerate mpg123 openal opus pulseaudio wavpack
 
 name=mpd
-version=0.21.23
+version=0.21.24
 release=1
 source=(https://www.musicpd.org/download/mpd/${version%.*}/$name-$version.tar.xz mpd)
 
