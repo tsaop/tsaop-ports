@@ -1,7 +1,7 @@
 # Description: AMD Open Source Driver For Vulkan
 # URL: https://github.com/GPUOpen-Drivers/AMDVLK
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: cmake git gnupg xorg-libxrandr xorg-libxshmfence
+# Depends on: cmake git gnupg xorg-libxrandr xorg-libxshmfence wayland
 
 name=amdvlk
 version=9999
@@ -23,6 +23,7 @@ build() {
 	cd $SRC/$name/drivers/xgl
 	cmake -H. -Bbuilds/Release64 \
 	       	-DCMAKE_BUILD_TYPE=Release \
+		-DBUILD_WAYLAND_SUPPORT=OFF 
 
 	cd builds/Release64
 	make
