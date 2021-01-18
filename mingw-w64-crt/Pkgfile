@@ -1,0 +1,34 @@
+# Description: mingw-w64 CRT
+# URL: http://mingw-w64.org
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: binutils-mingw-w64 mingw-w64-headers gcc-mingw-w64
+
+name=mingw-w64-crt
+version=8.0.0
+release=1
+source=(https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/mingw-w64-v${version}.tar.bz2)
+
+build() {
+	local targets="x86_64-w64-mingw32 i686-w64-mingw32"
+
+	unset CFLAGS CXXFLAGS
+
+	for _target in $targets; do
+		mkdir "$SRC/$_target-build"
+		cd "$SRC/$_target-build"
+
+		if [ ${_target} == "x86_64-w64-mingw32" ]; then
+			_crtargs="--disable-lib32 --enable-lib64"
+		elif [ ${_target} == "i686-w64-mingw32" ]; then
+			_crtargs="--disable-lib64 --enable-lib32"
+		fi
+
+		../mingw-w64-v${version}/$name/configure \
+			--prefix=/usr/${_target} --host=${_target} \
+			--enable-wildcard \
+			${_crtargs}
+
+		make
+		make DESTDIR=$PKG install
+	done
+}
