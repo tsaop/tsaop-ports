@@ -1,0 +1,35 @@
+# Description: binutils for use with mingw-w64
+# URL: https://www.gnu.org/software/binutils/ 
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glibc
+
+name=binutils-mingw-w64
+version=2.35.1
+release=1
+source=(https://ftp.gnu.org/gnu/${name/-mingw-w64/}/${name/-mingw-w64/}-$version.tar.xz)
+
+build() {
+	cd ${name/-mingw-w64/}-$version
+
+	# do not install libiberty
+	sed -i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in
+	# hack! - libiberty configure tests for header files using "$CPP $CPPFLAGS"
+	sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" libiberty/configure
+
+	local targets="x86_64-w64-mingw32 i686-w64-mingw32"
+
+
+	for _target in $targets; do
+		mkdir "$SRC/$_target-build"
+		cd "$SRC/$_target-build"
+		../${name/-mingw-w64/}-$version/configure --prefix=/usr \
+		--target="$_target" \
+		--enable-lto --enable-plugins \
+		--enable-deterministic-archives \
+		--disable-multilib --disable-nls \
+		--disable-werror
+
+		make
+		make DESTDIR=$PKG install
+	done
+}
