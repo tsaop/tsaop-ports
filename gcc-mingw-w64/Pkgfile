@@ -1,0 +1,52 @@
+# Description: gcc for use with mingw-w64
+# URL: https://gcc.gnu.org/ 
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: binutils-mingw-w64 mingw-w64-headers
+
+name=gcc-mingw-w64
+version=10.2.0
+_islver=0.21
+release=1
+source=(https://ftp.gnu.org/gnu/${name/-mingw-w64/}/${name/-mingw-w64/}-$version.tar.xz
+	http://isl.gforge.inria.fr/isl-${_islver}.tar.xz
+	0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch)
+
+build() {
+	cd ${name/-mingw-w64/}-$version
+	ln -svf $SRC/isl-${_islver} isl
+
+	patch -Np1 -i $SRC/0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch
+
+	local targets="x86_64-w64-mingw32 i686-w64-mingw32"
+
+	for _target in $targets; do
+		mkdir "$SRC/$_target-build"
+		cd "$SRC/$_target-build"
+
+		 ../${name/-mingw-w64/}-$version/configure --prefix=/usr \
+		--libexecdir=/usr/lib \
+                --target=${_target} \
+                --enable-languages=c,lto,c++ \
+                --enable-shared --enable-static \
+                --enable-threads=posix --enable-fully-dynamic-string \
+                --enable-libstdcxx-time=yes --enable-libstdcxx-filesystem-ts=yes \
+                --with-system-zlib --enable-cloog-backend=isl \
+                --enable-lto --enable-libgomp \
+                --disable-multilib --enable-checking=release \
+                --disable-sjlj-exceptions --with-dwarf2
+
+		# 1st pass
+		# uncomment if you haven't built the crt and winpthreads library, and comment the 2nd pass block
+		# make all-gcc
+		# make DESTDIR=$PKG install-gcc
+
+		# 2nd pass, uncomment after installing mingw-w64-crt and mingw-w64-winpthreads
+		# Of course, comment the 1st pass block instead
+		make
+		make DESTDIR=$PKG install
+
+	done
+
+	rm -rf $PKG/usr/share
+	rm -rf $PKG/usr/lib/libcc1.*
+}
