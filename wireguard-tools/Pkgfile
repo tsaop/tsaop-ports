@@ -1,0 +1,21 @@
+# Description:
+# URL: https://www.wireguard.com
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glibc
+# Optional: bash-completion
+
+name=wireguard-tools
+version=1.0.20200827
+release=1
+source=(https://git.zx2c4.com/$name/snapshot/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version/src
+
+	if [ ! -e /usr/share/pkgconfig/bash-completion.pc ]; then
+		export WITH_BASHCOMPLETION=no
+	fi
+
+	make PREFIX=/usr
+	make DESTDIR=$PKG install
+}
