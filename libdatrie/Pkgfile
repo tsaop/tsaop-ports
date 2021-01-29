@@ -4,7 +4,7 @@
 # Depends on: glibc
 
 name=libdatrie
-version=0.2.12
+version=0.2.13
 release=1
 source=(https://github.com/tlwg/$name/releases/download/v${version}/$name-$version.tar.xz)
 
