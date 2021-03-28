@@ -1,0 +1,22 @@
+# Description: X Clients under Wayland
+# URL: https://wayland.freedesktop.org/xserver.html
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libepoxy xorg-font-util xorg-libpixman xorg-libxfont2 xorg-libxkbfile
+
+name=xwayland
+version=21.1.0
+release=1
+source=(https://xorg.freedesktop.org/archive/individual/xserver/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	meson build \
+		-Dprefix=/usr
+
+	meson compile -C build
+
+	install -Dm755 -t $PKG/usr/bin build/hw/xwayland/Xwayland
+	install -Dm644 -t $PKG/usr/share/man/man1 build/hw/xwayland/Xwayland.1
+	install -Dm644 -t $PKG/usr/lib/pkgconfig build/hw/xwayland/xwayland.pc
+}
