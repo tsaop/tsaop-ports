@@ -6,20 +6,88 @@
 name=mingw-w64-winpthreads
 version=8.0.0
 release=1
-source=(https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/mingw-w64-v${version}.tar.bz2)
+_gccver=10.3.0
+_binutilsver=2.35.2
+
+source=(https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/mingw-w64-v${version}.tar.bz2
+        https://ftp.gnu.org/gnu/gcc/gcc-${_gccver}/gcc-${_gccver}.tar.xz
+        https://ftp.gnu.org/gnu/binutils/binutils-${_binutilsver}.tar.xz)
 
 build() {
-	local targets="x86_64-w64-mingw32 i686-w64-mingw32"
+        local targets="x86_64-w64-mingw32 i686-w64-mingw32"
+        unset CFLAGS CXXFLAGS
 
-	unset CFLAGS CXXFLAGS
+        if [ ! -f "/usr/bin/*-w64-mingw32-gcc" ]; then
+                export SYSROOT="--with-sysroot=$SRC/tempgcc"
+                export PATH="$SRC/tempgcc/bin:$PATH"
+                for _target in $targets; do
+
+                        # binutils
+                        mkdir $SRC/binutils-build-${_target}
+                        cd $SRC/binutils-build-${_target}
+                        ../binutils-${_binutilsver}/configure \
+                                --prefix=$SRC/tempgcc \
+                                --target=${_target} \
+                                --disable-multilib \
+                                --disable-nls \
+                                --disable-werror $SYSROOT
+                        make
+                        make install
+
+                        # headers
+                        mkdir "$SRC/mingw-headers-${_target}"
+                        cd $SRC/mingw-headers-${_target}
+                        ../mingw-w64-v${version}/mingw-w64-headers/configure \
+                                --prefix=$SRC/tempgcc/${_target} \
+                                --host=${_target} \
+                                --enable-sdk=all \
+                                --enable-secure-api
+                        make install
+
+                        if [ ${_target} = "x86_64-w64-mingw32" ]; then
+                                ln -sv $SRC/tempgcc/${_target} $SRC/tempgcc/mingw
+                                ln -sv $SRC/tempgcc/${_target}/lib $SRC/tempgcc/${_target}/lib64 
+                        fi
+
+                        # build gcc stub
+                        mkdir "$SRC/gcc-build-${_target}"
+                        cd $SRC/gcc-build-${_target}
+                        ../gcc-${_gccver}/configure --prefix=$SRC/tempgcc \
+                                --target=${_target} \
+                                --disable-multilib \
+                                --disable-nls $SYSROOT
+                        make all-gcc
+                        make install-gcc
+
+			# build mingw-crt
+			mkdir "$SRC/mingw-crt-build-${_target}"
+			cd $SRC/mingw-crt-build-${_target}
+	                if [ ${_target} == "x86_64-w64-mingw32" ]; then
+	                        _crtargs="--disable-lib32 --enable-lib64"
+        	        elif [ ${_target} == "i686-w64-mingw32" ]; then
+                	        _crtargs="--disable-lib64 --enable-lib32"
+	                fi
+
+	                ../mingw-w64-v${version}/mingw-w64-crt/configure \
+        	                --prefix=$SRC/tempgcc/${_target} \
+                	        --host=${_target} \
+                        	--enable-wildcard \
+	                        ${_crtargs} $SYSROOT
+			make
+			make install
+
+                done
+        fi
 
 	for _target in $targets; do
 		mkdir "$SRC/$_target-build"
 		cd "$SRC/$_target-build"
 
-		../mingw-w64-v${version}/mingw-w64-libraries/winpthreads/configure \
-			--prefix=/usr/${_target} --host=${_target} \
-			--enable-static --enable-shared
+		CFLAGS="-I/usr/${_target}/include" ../mingw-w64-v${version}/mingw-w64-libraries/winpthreads/configure \
+			--prefix=/usr/${_target} \
+			--host=${_target} \
+			--enable-static \
+			--enable-shared $SYSROOT
 
 		make DESTDIR=$PKG install
 	done
