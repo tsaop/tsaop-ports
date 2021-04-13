@@ -4,7 +4,7 @@
 # Depends on: libepoxy xorg-font-util xorg-libpixman xorg-libxfont2 xorg-libxkbfile
 
 name=xwayland
-version=21.1.0
+version=21.1.1
 release=1
 source=(https://xorg.freedesktop.org/archive/individual/xserver/$name-$version.tar.xz)
 
