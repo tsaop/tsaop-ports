@@ -1,0 +1,25 @@
+# Description: A date and time library based on the C++11/14/17 <chrono> header
+# URL: https://github.com/HowardHinnant/date
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake
+
+name=chrono-date
+version=3.0.0
+release=1
+source=(https://github.com/HowardHinnant/${name/chrono-/}/archive/v${version}/${name/chrono-/}-$version.tar.gz
+	538-output-date-pc-for-pkg-config.patch)
+
+build() {
+	cd ${name/chrono-/}-$version
+	patch -Np1 -i $SRC/538-output-date-pc-for-pkg-config.patch
+
+	cmake -Bbuild \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
+		-DBUILD_TZ_LIB=ON \
+		-DUSE_SYSTEM_TZ_DB=ON \
+		-DBUILD_SHARED_LIBS=ON
+
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}

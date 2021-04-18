@@ -1,0 +1,16 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/date/
+-rw-r--r--	root/root	usr/include/date/date.h
+-rw-r--r--	root/root	usr/include/date/tz.h
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/cmake/
+drwxr-xr-x	root/root	usr/lib/cmake/date/
+-rw-r--r--	root/root	usr/lib/cmake/date/dateConfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/date/dateConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/date/dateTargets-noconfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/date/dateTargets.cmake
+lrwxrwxrwx	root/root	usr/lib/libdate-tz.so -> libdate-tz.so.2.4.1
+-rwxr-xr-x	root/root	usr/lib/libdate-tz.so.2.4.1
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/date.pc
