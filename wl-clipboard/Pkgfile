@@ -1,0 +1,24 @@
+# Description: Command-line copy/paste utilities for Wayland 
+# URL: https://github.com/bugaevc/wl-clipboard
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: wayland-protocols
+
+name=wl-clipboard
+version=2.0.0
+release=1
+source=(https://github.com/bugaevc/$name/archive/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	mkdir build; cd build
+
+	[ ! -e "/usr/bin/zsh" ] && PKGMK_WL_CLIPBOARD+="-Dzshcompletiondir=no"
+	meson -Dprefix=/usr \
+		${PKGMK_WL_CLIPBOARD} \
+		..
+
+	DESTDIR=$PKG ninja install
+
+	[ ! -e "/usr/share/pkgconfig/bash-completion.pc" ] &&
+		rm -rf $PKG/usr/share/bash-completion
+}
