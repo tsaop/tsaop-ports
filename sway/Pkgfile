@@ -1,0 +1,22 @@
+# Description: i3-compatible Wayland compositor
+# URL: https://swaywm.org
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: gdk-pixbuf json-c pango scdoc wlroots
+
+name=sway
+version=1.6
+release=1
+source=(https://github.com/swaywm/$name/releases/download/$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	[ ! -e "/usr/bin/zsh" ] && PKGMK_SWAY+="-Dzsh-completions=false"
+	[ ! -e "/usr/share/pkgconfig/bash-completion.pc" ] && PKGMK_SWAY+=" -Dbash-completions=false"
+
+	meson build -Dprefix=/usr \
+		-Dfish-completions=false \
+		${PKGMK_SWAY}
+
+	DESTDIR=$PKG ninja -C build install
+}
