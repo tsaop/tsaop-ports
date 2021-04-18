@@ -1,0 +1,16 @@
+# Description: Grab images from a Wayland compositor
+# URL: https://github.com/emersion/grim
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cairo libjpeg-turbo scdoc wayland-protocols
+
+name=grim
+version=1.3.1
+release=1
+source=(https://github.com/emersion/$name/releases/download/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	meson build -Dprefix=/usr
+	DESTDIR=$PKG ninja -C build install
+}
