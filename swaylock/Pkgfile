@@ -1,7 +1,7 @@
 # Description:  Screen locker for Wayland
 # URL: https://github.com/swaywm/swaylock
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: cairo gdk-pixbuf libxkbcommon pam scdoc wayland-protocols
+# Depends on: cairo gdk-pixbuf libxkbcommon linux-pam scdoc wayland-protocols
 
 name=swaylock
 version=1.5
