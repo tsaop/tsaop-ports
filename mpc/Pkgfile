@@ -1,0 +1,22 @@
+# Descriptin: A minimalist command line interface to MPD
+# URL: https://www.musicpd.org/clients/mpc
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: meson ninja libmpdclient
+
+name=mpc
+version=0.33
+release=1
+source=(https://www.musicpd.org/download/$name/0/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	meson setup build \
+		-Dprefix=/usr \
+		-Ddocumentation=disabled
+
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+
+	rm -rf $PKG/usr/share/doc
+}
