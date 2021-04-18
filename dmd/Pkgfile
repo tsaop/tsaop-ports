@@ -1,11 +1,11 @@
 # Description: D is a general-purpose programming language with static typing, systems-level access, and C-like syntax
 # URL: https://dlang.org/
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: git make
+# Depends on:  git make
 
 name=dmd
-version=2.092.0
-_binversion=2.088.0
+version=2.096.0
+_binversion=2.096.0
 release=1
 source=(http://downloads.dlang.org/releases/2.x/${_binversion}/${name}.${_binversion}.linux.tar.xz
 	dmd.conf)

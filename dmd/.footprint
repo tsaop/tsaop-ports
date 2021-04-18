@@ -32,6 +32,18 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/array/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/array/utils.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/atomic.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/attributes.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/backtrace/
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/dwarf.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/elf.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/handler.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/libunwind.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/macho.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/unwind.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/container/
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/container/array.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/container/common.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/container/hashtab.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/container/treap.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/convert.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/dassert.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/destruction.d
@@ -40,11 +52,24 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/elf/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/elf/io.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/entrypoint.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/execinfo.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/gc/
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/bits.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/gc/impl/
+drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/gc/impl/conservative/
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/impl/conservative/gc.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/gc/impl/manual/
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/impl/manual/gc.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/gc/impl/proto/
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/impl/proto/gc.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/os.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/pooltable.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/proxy.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/hash.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/lifetime.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/moving.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/parseoptions.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/postblit.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/qsort.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/spinlock.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/string.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/switch_.d
@@ -52,6 +77,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/elf/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/utf.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/util/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/util/array.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/util/math.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/vararg/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/vararg/aarch64.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/vararg/sysv_x64.d
@@ -108,6 +134,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/bionic/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/bionic/err.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/bionic/fcntl.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/bionic/stdlib.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/bionic/string.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/bionic/unistd.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/darwin/
@@ -115,22 +142,28 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/darwin/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/dlfcn.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/err.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/execinfo.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/fcntl.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/ifaddrs.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/darwin/mach/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/dyld.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/getsect.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/kern_return.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/loader.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/nlist.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/port.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/semaphore.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/stab.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/mach/thread_act.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/darwin/netinet/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/netinet/in_.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/pthread.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/stdlib.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/string.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/darwin/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/sys/cdefs.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/sys/event.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/sys/mman.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/darwin/sys/sysctl.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/dragonflybsd/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/dlfcn.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/err.d
@@ -138,6 +171,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/dragonflybsd/
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/dragonflybsd/netinet/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/netinet/in_.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/pthread_np.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/stdlib.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/string.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/dragonflybsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/sys/_bitset.d
@@ -151,14 +185,17 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/dragonflybsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/sys/link_elf.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/sys/mman.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/sys/socket.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/sys/sysctl.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/dragonflybsd/time.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/freebsd/
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/config.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/dlfcn.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/err.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/execinfo.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/freebsd/netinet/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/netinet/in_.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/pthread_np.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/stdlib.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/string.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/freebsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/sys/_bitset.d
@@ -172,6 +209,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/freebsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/sys/link_elf.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/sys/mman.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/sys/mount.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/sys/sysctl.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/time.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/unistd.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/linux/
@@ -212,6 +250,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/netbsd/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/dlfcn.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/err.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/execinfo.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/stdlib.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/string.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/netbsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/sys/elf.d
@@ -222,10 +261,12 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/netbsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/sys/featuretest.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/sys/link_elf.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/sys/mman.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/sys/sysctl.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/netbsd/time.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/openbsd/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/dlfcn.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/err.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/stdlib.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/string.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/openbsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/sys/cdefs.d
@@ -235,6 +276,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/openbsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/sys/elf_common.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/sys/link_elf.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/sys/mman.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/sys/sysctl.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/time.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/aio.d
@@ -264,6 +306,8 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/netinet/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/setjmp.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/signal.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/spawn.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/stdc/
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/stdc/time.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/stdio.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/stdlib.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/string.d
@@ -301,6 +345,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/solaris/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/solaris/execinfo.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/solaris/libelf.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/solaris/link.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/solaris/stdlib.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/solaris/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/solaris/sys/elf.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/solaris/sys/elf_386.d
@@ -448,6 +493,8 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/windows/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/sspi.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/stacktrace.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/stat.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/windows/stdc/
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/stdc/time.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/subauth.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/threadaux.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/tlhelp32.d
@@ -481,9 +528,13 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/windows/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/wtsapi32.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/wtypes.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/thread/
+-rw-r--r--	root/root	usr/include/d/dmd/core/thread/context.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/thread/fiber.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/thread/osthread.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/thread/package.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/thread/threadbase.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/thread/threadgroup.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/thread/types.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/time.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/vararg.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/volatile.d
@@ -621,7 +672,12 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/experimental/logger/
 -rw-r--r--	root/root	usr/include/d/dmd/std/experimental/note.md
 -rw-r--r--	root/root	usr/include/d/dmd/std/experimental/typecons.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/file.d
--rw-r--r--	root/root	usr/include/d/dmd/std/format.d
+drwxr-xr-x	root/root	usr/include/d/dmd/std/format/
+drwxr-xr-x	root/root	usr/include/d/dmd/std/format/internal/
+-rw-r--r--	root/root	usr/include/d/dmd/std/format/internal/floats.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/format/internal/read.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/format/internal/write.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/format/package.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/functional.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/getopt.d
 drwxr-xr-x	root/root	usr/include/d/dmd/std/internal/
@@ -687,7 +743,8 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/regex/internal/
 -rw-r--r--	root/root	usr/include/d/dmd/std/traits.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/typecons.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/typetuple.d
--rw-r--r--	root/root	usr/include/d/dmd/std/uni.d
+drwxr-xr-x	root/root	usr/include/d/dmd/std/uni/
+-rw-r--r--	root/root	usr/include/d/dmd/std/uni/package.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/uri.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/utf.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/uuid.d
@@ -702,6 +759,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/windows/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdruntime.a
 -rw-r--r--	root/root	usr/lib/libphobos2.a
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.92.0
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.92 -> libphobos2.so.0.92.0
--rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.92.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.96.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.96 -> libphobos2.so.0.96.0
+-rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.96.0
