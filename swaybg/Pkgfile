@@ -1,0 +1,16 @@
+# Description:  Wallpaper tool for Wayland compositors 
+# URL: https://github.com/swaywm/swaybg
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: sway
+
+name=swaybg
+version=1.0
+release=1
+source=(https://github.com/swaywm/$name/archive/$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	meson build -Dprefix=/usr
+	DESTDIR=$PKG ninja -C build install
+}
