@@ -1,0 +1,56 @@
+# Description: D is a general-purpose programming language with static typing, systems-level access, and C-like syntax
+# URL: https://dlang.org/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: git make
+
+name=dmd
+version=2.092.0
+_binversion=2.088.0
+release=1
+source=(http://downloads.dlang.org/releases/2.x/${_binversion}/${name}.${_binversion}.linux.tar.xz
+	dmd.conf)
+
+unpack_source() {
+	install -d $SRC/$name-binary
+	bsdtar -xf $PKGMK_SOURCE_DIR/${name}.${_binversion}.linux.tar.xz \
+		-C $SRC/$name-binary
+
+	cp $PKGMK_ROOT/dmd.conf $SRC
+}
+
+build() {
+	git clone https://github.com/dlang/$name -b v${version}
+	git clone https://github.com/dlang/druntime -b v${version}
+	git clone https://github.com/dlang/phobos -b v${version}
+
+	cd $name
+	export PATH=$SRC/$name-binary/dmd2/linux/bin64:$PATH
+
+	make -f posix.mak
+
+	cd $SRC/druntime
+	make -f posix.mak
+	
+	cd $SRC/phobos
+	make -f posix.mak
+
+	install -dm755 $PKG/usr/bin \
+		$PKG/usr/lib \
+		$PKG/etc \
+		$PKG/usr/include/d/dmd
+
+	# configuration file
+	install -Dm644 $SRC/dmd.conf $PKG/etc/dmd.conf
+
+	# dmd executable
+	install -Dm755 $SRC/$name/generated/linux/release/64/dmd $PKG/usr/bin/dmd
+
+	# libphobos2
+	cp -P $SRC/phobos/generated/linux/release/64/libphobos2.{a,so*} $PKG/usr/lib
+
+	# druntime
+	cp $SRC/druntime/generated/linux/release/64/libdruntime.a $PKG/usr/lib
+	cp -r {$SRC/phobos/std,$SRC/phobos/etc,$SRC/druntime/import/*} $PKG/usr/include/d/dmd
+
+	find $PKG -name "*.o" -delete
+}
