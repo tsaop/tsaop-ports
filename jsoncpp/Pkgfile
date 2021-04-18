@@ -1,0 +1,18 @@
+# Description: A C++ library for interacting with JSON
+# URL: https://github.com/open-source-parsers/jsoncpp
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: meson ninja
+
+name=jsoncpp
+version=1.9.4
+release=1
+source=(https://github.com/open-source-parsers/$name/archive/$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	meson build -Dprefix=/usr \
+		-Dtests=false
+
+	DESTDIR=$PKG ninja -C build install
+}
