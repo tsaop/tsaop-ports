@@ -1,0 +1,23 @@
+# Description: Turns your Realtek RTL2832 based DVB dongle into a SDR receiver
+# URL: https://osmocom.org/projects/rtl-sdr
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake
+
+name=rtl-sdr
+version=0.6.0
+release=1
+source=(https://github.com/osmocom/$name/archive/$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	mkdir build; cd build
+
+	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DINSTALL_UDEV_RULES=ON \
+		-DDETACH_KERNEL_DRIVER=ON \
+		..
+
+	make
+	make DESTDIR=$PKG install
+}
