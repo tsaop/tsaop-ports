@@ -1,0 +1,19 @@
+# Description: Ancillary tools for the D programming language compiler
+# URL: https://github.com/dlang/tools
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: dmd
+
+name=dtools
+version=2.092.0
+release=1
+source=(https://github.com/dlang/tools/archive/v${version}/${name:1}-$version.tar.gz)
+
+build() {
+	cd ${name:1}-$version
+	make -f posix.mak DMD=/usr/bin/dmd
+
+	install -dm755 $PKG/usr/bin
+	for i in rdmd ddemangle catdoc detab tolf dget dustmite; do
+		install -m755 generated/linux/64/$i $PKG/usr/bin/$i
+	done
+}

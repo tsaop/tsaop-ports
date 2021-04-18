@@ -1,0 +1,9 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/catdoc
+-rwxr-xr-x	root/root	usr/bin/ddemangle
+-rwxr-xr-x	root/root	usr/bin/detab
+-rwxr-xr-x	root/root	usr/bin/dget
+-rwxr-xr-x	root/root	usr/bin/dustmite
+-rwxr-xr-x	root/root	usr/bin/rdmd
+-rwxr-xr-x	root/root	usr/bin/tolf
