@@ -1,0 +1,21 @@
+# Description: VirGL virtual OpenGL renderer
+# URL: https://virgil3d.github.io/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: git meson ninja libepoxy
+
+name=virglrenderer
+version=9999
+release=1
+source=()
+
+build() {
+	git clone --depth=1 git://anongit.freedesktop.org/$name
+	cd $name
+	mkdir build; cd build
+
+	meson -Dprefix=/usr \
+	..
+
+	ninja
+	DESTDIR=$PKG ninja install
+}
