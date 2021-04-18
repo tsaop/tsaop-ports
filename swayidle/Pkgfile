@@ -1,0 +1,22 @@
+# Description: Idle management daemon for Wayland
+# URL: https://github.com/swaywm/swayidle
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: sway
+
+name=swayidle
+version=1.6
+release=1
+source=(https://github.com/swaywm/$name/releases/download/$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	[ ! -e /usr/bin/zsh ] && PKGMK_SWAYIDLE+="-Dzsh-completions=false "
+	[ ! -e /usr/share/pkgconfig/bash-completion.pc ] && PKGMK_SWAYIDLE+="-Dbash-completions=false "
+
+	meson build -Dprefix=/usr \
+		-Dfish-completions=false \
+		${PKGMK_SWAYIDLE}
+
+	DESTDIR=$PKG ninja -C build install
+}
