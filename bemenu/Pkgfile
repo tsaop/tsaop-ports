@@ -1,0 +1,16 @@
+# Description:  Dynamic menu library and client program inspired by dmenu
+# URL: https://github.com/Cloudef/bemenu
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libxkbcommon pango wayland-protocols xorg-libxinerama
+
+name=bemenu
+version=0.5.0
+release=1
+source=(https://github.com/Cloudef/$name/archive/$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	make PREFIX=/usr
+	make install PREFIX=/usr DESTDIR=$PKG
+}
