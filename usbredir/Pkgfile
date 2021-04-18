@@ -1,0 +1,20 @@
+# Description: usbredir is a protocol for redirection USB traffic from a single USB device, # to a different (virtual) machine then the one to which the USB device is attached. 
+# URL: https://gitlab.freedesktop.org/spice/usbredir
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glib
+
+name=usbredir
+version=0.9.0
+release=1
+source=(https://www.spice-space.org/download/usbredir/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./autogen.sh
+	./configure --prefix=/usr \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+}
