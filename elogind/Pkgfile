@@ -1,0 +1,27 @@
+# Description: The systemd project's "logind", extracted to a standalone package
+# URL: https://github.com/elogind/elogind
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: dbus linux-pam polkit
+
+name=elogind
+version=246.10
+release=1
+source=(https://github.com/$name/$name/archive/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	
+	meson -Dprefix=/usr \
+		-Dsysconfdir=/etc \
+		-Dlocalstatedir=/var \
+		-Dzshcompletiondir=no \
+		-Ddefault-hierarchy=legacy \
+		-Dcgroup-controller=elogind \
+		build
+
+	ninja -C build
+	DESTDIR=$PKG ninja -C build install
+
+	# remove junk
+	rm -rf $PKG/usr/share/{doc,locale}
+}
