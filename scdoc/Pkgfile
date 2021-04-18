@@ -1,0 +1,14 @@
+# Description: Small man page generator
+# URL: https://git.sr.ht/~sircmpwn/scdoc
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on:  glibc
+
+name=scdoc
+version=1.11.1
+release=1
+source=(https://git.sr.ht/~sircmpwn/$name/archive/$version.tar.gz)
+
+build() {
+	cd $name-$version
+	make PREFIX=/usr DESTDIR=$PKG install
+}
