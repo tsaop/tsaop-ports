@@ -11,7 +11,7 @@ source=(https://www.spice-space.org/download/usbredir/$name-$version.tar.xz)
 build() {
 	cd $name-$version
 
-	./autogen.sh
+	autoreconf -vfi
 	./configure --prefix=/usr \
 		--disable-static
 
