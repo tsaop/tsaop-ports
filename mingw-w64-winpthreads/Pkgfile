@@ -17,7 +17,7 @@ build() {
         local targets="x86_64-w64-mingw32 i686-w64-mingw32"
         unset CFLAGS CXXFLAGS
 
-        if [ ! -f "/usr/bin/*-w64-mingw32-gcc" ]; then
+        if [ ! -f /usr/bin/*-w64-mingw32-gcc ]; then
                 export SYSROOT="--with-sysroot=$SRC/tempgcc"
                 export PATH="$SRC/tempgcc/bin:$PATH"
                 for _target in $targets; do
