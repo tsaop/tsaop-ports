@@ -1,13 +1,13 @@
 # Description: mingw-w64 CRT
 # URL: http://mingw-w64.org
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: binutils-mingw-w64 mingw-w64-headers
+# Depends on: mingw-w64-headers
 
 name=mingw-w64-crt
-version=8.0.0
+version=8.0.2
 release=1
 _gccver=10.3.0
-_binutilsver=2.35.2
+_binutilsver=2.36.1
 
 source=(https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/mingw-w64-v${version}.tar.bz2
 	https://ftp.gnu.org/gnu/gcc/gcc-${_gccver}/gcc-${_gccver}.tar.xz
