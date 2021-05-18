@@ -1,7 +1,7 @@
 # Description: gcc for use with mingw-w64
 # URL: https://gcc.gnu.org/ 
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: binutils-mingw-w64 mingw-w64-headers mingw-w64-crt mingw-w64-winpthreads
+# Depends on: mingw-w64-winpthreads
 
 name=gcc-mingw-w64
 version=10.3.0
