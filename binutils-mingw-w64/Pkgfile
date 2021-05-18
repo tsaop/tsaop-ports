@@ -4,7 +4,7 @@
 # Depends on: glibc
 
 name=binutils-mingw-w64
-version=2.35.2
+version=2.36.1
 release=1
 source=(https://ftp.gnu.org/gnu/${name/-mingw-w64/}/${name/-mingw-w64/}-$version.tar.xz)
 
@@ -31,4 +31,6 @@ build() {
 		make
 		make DESTDIR=$PKG install
 	done
+
+	rm -rf  $PKG/usr/lib/bfd-plugins
 }
