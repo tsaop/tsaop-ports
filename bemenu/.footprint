@@ -9,9 +9,9 @@ drwxr-xr-x	root/root	usr/lib/bemenu/
 -rwxr-xr-x	root/root	usr/lib/bemenu/bemenu-renderer-curses.so
 -rwxr-xr-x	root/root	usr/lib/bemenu/bemenu-renderer-wayland.so
 -rwxr-xr-x	root/root	usr/lib/bemenu/bemenu-renderer-x11.so
-lrwxrwxrwx	root/root	usr/lib/libbemenu.so -> libbemenu.so.0.6.0
-lrwxrwxrwx	root/root	usr/lib/libbemenu.so.0 -> libbemenu.so.0.6.0
--rwxr-xr-x	root/root	usr/lib/libbemenu.so.0.6.0
+lrwxrwxrwx	root/root	usr/lib/libbemenu.so -> libbemenu.so.0.6.1
+lrwxrwxrwx	root/root	usr/lib/libbemenu.so.0 -> libbemenu.so.0.6.1
+-rwxr-xr-x	root/root	usr/lib/libbemenu.so.0.6.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/bemenu.pc
 drwxr-xr-x	root/root	usr/share/
