@@ -4,17 +4,13 @@
 # Depends on: glib
 
 name=usbredir
-version=0.9.0
+version=0.10.0
 release=1
 source=(https://www.spice-space.org/download/usbredir/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
-	autoreconf -vfi
-	./configure --prefix=/usr \
-		--disable-static
-
-	make
-	make DESTDIR=$PKG install
+	meson build -Dprefix=/usr
+	DESTDIR=$PKG meson install -C build
 }
