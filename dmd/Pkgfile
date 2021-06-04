@@ -4,8 +4,8 @@
 # Depends on: git make
 
 name=dmd
-version=2.096.1
-_binversion=2.096.1
+version=2.097.0
+_binversion=2.097.0
 release=1
 source=(http://downloads.dlang.org/releases/2.x/${_binversion}/${name}.${_binversion}.linux.tar.xz
 	dmd.conf)

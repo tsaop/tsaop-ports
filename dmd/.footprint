@@ -10,6 +10,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/
 -rw-r--r--	root/root	usr/include/d/dmd/core/atomic.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/attribute.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/bitop.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/builtins.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/checkedint.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/cpuid.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/demangle.d
@@ -494,6 +495,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/windows/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/stacktrace.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/stat.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/windows/stdc/
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/stdc/malloc.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/stdc/time.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/subauth.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/threadaux.d
@@ -678,6 +680,9 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/format/internal/
 -rw-r--r--	root/root	usr/include/d/dmd/std/format/internal/read.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/format/internal/write.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/format/package.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/format/read.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/format/spec.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/format/write.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/functional.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/getopt.d
 drwxr-xr-x	root/root	usr/include/d/dmd/std/internal/
@@ -705,7 +710,17 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/internal/test/
 drwxr-xr-x	root/root	usr/include/d/dmd/std/internal/windows/
 -rw-r--r--	root/root	usr/include/d/dmd/std/internal/windows/advapi32.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/json.d
--rw-r--r--	root/root	usr/include/d/dmd/std/math.d
+drwxr-xr-x	root/root	usr/include/d/dmd/std/math/
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/algebraic.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/constants.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/exponential.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/hardware.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/operations.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/package.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/remainder.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/rounding.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/traits.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/math/trigonometry.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/mathspecial.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/meta.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/mmfile.d
@@ -739,6 +754,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/regex/internal/
 -rw-r--r--	root/root	usr/include/d/dmd/std/stdint.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/stdio.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/string.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/sumtype.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/system.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/traits.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/typecons.d
@@ -759,6 +775,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/windows/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdruntime.a
 -rw-r--r--	root/root	usr/lib/libphobos2.a
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.96.1
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.96 -> libphobos2.so.0.96.1
--rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.96.1
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.97.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.97 -> libphobos2.so.0.97.0
+-rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.97.0
