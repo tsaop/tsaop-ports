@@ -3,16 +3,16 @@
 # Maintainer: Tsaop, leeroy at cock dot li
 # Depends on: mingw-w64-winpthreads
 
-name=gcc-mingw-w64
+name=mingw-w64-gcc
 version=10.3.0
-_islver=0.23
+_islver=0.24
 release=1
-source=(https://ftp.gnu.org/gnu/${name/-mingw-w64/}/${name/-mingw-w64/}-$version.tar.xz
+source=(https://ftp.gnu.org/gnu/${name/mingw-w64-/}/${name/mingw-w64-/}-$version.tar.xz
 	http://isl.gforge.inria.fr/isl-${_islver}.tar.xz
 	0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch)
 
 build() {
-	cd ${name/-mingw-w64/}-$version
+	cd ${name/mingw-w64-/}-$version
 	ln -svf $SRC/isl-${_islver} isl
 
 	patch -Np1 -i $SRC/0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch
@@ -23,7 +23,7 @@ build() {
 		mkdir "$SRC/$_target-build"
 		cd "$SRC/$_target-build"
 
-		 ../${name/-mingw-w64/}-$version/configure --prefix=/usr \
+		 ../${name/mingw-w64-/}-$version/configure --prefix=/usr \
 		--libexecdir=/usr/lib \
                 --target=${_target} \
                 --enable-languages=c,lto,c++ \
@@ -35,13 +35,6 @@ build() {
                 --disable-multilib --enable-checking=release \
                 --disable-sjlj-exceptions --with-dwarf2
 
-		# 1st pass
-		# uncomment if you haven't built the crt and winpthreads library, and comment the 2nd pass block
-		# make all-gcc
-		# make DESTDIR=$PKG install-gcc
-
-		# 2nd pass, uncomment after installing mingw-w64-crt and mingw-w64-winpthreads
-		# Of course, comment the 1st pass block instead
 		make
 		make DESTDIR=$PKG install
 
