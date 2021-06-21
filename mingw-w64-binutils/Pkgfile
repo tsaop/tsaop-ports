@@ -3,13 +3,13 @@
 # Maintainer: Tsaop, leeroy at cock dot li
 # Depends on: glibc
 
-name=binutils-mingw-w64
+name=mingw-w64-binutils
 version=2.36.1
 release=1
-source=(https://ftp.gnu.org/gnu/${name/-mingw-w64/}/${name/-mingw-w64/}-$version.tar.xz)
+source=(https://ftp.gnu.org/gnu/${name/mingw-w64-/}/${name/mingw-w64-/}-$version.tar.xz)
 
 build() {
-	cd ${name/-mingw-w64/}-$version
+	cd ${name/mingw-w64-/}-$version
 
 	# do not install libiberty
 	sed -i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in
@@ -21,7 +21,7 @@ build() {
 	for _target in $targets; do
 		mkdir "$SRC/$_target-build"
 		cd "$SRC/$_target-build"
-		../${name/-mingw-w64/}-$version/configure --prefix=/usr \
+		../${name/mingw-w64-/}-$version/configure --prefix=/usr \
 		--target="$_target" \
 		--enable-lto --enable-plugins \
 		--enable-deterministic-archives \
