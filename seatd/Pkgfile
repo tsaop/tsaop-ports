@@ -1,0 +1,20 @@
+# Description: Seat management daemon and library
+# URL: https://git.sr.ht/~kennylevinsen/seatd
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: elogind scdoc
+
+name=seatd
+version=0.5.0
+release=1
+source=(https://git.sr.ht/~kennylevinsen/$name/archive/$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	meson setup build -Dprefix=/usr	\
+		-Dlogind=enabled \
+		-Dexamples=disabled \
+		-Dman-pages=enabled
+
+	DESTDIR=$PKG ninja -C build install
+}
