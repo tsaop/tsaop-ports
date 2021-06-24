@@ -1,10 +1,10 @@
 # Description: i3-compatible Wayland compositor
 # URL: https://swaywm.org
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: gdk-pixbuf json-c pango scdoc wlroots
+# Depends on: gdk-pixbuf json-c pango wlroots
 
 name=sway
-version=1.6
+version=1.6.1
 release=1
 source=(https://github.com/swaywm/$name/releases/download/$version/$name-$version.tar.gz)
 
