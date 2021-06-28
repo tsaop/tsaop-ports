@@ -1,7 +1,7 @@
 # Description: mingw-w64 headers
 # URL: http://mingw-w64.org
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: binutils-mingw-w64
+# Depends on: mingw-w64-binutils
 
 name=mingw-w64-headers
 version=8.0.2
