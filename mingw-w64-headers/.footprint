@@ -75,6 +75,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/KHR/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/aqadmtyp.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/asptlb.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/assert.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/asyncinfo.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/atacct.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/atalkwsh.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/atsmedia.h
@@ -228,9 +229,11 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/KHR/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d11_2.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d11_3.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d11_4.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d11on12.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d11sdklayers.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d11shader.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d12.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d12sdklayers.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d12shader.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d8.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/d3d8caps.h
@@ -383,8 +386,11 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/ddk/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/dinputd.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/dir.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/direct.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/directmanipulation.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/directxmath.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/dirent.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/diskguid.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/dismapi.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/dispatch.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/dispatcherqueue.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/dispdib.h
@@ -478,6 +484,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/ddk/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/eh.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/ehstorapi.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/elscore.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/elssrvc.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/emostore.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/emptyvc.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/endpointvolume.h
@@ -490,6 +497,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/ddk/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/evcode.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/evcoll.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/eventsys.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/eventtoken.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/evntcons.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/evntprov.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/evntrace.h
@@ -769,6 +777,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/gdiplus/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/mlang.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/mmc.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/mmcobj.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/mmddk.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/mmdeviceapi.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/mmreg.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/mmstream.h
@@ -1059,6 +1068,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/psdk_inc/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/reconcil.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/regbag.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/regstr.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/relogger.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/rend.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/resapi.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/restartmanager.h
@@ -1087,6 +1097,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/psdk_inc/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/rtm.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/rtmv2.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/rtutils.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/rtworkq.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/sal.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/sapi.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/sapi51.h
@@ -1172,7 +1183,9 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/sec_api/sys/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/snmp.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/softpub.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/spatialaudioclient.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/spatialaudiometadata.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/specstrings.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/spellcheck.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/sperror.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/sphelper.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/sporder.h
@@ -1382,13 +1395,16 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/sys/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windef.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windns.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windot11.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.foundation.collections.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.foundation.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.media.speechsynthesis.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.security.cryptography.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.storage.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.storage.streams.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.system.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windows.system.threading.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/windowscontracts.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windowsx.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/windowsx.h16
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/winefs.h
@@ -1443,7 +1459,12 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/sys/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmiatlprov.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmistr.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmiutils.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmp.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmpids.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmprealestate.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmpservices.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmsbuffer.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmsdk.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wmsdkidl.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wnnc.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wow64apiset.h
@@ -1497,6 +1518,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/include/wrl/wrappers/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wtsapi32.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wtypes.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/wtypesbase.h
+-rw-r--r--	root/root	usr/i686-w64-mingw32/include/wuapi.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/xa.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/xapo.h
 -rw-r--r--	root/root	usr/i686-w64-mingw32/include/xapofx.h
@@ -1599,6 +1621,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/KHR/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/aqadmtyp.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/asptlb.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/assert.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/asyncinfo.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/atacct.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/atalkwsh.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/atsmedia.h
@@ -1752,9 +1775,11 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/KHR/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d11_2.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d11_3.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d11_4.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d11on12.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d11sdklayers.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d11shader.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d12.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d12sdklayers.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d12shader.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d8.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/d3d8caps.h
@@ -1907,8 +1932,11 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/ddk/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/dinputd.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/dir.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/direct.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/directmanipulation.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/directxmath.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/dirent.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/diskguid.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/dismapi.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/dispatch.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/dispatcherqueue.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/dispdib.h
@@ -2002,6 +2030,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/ddk/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/eh.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/ehstorapi.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/elscore.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/elssrvc.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/emostore.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/emptyvc.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/endpointvolume.h
@@ -2014,6 +2043,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/ddk/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/evcode.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/evcoll.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/eventsys.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/eventtoken.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/evntcons.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/evntprov.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/evntrace.h
@@ -2293,6 +2323,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/gdiplus/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/mlang.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/mmc.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/mmcobj.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/mmddk.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/mmdeviceapi.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/mmreg.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/mmstream.h
@@ -2583,6 +2614,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/psdk_inc/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/reconcil.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/regbag.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/regstr.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/relogger.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/rend.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/resapi.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/restartmanager.h
@@ -2611,6 +2643,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/psdk_inc/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/rtm.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/rtmv2.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/rtutils.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/rtworkq.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/sal.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/sapi.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/sapi51.h
@@ -2696,7 +2729,9 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/sec_api/sys/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/snmp.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/softpub.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/spatialaudioclient.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/spatialaudiometadata.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/specstrings.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/spellcheck.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/sperror.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/sphelper.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/sporder.h
@@ -2906,13 +2941,16 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/sys/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windef.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windns.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windot11.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.foundation.collections.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.foundation.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.media.speechsynthesis.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.security.cryptography.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.storage.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.storage.streams.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.system.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windows.system.threading.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windowscontracts.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windowsx.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/windowsx.h16
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/winefs.h
@@ -2967,7 +3005,12 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/sys/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmiatlprov.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmistr.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmiutils.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmp.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmpids.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmprealestate.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmpservices.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmsbuffer.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmsdk.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wmsdkidl.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wnnc.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wow64apiset.h
@@ -3021,6 +3064,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/include/wrl/wrappers/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wtsapi32.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wtypes.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wtypesbase.h
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/wuapi.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/xa.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/xapo.h
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/include/xapofx.h
