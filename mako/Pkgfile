@@ -4,7 +4,7 @@
 # Depends on: elogind gdk-pixbuf jq pango scdoc wayland-protocols
 
 name=mako
-version=1.5
+version=1.6
 release=1
 source=(https://github.com/emersion/$name/releases/download/v${version}/$name-$version.tar.gz)
 
