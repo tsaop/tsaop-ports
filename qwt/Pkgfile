@@ -4,7 +4,7 @@
 # Depends on: qt5
 
 name=qwt
-version=6.1.6
+version=6.2.0
 release=1
 source=(https://sourceforge.net/projects/$name/files/$name/$version/$name-$version.tar.bz2)
 
@@ -16,7 +16,7 @@ build() {
 	  	-e '/^QWT_INSTALL_HEADERS/ s|include|&/qwt|' \
 		-e '/^QWT_INSTALL_PLUGINS/ s|plugins/designer|lib/qt5/&|' \
 		-e '/^QWT_INSTALL_FEATURES/ s|features|lib/qt5/mkspecs/&|' \
-	  	-i qwtconfig.pri
+		-i qwtconfig.pri
 
 	qmake-qt5 PREFIX=/usr
 
