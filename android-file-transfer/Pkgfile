@@ -1,0 +1,21 @@
+# Description: reliable MTP client with minimalistic UI similar to Android File Transfer for Mac
+# URL: https://whoozle.github.io/android-file-transfer-linux/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake qt5 fuse taglib
+
+name=android-file-transfer
+version=4.2
+release=1
+source=(https://github.com/whoozle/$name-linux/archive/v${version}/$name-linux-$version.tar.gz)
+
+build() {
+	cd $name-linux-$version
+
+	cmake -Bbuild \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DBUILD_SHARED_LIB=ON
+
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
