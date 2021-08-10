@@ -120,6 +120,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/stdcpp/
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdcpp/string_view.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdcpp/type_traits.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdcpp/typeinfo.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/stdcpp/utility.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdcpp/vector.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdcpp/xutility.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sync/
@@ -775,6 +776,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/windows/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdruntime.a
 -rw-r--r--	root/root	usr/lib/libphobos2.a
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.97.0
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.97 -> libphobos2.so.0.97.0
--rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.97.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.97.2
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.97 -> libphobos2.so.0.97.2
+-rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.97.2
