@@ -4,7 +4,7 @@
 # Depends on: glib
 
 name=usbredir
-version=0.10.0
+version=0.11.0
 release=1
 source=(https://www.spice-space.org/download/usbredir/$name-$version.tar.xz)
 
