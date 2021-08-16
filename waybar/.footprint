@@ -6,7 +6,18 @@ drwxr-xr-x	root/root	etc/xdg/waybar/
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/waybar
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/gtk-layer-shell/
+-rw-r--r--	root/root	usr/include/gtk-layer-shell/gtk-layer-shell.h
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/girepository-1.0/
+-rw-r--r--	root/root	usr/lib/girepository-1.0/GtkLayerShell-0.1.typelib
+-rw-r--r--	root/root	usr/lib/libgtk-layer-shell.a
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/gtk-layer-shell-0.pc
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/gir-1.0/
+-rw-r--r--	root/root	usr/share/gir-1.0/GtkLayerShell-0.1.gir
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-backlight.5.gz
@@ -17,6 +28,7 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-custom.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-disk.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-idle-inhibitor.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-keyboard-state.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-memory.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-mpd.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-network.5.gz

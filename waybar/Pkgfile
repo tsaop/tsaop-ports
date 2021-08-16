@@ -4,17 +4,12 @@
 # Depends on: chrono-date gtkmm3 jsoncpp libmpdclient libnl pulseaudio scdoc spdlog
 
 name=waybar
-version=0.9.7
-release=2
-source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz
-	waybar-0.9.7-fmt-8.0.0.patch)
+version=0.9.8
+release=1
+source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz)
 
 build() {
 	cd ${name^}-$version
-
-	# fix build with fmt >= 8.0.0
-	patch -Np1 -i $SRC/waybar-0.9.7-fmt-8.0.0.patch
-
 	meson build -Dprefix=/usr
 
 	ninja -C build
