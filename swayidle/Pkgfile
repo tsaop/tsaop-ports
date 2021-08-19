@@ -1,10 +1,10 @@
 # Description: Idle management daemon for Wayland
 # URL: https://github.com/swaywm/swayidle
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: sway
+# Depends on: scdoc sway
 
 name=swayidle
-version=1.6
+version=1.7
 release=1
 source=(https://github.com/swaywm/$name/releases/download/$version/$name-$version.tar.gz)
 
