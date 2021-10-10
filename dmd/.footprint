@@ -223,7 +223,9 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/linux/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/errno.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/execinfo.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/fcntl.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/fs.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/ifaddrs.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/io_uring.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/link.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/linux/netinet/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/netinet/in_.d
@@ -316,7 +318,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/stdc/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/strings.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/filio.d
--rwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/sys/ioccom.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/ioccom.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/ioctl.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/ipc.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/mman.d
@@ -328,7 +330,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/stat.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/statvfs.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/time.d
--rwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/sys/ttycom.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/ttycom.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/types.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/uio.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/sys/un.d
@@ -776,6 +778,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/windows/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdruntime.a
 -rw-r--r--	root/root	usr/lib/libphobos2.a
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.97.2
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.97 -> libphobos2.so.0.97.2
--rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.97.2
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.98.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.98 -> libphobos2.so.0.98.0
+-rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.98.0
