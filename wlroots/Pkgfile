@@ -1,7 +1,7 @@
 # Description: A modular Wayland compositor library
 # URL: https://github.com/swaywm/wlroots
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: libinput libxkbcommon seatd xorg-xcb-util-renderutil xorg-xcb-util-wm xwayland
+# Depends on: libinput libxkbcommon seatd xorg-xcb-util-renderutil xorg-xcb-util-wm xorg-xwayland
 
 name=wlroots
 version=0.14.1
