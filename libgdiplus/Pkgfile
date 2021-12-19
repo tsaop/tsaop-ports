@@ -4,14 +4,13 @@
 # Depends on: cairo giflib libexif libtiff
 
 name=libgdiplus
-version=6.0.5
+version=6.1
 release=1
-source=(https://github.com/mono/$name/archive/${version}/$name-$version.tar.gz)
+source=(https://download.mono-project.com/sources/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
-	./autogen.sh
 	./configure --prefix=/usr \
 		--disable-static
 
