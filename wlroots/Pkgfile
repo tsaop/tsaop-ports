@@ -1,12 +1,12 @@
 # Description: A modular Wayland compositor library
 # URL: https://github.com/swaywm/wlroots
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: libinput libxkbcommon seatd xorg-xcb-util-renderutil xorg-xcb-util-wm xorg-xwayland
+# Depends on: libinput libxkbcommon seatd xorg-xcb-util-renderutil xorg-xcb-util-wm xorg-xwayland xorg-xcb-util-error vulkan-loader
 
 name=wlroots
-version=0.14.1
+version=0.15.0
 release=1
-source=(https://github.com/swaywm/$name/releases/download/$version/$name-$version.tar.gz)
+source=(https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/$version/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
