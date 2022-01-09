@@ -4,7 +4,7 @@
 # Depends on: gdk-pixbuf json-c pango wlroots scdoc
 
 name=sway
-version=1.6.1
+version=1.7-rc2
 release=1
 source=(https://github.com/swaywm/$name/releases/download/$version/$name-$version.tar.gz)
 
