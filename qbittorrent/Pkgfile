@@ -4,7 +4,7 @@
 # Depends on: libtorrent-rasterbar qt5
 
 name=qbittorrent
-version=4.3.9
+version=4.4.0
 release=1
 source=(https://sourceforge.net/projects/$name/files/$name/$name-$version/$name-$version.tar.xz)
 
