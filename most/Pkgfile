@@ -1,0 +1,19 @@
+# Description: Powerful paging program for Unix, VMS, MSDOS, and win32 systems
+# URL: https://www.jedsoft.org/most/index.html
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: slang
+
+name=most
+version=5.1.0
+release=1
+source=(https://www.jedsoft.org/releases/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/doc
+}
