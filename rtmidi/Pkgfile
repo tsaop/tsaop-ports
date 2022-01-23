@@ -1,0 +1,21 @@
+# Description: A set of C++ classes that provide a common API for realtime MIDI input/output across Linux (ALSA & JACK), Macintosh OS X (CoreMIDI) and Windows (Multimedia)
+# URL: https://github.com/thestk/rtmidi
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake ninja alsa-lib
+
+name=rtmidi
+version=5.0.0
+release=1
+source=(https://github.com/thestk/$name/archive/$version/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	cmake -Bbuild -GNinja \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib
+
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}

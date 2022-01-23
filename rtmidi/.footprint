@@ -1,0 +1,17 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/rtmidi/
+-rw-r--r--	root/root	usr/include/rtmidi/RtMidi.h
+-rw-r--r--	root/root	usr/include/rtmidi/rtmidi_c.h
+drwxr-xr-x	root/root	usr/lib/
+lrwxrwxrwx	root/root	usr/lib/librtmidi.so -> librtmidi.so.6
+lrwxrwxrwx	root/root	usr/lib/librtmidi.so.6 -> librtmidi.so.6.0.0
+-rwxr-xr-x	root/root	usr/lib/librtmidi.so.6.0.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/rtmidi.pc
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/rtmidi/
+-rw-r--r--	root/root	usr/share/rtmidi/RtMidi-config-version.cmake
+-rw-r--r--	root/root	usr/share/rtmidi/RtMidi-config.cmake
+-rw-r--r--	root/root	usr/share/rtmidi/RtMidiTargets-release.cmake
+-rw-r--r--	root/root	usr/share/rtmidi/RtMidiTargets.cmake
