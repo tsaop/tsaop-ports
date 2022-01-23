@@ -1,0 +1,18 @@
+# Description: the open source Windows Imaging (WIM) library
+# URL: https://wimlib.net/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libxml2 ntfs-3g
+
+name=wimlib
+version=1.13.5
+release=1
+source=(https://wimlib.net/downloads/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+}
