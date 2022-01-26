@@ -217,6 +217,7 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/cocoaPen.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/cu2quPen.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/filterPen.cpython-39.pyc
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/freetypePen.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/hashPointPen.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/momentsPen.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/perimeterPen.cpython-39.pyc
@@ -241,6 +242,7 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fontTools/pens/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/cocoaPen.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/cu2quPen.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/filterPen.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/freetypePen.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/hashPointPen.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/momentsPen.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/pens/perimeterPen.py
@@ -593,13 +595,13 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fontTools/voltLib/__pycache
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/voltLib/error.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/voltLib/lexer.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/voltLib/parser.py
-drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fonttools-4.28.5-py3.9.egg-info/
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.28.5-py3.9.egg-info/PKG-INFO
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.28.5-py3.9.egg-info/SOURCES.txt
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.28.5-py3.9.egg-info/dependency_links.txt
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.28.5-py3.9.egg-info/entry_points.txt
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.28.5-py3.9.egg-info/requires.txt
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.28.5-py3.9.egg-info/top_level.txt
+drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fonttools-4.29.0-py3.9.egg-info/
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.29.0-py3.9.egg-info/PKG-INFO
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.29.0-py3.9.egg-info/SOURCES.txt
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.29.0-py3.9.egg-info/dependency_links.txt
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.29.0-py3.9.egg-info/entry_points.txt
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.29.0-py3.9.egg-info/requires.txt
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.29.0-py3.9.egg-info/top_level.txt
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
