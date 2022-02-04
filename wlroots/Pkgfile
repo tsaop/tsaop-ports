@@ -4,7 +4,7 @@
 # Depends on: libinput libxkbcommon seatd xorg-xcb-util-renderutil xorg-xcb-util-wm xorg-xwayland xorg-xcb-util-error vulkan-loader
 
 name=wlroots
-version=0.15.0
+version=0.15.1
 release=1
 source=(https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/$version/$name-$version.tar.bz2)
 
