@@ -1,7 +1,7 @@
 # Description: Grab images from a Wayland compositor
 # URL: https://github.com/emersion/grim
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: libjpeg-turbo libpng scdoc wayland-protocols xorg-libpixman
+# Depends on: libjpeg-turbo libpng scdoc wayland wayland-protocols xorg-libpixman
 
 name=grim
 version=1.4.0
