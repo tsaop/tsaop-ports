@@ -4,7 +4,7 @@
 # Depends on: chrono-date gtkmm3 jsoncpp libmpdclient libnl libxkbcommon pulseaudio scdoc spdlog
 
 name=waybar
-version=0.9.9
+version=0.9.10
 release=1
 source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz)
 
