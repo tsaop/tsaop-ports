@@ -1,0 +1,23 @@
+# Description: A wayland based logout menu
+# URL: https://github.com/ArtsyMacaw/wlogout
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: gtk-layer-shell scdoc swaylock
+
+name=wlogout
+version=1.1.1
+release=1
+source=(https://github.com/ArtsyMacaw/wlogout/archive/${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	prt-get isinst zsh || PKGMK_WLOGOUT+=" -Dzsh-completions=false"
+	prt-get isinst fish || PKGMK_WLOGOUT+=" -Dfish-completions=false"
+
+	meson setup build \
+		-Dprefix=/usr \
+		$PKGMK_WLOGOUT
+
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+}
