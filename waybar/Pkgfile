@@ -1,11 +1,11 @@
 # Description: Highly customizable Wayland bar for Sway and Wlroots based compositors
 # URL: https://github.com/Alexays/Waybar
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: chrono-date gtkmm3 jsoncpp libmpdclient libnl libxkbcommon pulseaudio scdoc spdlog
+# Depends on: chrono-date gtk-layer-shell gtkmm3 jsoncpp libmpdclient libnl libxkbcommon pulseaudio scdoc spdlog
 
 name=waybar
 version=0.9.12
-release=1
+release=2
 source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz)
 
 build() {
