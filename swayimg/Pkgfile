@@ -1,0 +1,16 @@
+# Description: Image viewer for Sway/Wayland
+# URL: https://github.com/artemsen/swayimg
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: json-c libexif librsvg libwebp libxkbcommon wayland-protocols
+
+name=swayimg
+version=1.7
+release=1
+source=(https://github.com/artemsen/$name/archive/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	meson setup build -Dprefix=/usr
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+}

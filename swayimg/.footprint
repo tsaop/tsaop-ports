@@ -1,0 +1,16 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/swayimg
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/applications/
+-rw-r--r--	root/root	usr/share/applications/swayimg.desktop
+drwxr-xr-x	root/root	usr/share/icons/
+drwxr-xr-x	root/root	usr/share/icons/hicolor/
+drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/
+drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/apps/
+-rw-r--r--	root/root	usr/share/icons/hicolor/64x64/apps/swayimg.png
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/swayimg.1.gz
+drwxr-xr-x	root/root	usr/share/man/man5/
+-rw-r--r--	root/root	usr/share/man/man5/swayimgrc.5.gz
