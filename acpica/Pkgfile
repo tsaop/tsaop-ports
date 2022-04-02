@@ -4,7 +4,7 @@
 # Depends on: bison flex
 
 name=acpica
-version=20211217
+version=20220331
 release=1
 source=(https://acpica.org/sites/$name/files/$name-unix2-$version.tar.gz)
 
