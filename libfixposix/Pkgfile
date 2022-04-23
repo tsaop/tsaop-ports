@@ -1,0 +1,18 @@
+# Description:
+# URL:
+# Maintainer: 
+# Depends on:
+
+name=libfixposix
+version=0.4.3
+release=1
+source=(https://github.com/sionescu/libfixposix/archive/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	autoreconf -vfi
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
