@@ -16,3 +16,4 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 drwxr-xr-x	root/root	usr/share/vulkan/
 drwxr-xr-x	root/root	usr/share/vulkan/implicit_layer.d/
 -rw-r--r--	root/root	usr/share/vulkan/implicit_layer.d/MangoHud.json
+-rw-r--r--	root/root	usr/share/vulkan/implicit_layer.d/libMangoApp.json
