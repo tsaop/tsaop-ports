@@ -1,10 +1,10 @@
 # Description: binutils for use with mingw-w64
 # URL: https://www.gnu.org/software/binutils/ 
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: glibc
+# Depends on: glibc texinfo
 
 name=mingw-w64-binutils
-version=2.36.1
+version=2.38
 release=1
 source=(https://ftp.gnu.org/gnu/${name/mingw-w64-/}/${name/mingw-w64-/}-$version.tar.xz)
 
