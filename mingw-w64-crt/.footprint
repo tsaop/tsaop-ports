@@ -42,6 +42,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libavifil32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libavrt.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbcrypt.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbits.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbluetoothapis.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbootvid.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbrowcli.a
@@ -175,6 +176,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libevr.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libfaultrep.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libfeclient.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libfontsub.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libfwpuclnt.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libgdi32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libgdiplus.a
@@ -251,11 +253,16 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr120.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr120_app.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr120d.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr70.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr71.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr80.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr90.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr90d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt-os.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt10.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt20.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt40.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvfw32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmswsock.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libncrypt.a
@@ -273,6 +280,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libntdsapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libntmsapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libntoskrnl.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libntquery.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libodbc32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libodbccp32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libole32.a
@@ -300,6 +308,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libpropsys.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libpsapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libquartz.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libquery.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libqutil.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libqwave.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/librapi.a
@@ -379,6 +388,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwdstptc.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwdsupgcompl.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwdsutil.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwebauthn.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwebsocket.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwecapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwer.a
@@ -511,6 +521,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbatmeter.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbatt.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbcrypt.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbits.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbluetoothapis.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbootvid.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbrowser.a
@@ -546,6 +557,9 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomctl32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomdlg32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcompstui.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomputecore.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomputenetwork.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomputestorage.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomres.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomsetup.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomsnap.a
@@ -555,7 +569,6 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libconsole.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcorpol.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcredui.a
--rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcrtdll.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcrypt32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcryptdlg.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcryptdll.a
@@ -1007,6 +1020,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libntoc.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libntoskrnl.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libntprint.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libntquery.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libntshrui.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libntvdm64.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libnwprovau.a
@@ -1260,6 +1274,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwdstptc.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwdsupgcompl.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwdsutil.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebauthn.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebcheck.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebclnt.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebhits.a
