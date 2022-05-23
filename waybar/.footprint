@@ -24,6 +24,7 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-network.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-pulseaudio.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-river-tags.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-river-window.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-sndio.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-states.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-sway-language.5.gz
@@ -32,6 +33,7 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-sway-workspaces.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-temperature.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-tray.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-upower.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-wlr-taskbar.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-wlr-workspaces.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar.5.gz
