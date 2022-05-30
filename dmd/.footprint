@@ -6,6 +6,7 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/d/
 drwxr-xr-x	root/root	usr/include/d/dmd/
+-rw-r--r--	root/root	usr/include/d/dmd/__builtins.di
 drwxr-xr-x	root/root	usr/include/d/dmd/core/
 -rw-r--r--	root/root	usr/include/d/dmd/core/atomic.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/attribute.d
@@ -19,6 +20,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/gc/
 -rw-r--r--	root/root	usr/include/d/dmd/core/gc/config.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/gc/gcinterface.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/gc/registry.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/int128.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/abort.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/array/
@@ -230,6 +232,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/linux/
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/linux/netinet/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/netinet/in_.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/netinet/tcp.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/perf_event.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/sched.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/stdio.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/string.d
@@ -270,6 +273,9 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/netbsd/sys/
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/openbsd/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/dlfcn.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/err.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/execinfo.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/pthread_np.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/pwd.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/stdlib.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/string.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/openbsd/sys/
@@ -282,6 +288,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/openbsd/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/sys/mman.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/sys/sysctl.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/time.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/openbsd/unistd.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/posix/aio.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/posix/arpa/
@@ -557,13 +564,13 @@ drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/ChangeLog
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/README
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/adler32.c
--rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/algorithm.txt
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/compress.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/crc32.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/crc32.h
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/deflate.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/deflate.h
--rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/example.c
+drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/doc/
+-rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/doc/algorithm.txt
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/gzclose.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/gzguts.h
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/gzlib.c
@@ -578,8 +585,11 @@ drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/inftrees.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/inftrees.h
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/linux.mak
--rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/minigzip.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/osx.mak
+drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/test/
+-rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/test/example.c
+-rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/test/infcover.c
+-rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/test/minigzip.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/trees.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/trees.h
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/uncompr.c
@@ -592,6 +602,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/zutil.h
 drwxr-xr-x	root/root	usr/include/d/dmd/etc/linux/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/linux/memoryerror.d
+-rw-r--r--	root/root	usr/include/d/dmd/importc.h
 -rw-r--r--	root/root	usr/include/d/dmd/object.d
 drwxr-xr-x	root/root	usr/include/d/dmd/std/
 drwxr-xr-x	root/root	usr/include/d/dmd/std/algorithm/
@@ -608,6 +619,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/algorithm/
 -rw-r--r--	root/root	usr/include/d/dmd/std/base64.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/bigint.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/bitmanip.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/checkedint.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/compiler.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/complex.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/concurrency.d
@@ -688,6 +700,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/format/internal/
 -rw-r--r--	root/root	usr/include/d/dmd/std/format/write.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/functional.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/getopt.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/int128.d
 drwxr-xr-x	root/root	usr/include/d/dmd/std/internal/
 -rw-r--r--	root/root	usr/include/d/dmd/std/internal/attributes.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/internal/cstring.d
@@ -778,6 +791,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/windows/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdruntime.a
 -rw-r--r--	root/root	usr/lib/libphobos2.a
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.98.0
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.98 -> libphobos2.so.0.98.0
--rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.98.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.100.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.100 -> libphobos2.so.0.100.0
+-rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.100.0
