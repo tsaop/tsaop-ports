@@ -1,0 +1,19 @@
+# Description: utility for controlling network drivers and hardware
+# URL: https://mirrors.edge.kernel.org/pub/software/network/ethtool/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libmnl
+
+name=ethtool
+version=5.17
+release=1
+source=(https://mirrors.edge.kernel.org/pub/software/network/$name/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+
+	prt-get isinst bash-completion || rm -rf $PKG/usr/share/bash-completion
+}
