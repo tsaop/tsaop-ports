@@ -39,6 +39,8 @@ drwxr-xr-x	root/root	usr/lib/sbcl/contrib/
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-rotate-byte.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-rt.asd
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-rt.fasl
+-rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-simd.asd
+-rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-simd.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-simple-streams.asd
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-simple-streams.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-sprof.asd
