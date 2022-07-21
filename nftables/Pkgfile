@@ -1,0 +1,22 @@
+# Description: nft command line tool 
+# URL: https://netfilter.org/projects/nftables/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libedit libnftnl
+
+name=nftables
+version=1.0.4
+release=1
+source=(https://netfilter.org/projects/$name/files/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	
+	./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--disable-debug
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/doc
+}
