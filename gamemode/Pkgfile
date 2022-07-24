@@ -1,0 +1,21 @@
+# Description: Optimise Linux system performance on demand
+# URL: https://github.com/FeralInteractive/gamemode
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: elogind inih polkit
+
+name=gamemode
+version=1.7
+release=1
+source=(https://github.com/FeralInteractive/$name/releases/download/$version/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	meson build -Dprefix=/usr \
+		-Dlibexecdir=/usr/lib \
+		-Dwith-sd-bus-provider=elogind \
+		-Dwith-examples=false
+
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+}

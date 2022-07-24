@@ -1,0 +1,35 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/gamemoded
+-rwxr-xr-x	root/root	usr/bin/gamemodelist
+-rwxr-xr-x	root/root	usr/bin/gamemoderun
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/gamemode_client.h
+drwxr-xr-x	root/root	usr/lib/
+-rwxr-xr-x	root/root	usr/lib/cpugovctl
+-rwxr-xr-x	root/root	usr/lib/gpuclockctl
+lrwxrwxrwx	root/root	usr/lib/libgamemode.so -> libgamemode.so.0
+lrwxrwxrwx	root/root	usr/lib/libgamemode.so.0 -> libgamemode.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libgamemode.so.0.0.0
+-rw-r--r--	root/root	usr/lib/libgamemodeauto.a
+lrwxrwxrwx	root/root	usr/lib/libgamemodeauto.so -> libgamemodeauto.so.0
+lrwxrwxrwx	root/root	usr/lib/libgamemodeauto.so.0 -> libgamemodeauto.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libgamemodeauto.so.0.0.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/gamemode.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/libgamemodeauto.pc
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/dbus-1/
+drwxr-xr-x	root/root	usr/share/dbus-1/services/
+-rw-r--r--	root/root	usr/share/dbus-1/services/com.feralinteractive.GameMode.service
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/gamemodelist.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/gamemoderun.1.gz
+drwxr-xr-x	root/root	usr/share/man/man8/
+-rw-r--r--	root/root	usr/share/man/man8/gamemoded.8.gz
+drwxr-xr-x	root/root	usr/share/metainfo/
+-rw-r--r--	root/root	usr/share/metainfo/io.github.feralinteractive.gamemode.metainfo.xml
+drwxr-xr-x	root/root	usr/share/polkit-1/
+drwxr-xr-x	root/root	usr/share/polkit-1/actions/
+-rw-r--r--	root/root	usr/share/polkit-1/actions/com.feralinteractive.GameMode.policy
