@@ -4,7 +4,7 @@
 # Depends on: mingw-w64-winpthreads
 
 name=mingw-w64-gcc
-version=10.3.0
+version=10.4.0
 _islver=0.24
 release=1
 source=(https://ftp.gnu.org/gnu/${name/mingw-w64-/}/${name/mingw-w64-/}-$version.tar.xz
