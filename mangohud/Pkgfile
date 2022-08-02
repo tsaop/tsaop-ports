@@ -4,7 +4,7 @@
 # Depends on: dbus glslang python3-mako vulkan-loader-32
 
 name=mangohud
-version=0.6.7
+version=0.6.8
 release=1
 source=(https://github.com/flightlessmango/MangoHud/archive/v${version}/$name-$version.tar.gz)
 
