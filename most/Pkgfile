@@ -4,7 +4,7 @@
 # Depends on: slang
 
 name=most
-version=5.1.0
+version=5.2.0
 release=1
 source=(https://www.jedsoft.org/releases/$name/$name-$version.tar.gz)
 
