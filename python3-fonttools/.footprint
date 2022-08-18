@@ -316,6 +316,7 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/__pycache__
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/__pycache__/standardGlyphOrder.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/__pycache__/ttCollection.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/__pycache__/ttFont.cpython-39.pyc
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/__pycache__/ttGlyphSet.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/__pycache__/woff2.cpython-39.pyc
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/macUtils.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/removeOverlaps.py
@@ -520,6 +521,7 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/tables/__py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/tables/ttProgram.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/ttCollection.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/ttFont.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/ttGlyphSet.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttLib/woff2.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/ttx.py
 drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fontTools/ufoLib/
@@ -613,13 +615,13 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fontTools/voltLib/__pycache
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/voltLib/error.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/voltLib/lexer.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/fontTools/voltLib/parser.py
-drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fonttools-4.35.0-py3.9.egg-info/
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.35.0-py3.9.egg-info/PKG-INFO
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.35.0-py3.9.egg-info/SOURCES.txt
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.35.0-py3.9.egg-info/dependency_links.txt
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.35.0-py3.9.egg-info/entry_points.txt
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.35.0-py3.9.egg-info/requires.txt
--rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.35.0-py3.9.egg-info/top_level.txt
+drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/fonttools-4.36.0-py3.9.egg-info/
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.36.0-py3.9.egg-info/PKG-INFO
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.36.0-py3.9.egg-info/SOURCES.txt
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.36.0-py3.9.egg-info/dependency_links.txt
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.36.0-py3.9.egg-info/entry_points.txt
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.36.0-py3.9.egg-info/requires.txt
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/fonttools-4.36.0-py3.9.egg-info/top_level.txt
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
