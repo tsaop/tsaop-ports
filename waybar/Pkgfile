@@ -5,11 +5,16 @@
 
 name=waybar
 version=0.9.13
-release=2
-source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz)
+release=3
+source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz
+	1617.patch)
 
 build() {
 	cd ${name^}-$version
+
+	# fix build with fmt 9.0.0
+	patch -Np1 -i $SRC/1617.patch
+
 	meson build -Dprefix=/usr
 
 	ninja -C build
