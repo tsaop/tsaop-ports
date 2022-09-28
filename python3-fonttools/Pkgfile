@@ -5,7 +5,7 @@
 
 name=python3-fonttools
 version=4.37.2
-release=1
+release=2
 source=(https://github.com/${name/python3-/}/${name/python3-/}/archive/${version}/${name/python3-/}-$version.tar.gz)
 
 build() {
