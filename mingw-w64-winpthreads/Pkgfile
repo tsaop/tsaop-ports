@@ -5,9 +5,9 @@
 
 name=mingw-w64-winpthreads
 version=10.0.0
-release=1
-_gccver=10.4.0
-_binutilsver=2.38
+release=2
+_gccver=12.2.0
+_binutilsver=2.39
 
 source=(https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/mingw-w64-v${version}.tar.bz2
         https://ftp.gnu.org/gnu/gcc/gcc-${_gccver}/gcc-${_gccver}.tar.xz

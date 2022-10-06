@@ -4,7 +4,7 @@
 # Depends on: glibc texinfo
 
 name=mingw-w64-binutils
-version=2.38
+version=2.39
 release=1
 source=(https://ftp.gnu.org/gnu/${name/mingw-w64-/}/${name/mingw-w64-/}-$version.tar.xz)
 
