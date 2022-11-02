@@ -4,8 +4,8 @@
 # Depends on: python3-sphinx
 
 name=python3-sphinx_rtd_theme
-version=1.0.0
-release=2
+version=1.1.0
+release=1
 source=(https://github.com/readthedocs/${name/python3-/}/archive/${version}/${name/python3-/}-$version.tar.gz)
 
 build() {
