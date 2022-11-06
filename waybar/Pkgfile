@@ -4,18 +4,15 @@
 # Depends on: chrono-date gtk-layer-shell gtkmm3 jsoncpp libdbusmenu-gtk3 libmpdclient libnl libxkbcommon pulseaudio scdoc spdlog
 
 name=waybar
-version=0.9.13
-release=3
-source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz
-	1617.patch)
+version=0.9.15
+release=1
+source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz)
 
 build() {
 	cd ${name^}-$version
 
-	# fix build with fmt 9.0.0
-	patch -Np1 -i $SRC/1617.patch
-
-	meson build -Dprefix=/usr
+	meson build -Dprefix=/usr \
+		--wrap-mode=nodownload
 
 	ninja -C build
 	DESTDIR=$PKG ninja -C build install
