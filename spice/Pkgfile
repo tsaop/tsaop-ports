@@ -1,0 +1,16 @@
+# Description: Spice server component
+# URL: https://www.spice-space.org
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: gst-plugins-base lz4 spice-protocol
+
+name=spice
+version=0.15.1
+release=1
+source=(https://www.spice-space.org/download/releases/spice-server/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
