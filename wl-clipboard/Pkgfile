@@ -4,7 +4,7 @@
 # Depends on: wayland-protocols
 
 name=wl-clipboard
-version=2.0.0
+version=2.1.0
 release=1
 source=(https://github.com/bugaevc/$name/archive/v${version}/$name-$version.tar.gz)
 
@@ -15,6 +15,7 @@ build() {
 	[ ! -e "/usr/bin/zsh" ] && PKGMK_WL_CLIPBOARD+="-Dzshcompletiondir=no"
 	meson -Dprefix=/usr \
 		${PKGMK_WL_CLIPBOARD} \
+		-Dfishcompletiondir=no \
 		..
 
 	DESTDIR=$PKG ninja install
