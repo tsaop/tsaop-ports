@@ -4,7 +4,7 @@
 # Depends on:  glibc
 
 name=sbcl
-version=2.2.11
+version=2.3.0
 release=1
 source=(http://prdownloads.sourceforge.net/$name/$name-$version-source.tar.bz2
 	http://prdownloads.sourceforge.net/$name/$name-$version-x86-64-linux-binary.tar.bz2)
@@ -26,6 +26,7 @@ build() {
 
 	cd $name-$version
 
+	export CPPFLAGS="-D_GNU_SOURCE"
 	export SBCL_HOME=$SRC/sbcl-temp/lib/sbcl
 	sh make.sh $SRC/sbcl-temp/bin/sbcl --prefix=/usr
 	unset SBCL_HOME
