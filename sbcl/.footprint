@@ -21,8 +21,6 @@ drwxr-xr-x	root/root	usr/lib/sbcl/contrib/
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-executable.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-gmp.asd
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-gmp.fasl
--rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-graph.asd
--rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-graph.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-grovel.asd
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-grovel.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-introspect.asd
