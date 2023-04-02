@@ -1,0 +1,21 @@
+# Description: An attempt to provide an easy-to-use, unpredictable random number generator based upon an adaptation of the HAVEGE algorithm.
+# URL: https://www.issihosts.com/haveged
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: glibc
+
+name=haveged
+version=1.9.18
+release=1
+source=(https://github.com/jirka-h/$name/archive/v${version}/$name-$version.tar.gz
+	rc.haveged)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+
+	install -D -m 0755 $SRC/rc.haveged $PKG/etc/rc.d/haveged
+
+}
