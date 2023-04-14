@@ -1,10 +1,10 @@
 # Description: A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more.
 # URL: https://github.com/flightlessmango/MangoHud
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: dbus glslang python3-mako vulkan-loader-32
+# Depends on: dbus glslang python3-mako vulkan-loader-32 spdlog
 
 name=mangohud
-version=0.6.8
+version=0.6.9
 release=1
 source=(https://github.com/flightlessmango/MangoHud/archive/v${version}/$name-$version.tar.gz)
 
@@ -13,7 +13,7 @@ build() {
 	mkdir build32 build64
 
 	meson build64 -Dprefix=/usr \
-		-Duse_system_vulkan=enabled \
+		-Duse_system_spdlog=enabled \
 		-Dwith_xnvctrl=disabled
 
 	CC="gcc -m32" \
@@ -22,7 +22,6 @@ build() {
 	LLVM_CONFIG="/usr/bin/llvm-config-32" \
 	meson build32 -Dprefix=/usr \
 		-Dlibdir=/usr/lib32 \
-		-Duse_system_vulkan=enabled \
 		-Dwith_xnvctrl=disabled
 
 	DESTDIR=$PKG ninja -C build64 install
