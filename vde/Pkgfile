@@ -1,0 +1,20 @@
+# Description: VDEv2: Virtual Distributed Ethernet
+# URL: https://github.com/virtualsquare/vde-2
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on:
+
+name=vde
+version=2.3.3
+release=1
+source=(https://github.com/virtualsquare/vde-2/archive/v${version}/$name-2-$version.tar.gz)
+
+build() {
+	cd $name-2-$version
+	
+	autoreconf -vfi
+	./configure --prefix=/usr \
+		--sysconfdir=/etc
+
+	make
+	make DESTDIR=$PKG install
+}
