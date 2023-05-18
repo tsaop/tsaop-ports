@@ -1,0 +1,8 @@
+#
+# /etc/pam.d/polkit-1  -  polkit service module configuration
+#
+
+auth       include      common-auth
+account    include      common-account
+password   include      common-password
+session    include      common-session

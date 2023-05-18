@@ -1,0 +1,33 @@
+# Description: Application development toolkit for controlling system-wide privileges
+# URL: https://gitlab.freedesktop.org/polkit/polkit/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: dbus duktape gobject-introspection intltool util-linux elogind
+
+name=polkit-elogind
+version=122
+release=1
+source=(https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/polkit-$version.tar.bz2
+	polkit-1)
+
+build() {
+  prt-get isinst mozjs91 && PKGMK_POLKIT+=' -D js_engine=mozjs'
+
+  meson setup ${name/-elogind/}-$version build $PKGMK_POLKIT \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D session_tracking=libelogind \
+    -D systemdsystemunitdir=/usr/remove
+
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
+
+  chmod 4775 $PKG/usr/bin/pkexec
+  chmod 4755 $PKG/usr/lib/polkit-1/polkit-agent-helper-1
+  install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
+
+  rm -r $PKG/usr/share/locale
+  rm -r $PKG/usr/remove
+}
