@@ -1,0 +1,35 @@
+# Description: A sound system for POSIX OSes (with elogind support)
+# URL: http://www.freedesktop.org/wiki/Software/PulseAudio/
+# Maintainer: Fredrik Rinnestam, fredrik at crux dot guru
+# Depends on: elogind libsndfile speexdsp xorg-libsm xorg-libxtst dbus intltool libsndfile meson ninja avahi bluez fftw glib orc sbc speexdsp xorg-libnice
+
+name=pulseaudio-elogind
+_realname=${name/-elogind/}
+version=15.0
+release=1
+source=(https://freedesktop.org/software/${_realname}/releases/${_realname}-$version.tar.xz) 
+
+build() {
+	meson setup ${_realname}-$version build \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${_realname} \
+		-D buildtype=plain \
+		-D udevrulesdir=/etc/udev/rules.d \
+		-D database=gdbm \
+		-D tests=false \
+		-D speex=enabled \
+		-D adrian-aec=false \
+		-D doxygen=false
+
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+
+	rm -r $PKG/usr/share/locale
+
+	sed -e '/autospawn/iautospawn = no' -i $PKG/etc/pulse/client.conf
+	sed -e '/flat-volumes/iflat-volumes = no' -i $PKG/etc/pulse/daemon.conf
+	sed -e '/Load several protocols/aload-module module-dbus-protocol' \
+		-i $PKG/etc/pulse/default.pa
+
+	mkdir -p $PKG/etc/pulse/{client,daemon}.conf.d
+}
