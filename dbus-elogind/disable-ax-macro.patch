@@ -1,0 +1,11 @@
+--- dbus-1.12.20/configure.ac.orig	2021-11-29 19:04:08.632452460 +0100
++++ dbus-1.12.20/configure.ac	2021-11-29 19:03:21.505525545 +0100
+@@ -92,7 +92,7 @@
+ # The debugging check must run before the compiler tests. Other command-line
+ # options also use it to set their defaults. We disable debugging by default,
+ # except for developer builds.
+-AX_CHECK_ENABLE_DEBUG([$enable_developer])
++# AX_CHECK_ENABLE_DEBUG([$enable_developer])
+ 
+ AC_PROG_CC
+ AM_PROG_CC_C_O
