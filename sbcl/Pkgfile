@@ -4,7 +4,7 @@
 # Depends on:  glibc
 
 name=sbcl
-version=2.3.4
+version=2.3.5
 release=1
 source=(http://prdownloads.sourceforge.net/$name/$name-$version-source.tar.bz2
 	http://prdownloads.sourceforge.net/$name/$name-$version-x86-64-linux-binary.tar.bz2)
