@@ -4,7 +4,7 @@
 # Depends on: gst-plugins-base lz4 spice-protocol
 
 name=spice
-version=0.15.1
+version=0.15.2
 release=1
 source=(https://www.spice-space.org/download/releases/spice-server/$name-$version.tar.bz2)
 
