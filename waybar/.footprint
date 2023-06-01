@@ -16,8 +16,10 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-cpu.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-custom.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-disk.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-dwl-tags.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-gamemode.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-idle-inhibitor.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-image.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-inhibitor.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-keyboard-state.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-memory.5.gz
@@ -25,6 +27,7 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-mpris.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-network.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-pulseaudio.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-river-layout.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-river-mode.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-river-tags.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-river-window.5.gz
@@ -38,6 +41,7 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-temperature.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-tray.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-upower.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-wireplumber.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-wlr-taskbar.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-wlr-workspaces.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar.5.gz
