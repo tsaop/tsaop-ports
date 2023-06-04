@@ -5,7 +5,7 @@
 
 name=mangohud
 version=0.6.9-1
-release=1
+release=2
 source=(https://github.com/flightlessmango/MangoHud/archive/v${version}/$name-$version.tar.gz)
 
 build() {
@@ -28,4 +28,8 @@ build() {
 	DESTDIR=$PKG ninja -C build32 install
 
 	rm -rf $PKG/usr/share/doc
+
+	# https://github.com/flightlessmango/MangoHud/issues/1021
+	sed -i 's|VK_LAYER_MANGOHUD_overlay|VK_LAYER_MANGOHUD_overlay_32|' \
+		$PKG/usr/share/vulkan/implicit_layer.d/MangoHud.x86.json
 }
