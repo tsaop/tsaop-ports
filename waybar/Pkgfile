@@ -4,7 +4,7 @@
 # Depends on: chrono-date gtk-layer-shell gtkmm3 libdbusmenu-gtk3 libmpdclient libnl pulseaudio scdoc spdlog
 
 name=waybar
-version=0.9.18
+version=0.9.19
 release=1
 source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz)
 
