@@ -1,0 +1,20 @@
+# Description: Libtpms-based TPM emulator with socket, character device, and Linux CUSE interface
+# URL: https://github.com/stefanberger/libtpms
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libtpms libtasn1 json-glib gnutls expect socat libseccomp
+
+name=swtpm
+version=0.8.0
+release=1
+source=(https://github.com/stefanberger/$name/archive/refs/tags/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	./autogen.sh
+	./configure --prefix=/usr \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+}
