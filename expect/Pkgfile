@@ -1,0 +1,19 @@
+# Description: tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc.
+# URL: https://www.nist.gov/el/msid/expect.cfm
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: tcl
+
+name=expect
+version=5.45.4
+release=1
+source=(https://sourceforge.net/projects/$name/files/Expect/$version/$name${version}.tar.gz
+	expect-5.45-format-security.patch)
+
+build() {
+	cd $name${version}
+	patch -Np0 -i $SRC/expect-5.45-format-security.patch
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
