@@ -1,11 +1,11 @@
 # Description: the open source Windows Imaging (WIM) library
 # URL: https://wimlib.net/
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: libxml2 ntfs-3g
+# Depends on: libxml2 ntfs-3g fuse3
 
 name=wimlib
-version=1.13.5
-release=2
+version=1.14.1
+release=1
 source=(https://wimlib.net/downloads/$name-$version.tar.gz)
 
 build() {
