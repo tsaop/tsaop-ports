@@ -5,11 +5,15 @@
 
 name=waybar
 version=0.9.20
-release=1
-source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz)
+release=2
+source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz
+	1926-time-conversion-between-time-zones.patch)
 
 build() {
 	cd ${name^}-$version
+
+	# fix build with fmt 10.0.0
+	patch -Np1 -i $SRC/1926-time-conversion-between-time-zones.patch
 
 	meson build -Dprefix=/usr \
 		--wrap-mode=nodownload
