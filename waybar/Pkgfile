@@ -4,16 +4,12 @@
 # Depends on: chrono-date gtk-layer-shell gtkmm3 libdbusmenu-gtk3 libmpdclient libnl pulseaudio scdoc spdlog
 
 name=waybar
-version=0.9.20
-release=2
-source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz
-	1926-time-conversion-between-time-zones.patch)
+version=0.9.21
+release=1
+source=(https://github.com/Alexays/Waybar/archive/$version/${name^}-$version.tar.gz)
 
 build() {
 	cd ${name^}-$version
-
-	# fix build with fmt 10.0.0
-	patch -Np1 -i $SRC/1926-time-conversion-between-time-zones.patch
 
 	meson build -Dprefix=/usr \
 		--wrap-mode=nodownload
