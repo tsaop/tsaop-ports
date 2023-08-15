@@ -4,9 +4,9 @@
 # Depends on: libjpeg-turbo libpng scdoc wayland-protocols xorg-libpixman
 
 name=grim
-version=1.4.0
+version=1.4.1
 release=1
-source=(https://github.com/emersion/$name/releases/download/v${version}/$name-$version.tar.gz)
+source=(https://git.sr.ht/~emersion/$name/refs/download/v${version}/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
