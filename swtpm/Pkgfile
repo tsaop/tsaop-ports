@@ -4,7 +4,7 @@
 # Depends on: libtpms libtasn1 json-glib gnutls expect socat libseccomp
 
 name=swtpm
-version=0.8.0
+version=0.8.1
 release=1
 source=(https://github.com/stefanberger/$name/archive/refs/tags/v${version}/$name-$version.tar.gz)
 
