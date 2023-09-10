@@ -1,0 +1,19 @@
+# Description: xdg-desktop-portal backend for wlroots
+# URL: https://github.com/emersion/xdg-desktop-portal-wlr
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: meson pipewire inih basu
+
+name=xdg-desktop-portal-wlr
+version=0.7.0
+release=1
+source=(https://github.com/emersion/$name/releases/download/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	meson setup build \
+		-Dprefix=/usr \
+		-Dlibexecdir=/usr/lib
+
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+}
