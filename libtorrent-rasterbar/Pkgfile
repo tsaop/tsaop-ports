@@ -1,6 +1,6 @@
 # Description: A C++ bittorrent library.
 # URL: https://www.rasterbar.com/products/libtorrent/
-# Maintainer: unmaintained
+# Maintainer: Tsaop, leeroy at cock dot li
 # Depends on: boost python3-setuptools
 
 name=libtorrent-rasterbar
