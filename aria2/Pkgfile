@@ -1,0 +1,25 @@
+# Description: lightweight multi-protocol & multi-source command-line download utility
+# URL: https://aria2.github.io/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: nettle libxml2 c-ares
+
+name=aria2
+version=1.36.0
+release=1
+source=(https://github.com/$name/$name/releases/download/release-$version/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr \
+		--disable-nls \
+		--disable-bittorrent
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/doc
+        ( cd $PKG/usr/share/man
+          find . ! -path . -type d | grep -v "man[0-9]" | xargs rm -rf
+        )
+}
