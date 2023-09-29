@@ -1,11 +1,11 @@
 # Description: A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more.
 # URL: https://github.com/flightlessmango/MangoHud
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: dbus glslang python3-mako vulkan-loader-32 spdlog
+# Depends on: dbus glslang python3-mako spdlog vulkan-loader-32 git
 
 name=mangohud
-version=0.6.9-1
-release=2
+version=0.7.0
+release=1
 source=(https://github.com/flightlessmango/MangoHud/archive/v${version}/$name-$version.tar.gz)
 
 build() {

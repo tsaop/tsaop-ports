@@ -1,14 +1,17 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/mangohud
+-rwxr-xr-x	root/root	usr/bin/mangoplot
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/mangohud/
 -rwxr-xr-x	root/root	usr/lib/mangohud/libMangoHud.so
 -rwxr-xr-x	root/root	usr/lib/mangohud/libMangoHud_dlsym.so
+-rwxr-xr-x	root/root	usr/lib/mangohud/libMangoHud_opengl.so
 drwxr-xr-x	root/root	usr/lib32/
 drwxr-xr-x	root/root	usr/lib32/mangohud/
 -rwxr-xr-x	root/root	usr/lib32/mangohud/libMangoHud.so
 -rwxr-xr-x	root/root	usr/lib32/mangohud/libMangoHud_dlsym.so
+-rwxr-xr-x	root/root	usr/lib32/mangohud/libMangoHud_opengl.so
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/
