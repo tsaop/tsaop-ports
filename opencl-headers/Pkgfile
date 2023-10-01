@@ -1,0 +1,18 @@
+# Description: Khronos OpenCL-Headers
+# URL: https://github.com/KhronosGroup/OpenCL-Headers
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake
+
+name=opencl-headers
+version=2023.04.17
+release=1
+source=(https://github.com/KhronosGroup/OpenCL-Headers/archive/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd OpenCL-Headers-$version
+	cmake -Bbuild \
+		-DCMAKE_INSTALL_PREFIX=/usr
+
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
