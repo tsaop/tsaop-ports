@@ -1,0 +1,22 @@
+# Description: Spice client library using GLib and GTK+
+# URL: https://www.spice-space.org
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: meson ninja spice-protocol glib xorg-libpixman python3-six python3-pyparsing libjpeg-turbo json-glib gstreamer gst-plugins-base gtk3 polkit usbredir usbutils wayland libxkbcommon
+
+name=spice-gtk
+version=0.41
+release=1
+source=(https://www.spice-space.org/download/gtk/$name-$version.tar.xz)
+
+build() {
+	cd $name-${version}
+
+	meson setup build -Dprefix=/usr \
+		-Dlibexecdir=/usr/lib \
+		-Dgtk=enabled
+
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+
+	rm -rf $PKG/usr/share/{locale,gtk-doc}
+}
