@@ -6,7 +6,7 @@
 name=mingw-w64-gcc
 version=12.3.0
 _islver=0.26
-release=1
+release=2
 source=(https://ftp.gnu.org/gnu/${name/mingw-w64-/}/${name/mingw-w64-/}-$version.tar.xz
 	https://libisl.sourceforge.io/isl-${_islver}.tar.xz
 	0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch)
