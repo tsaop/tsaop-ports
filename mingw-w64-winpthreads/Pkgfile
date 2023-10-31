@@ -4,7 +4,7 @@
 # Depends on: mingw-w64-crt
 
 name=mingw-w64-winpthreads
-version=11.0.0
+version=11.0.1
 release=1
 _gccver=12.3.0
 _binutilsver=2.39
