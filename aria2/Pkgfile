@@ -4,7 +4,7 @@
 # Depends on: nettle libxml2 c-ares
 
 name=aria2
-version=1.36.0
+version=1.37.0
 release=1
 source=(https://github.com/$name/$name/releases/download/release-$version/$name-$version.tar.xz)
 
