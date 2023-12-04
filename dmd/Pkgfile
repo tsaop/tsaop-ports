@@ -4,33 +4,22 @@
 # Depends on: git make
 
 name=dmd
-version=2.100.0
-_binversion=2.100.0
+version=2.106.0
+_binversion=2.106.0
 release=1
 source=(http://downloads.dlang.org/releases/2.x/${_binversion}/${name}.${_binversion}.linux.tar.xz
+	https://github.com/dlang/$name/archive/v${version}/$name-$version.tar.gz
+	https://github.com/dlang/phobos/archive/v${version}/phobos-$version.tar.gz
 	dmd.conf)
 
-unpack_source() {
-	install -d $SRC/$name-binary
-	bsdtar -xf $PKGMK_SOURCE_DIR/${name}.${_binversion}.linux.tar.xz \
-		-C $SRC/$name-binary
-
-	cp $PKGMK_ROOT/dmd.conf $SRC
-}
-
 build() {
-	git clone https://github.com/dlang/$name -b v${version}
-	git clone https://github.com/dlang/druntime -b v${version}
-	git clone https://github.com/dlang/phobos -b v${version}
+	export PATH=$SRC/dmd2/linux/bin64:$PATH
+	ln -svf $SRC/$name-$version dmd
+	ln -svf $SRC/phobos-$version phobos
 
-	cd $name
-	export PATH=$SRC/$name-binary/dmd2/linux/bin64:$PATH
-
+	cd $SRC/$name
 	make -f posix.mak
 
-	cd $SRC/druntime
-	make -f posix.mak
-	
 	cd $SRC/phobos
 	make -f posix.mak
 
@@ -49,8 +38,8 @@ build() {
 	cp -P $SRC/phobos/generated/linux/release/64/libphobos2.{a,so*} $PKG/usr/lib
 
 	# druntime
-	cp $SRC/druntime/generated/linux/release/64/libdruntime.a $PKG/usr/lib
-	cp -r {$SRC/phobos/std,$SRC/phobos/etc,$SRC/druntime/import/*} $PKG/usr/include/d/dmd
+	cp $SRC/dmd/generated/linux/release/64/libdruntime.a $PKG/usr/lib
+	cp -r {$SRC/phobos/std,$SRC/phobos/etc,$SRC/dmd/druntime/import/*} $PKG/usr/include/d/dmd
 
 	find $PKG -name "*.o" -delete
 }
