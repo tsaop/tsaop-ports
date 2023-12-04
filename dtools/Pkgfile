@@ -4,7 +4,7 @@
 # Depends on: dmd
 
 name=dtools
-version=2.096.0
+version=2.106.0
 release=1
 source=(https://github.com/dlang/tools/archive/v${version}/${name:1}-$version.tar.gz)
 
