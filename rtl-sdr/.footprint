@@ -17,7 +17,7 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/librtlsdr.a
 lrwxrwxrwx	root/root	usr/lib/librtlsdr.so -> librtlsdr.so.0
-lrwxrwxrwx	root/root	usr/lib/librtlsdr.so.0 -> librtlsdr.so.0.5.4
--rwxr-xr-x	root/root	usr/lib/librtlsdr.so.0.5.4
+lrwxrwxrwx	root/root	usr/lib/librtlsdr.so.0 -> librtlsdr.so.0.6.0
+-rwxr-xr-x	root/root	usr/lib/librtlsdr.so.0.6.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/librtlsdr.pc
