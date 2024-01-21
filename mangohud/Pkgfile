@@ -6,30 +6,25 @@
 name=mangohud
 version=0.7.0
 release=1
-source=(https://github.com/flightlessmango/MangoHud/archive/v${version}/$name-$version.tar.gz)
+source=(https://github.com/flightlessmango/MangoHud/archive/v${version}/$name-$version.tar.gz
+	x86-linux-gnu)
 
 build() {
 	cd MangoHud-$version
-	mkdir build32 build64
 
-	meson build64 -Dprefix=/usr \
+	meson setup build64 -Dprefix=/usr \
 		-Duse_system_spdlog=enabled \
-		-Dwith_xnvctrl=disabled
+		-Dwith_xnvctrl=disabled \
+		--buildtype release
 
-	CC="gcc -m32" \
-	CXX="g++ -m32" \
-	PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
-	LLVM_CONFIG="/usr/bin/llvm-config-32" \
 	meson build32 -Dprefix=/usr \
 		-Dlibdir=/usr/lib32 \
-		-Dwith_xnvctrl=disabled
+		-Dwith_xnvctrl=disabled \
+		--cross $SRC/x86-linux-gnu \
+		--buildtype release
 
 	DESTDIR=$PKG ninja -C build64 install
 	DESTDIR=$PKG ninja -C build32 install
 
 	rm -rf $PKG/usr/share/doc
-
-	# https://github.com/flightlessmango/MangoHud/issues/1021
-	sed -i 's|VK_LAYER_MANGOHUD_overlay|VK_LAYER_MANGOHUD_overlay_32|' \
-		$PKG/usr/share/vulkan/implicit_layer.d/MangoHud.x86.json
 }
