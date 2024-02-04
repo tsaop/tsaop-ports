@@ -6,7 +6,7 @@
 name=acpica
 version=20230628
 release=1
-source=(https://acpica.org/sites/acpica/files/acpica-unix2-$version.tar.gz)
+source=(https://downloadmirror.intel.com/783536/acpica-unix2-$version.tar.gz)
 
 build() {
 	cd $name-unix2-$version
