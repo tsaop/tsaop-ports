@@ -4,7 +4,7 @@
 # Depends on: dbus glslang python3-mako spdlog vulkan-loader-32 git
 
 name=mangohud
-version=0.7.0
+version=0.7.1
 release=1
 source=(https://github.com/flightlessmango/MangoHud/archive/v${version}/$name-$version.tar.gz
 	x86-linux-gnu)
