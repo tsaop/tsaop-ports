@@ -1,18 +1,20 @@
 # Description: Free and reliable torrent client
 # URL: https://www.qbittorrent.org/
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: libtorrent-rasterbar qt5
+# Depends on: libtorrent-rasterbar qt6-base qt6-tools qt6-svg
 
 name=qbittorrent
 version=4.6.3
-release=1
+release=2
 source=(https://sourceforge.net/projects/$name/files/$name/$name-$version/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr
+	cmake -Bbuild \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DQT6=ON
 
-	make
-	make INSTALL_ROOT=$PKG install
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 }
