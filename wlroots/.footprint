@@ -28,14 +28,18 @@ drwxr-xr-x	root/root	usr/include/wlr/render/
 -rw-r--r--	root/root	usr/include/wlr/render/egl.h
 -rw-r--r--	root/root	usr/include/wlr/render/gles2.h
 -rw-r--r--	root/root	usr/include/wlr/render/interface.h
+-rw-r--r--	root/root	usr/include/wlr/render/pass.h
 -rw-r--r--	root/root	usr/include/wlr/render/pixman.h
+-rw-r--r--	root/root	usr/include/wlr/render/swapchain.h
 -rw-r--r--	root/root	usr/include/wlr/render/vulkan.h
 -rw-r--r--	root/root	usr/include/wlr/render/wlr_renderer.h
 -rw-r--r--	root/root	usr/include/wlr/render/wlr_texture.h
 drwxr-xr-x	root/root	usr/include/wlr/types/
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_buffer.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_compositor.h
+-rw-r--r--	root/root	usr/include/wlr/types/wlr_content_type_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_cursor.h
+-rw-r--r--	root/root	usr/include/wlr/types/wlr_cursor_shape_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_damage_ring.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_data_control_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_data_device.h
@@ -43,9 +47,9 @@ drwxr-xr-x	root/root	usr/include/wlr/types/
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_drm_lease_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_export_dmabuf_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_foreign_toplevel_management_v1.h
+-rw-r--r--	root/root	usr/include/wlr/types/wlr_fractional_scale_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_fullscreen_shell_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_gamma_control_v1.h
--rw-r--r--	root/root	usr/include/wlr/types/wlr_idle.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_idle_inhibit_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_idle_notify_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_input_device.h
@@ -58,7 +62,7 @@ drwxr-xr-x	root/root	usr/include/wlr/types/
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_linux_dmabuf_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_matrix.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_output.h
--rw-r--r--	root/root	usr/include/wlr/types/wlr_output_damage.h
+-rw-r--r--	root/root	usr/include/wlr/types/wlr_output_layer.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_output_layout.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_output_management_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_output_power_management_v1.h
@@ -73,15 +77,17 @@ drwxr-xr-x	root/root	usr/include/wlr/types/
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_scene.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_screencopy_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_seat.h
+-rw-r--r--	root/root	usr/include/wlr/types/wlr_security_context_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_server_decoration.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_session_lock_v1.h
+-rw-r--r--	root/root	usr/include/wlr/types/wlr_shm.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_single_pixel_buffer_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_subcompositor.h
--rw-r--r--	root/root	usr/include/wlr/types/wlr_surface.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_switch.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_tablet_pad.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_tablet_tool.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_tablet_v2.h
+-rw-r--r--	root/root	usr/include/wlr/types/wlr_tearing_control_v1.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_text_input_v3.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_touch.h
 -rw-r--r--	root/root	usr/include/wlr/types/wlr_viewporter.h
@@ -106,9 +112,10 @@ drwxr-xr-x	root/root	usr/include/wlr/util/
 -rw-r--r--	root/root	usr/include/wlr/xwayland.h
 drwxr-xr-x	root/root	usr/include/wlr/xwayland/
 -rw-r--r--	root/root	usr/include/wlr/xwayland/server.h
+-rw-r--r--	root/root	usr/include/wlr/xwayland/shell.h
 -rw-r--r--	root/root	usr/include/wlr/xwayland/xwayland.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libwlroots.so -> libwlroots.so.11
--rwxr-xr-x	root/root	usr/lib/libwlroots.so.11
+lrwxrwxrwx	root/root	usr/lib/libwlroots.so -> libwlroots.so.12
+-rwxr-xr-x	root/root	usr/lib/libwlroots.so.12
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/wlroots.pc
