@@ -1,0 +1,18 @@
+# Description:  Lightweight KMS plane library
+# URL: https://gitlab.freedesktop.org/emersion/libliftoff
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: libdrm meson ninja
+
+name=libliftoff
+version=0.4.1
+release=1
+source=(https://gitlab.freedesktop.org/emersion/$name/-/archive/v${version}/$name-v${version}.tar.gz)
+
+build() {
+	cd $name-v${version}
+	meson setup build \
+		-Dprefix=/usr
+
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+}
