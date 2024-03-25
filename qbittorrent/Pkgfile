@@ -4,8 +4,8 @@
 # Depends on: libtorrent-rasterbar qt6-base qt6-tools qt6-svg
 
 name=qbittorrent
-version=4.6.3
-release=2
+version=4.6.4
+release=1
 source=(https://sourceforge.net/projects/$name/files/$name/$name-$version/$name-$version.tar.xz)
 
 build() {
