@@ -29,6 +29,8 @@ drwxr-xr-x	root/root	usr/lib/sbcl/contrib/
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-md5.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-mpfr.asd
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-mpfr.fasl
+-rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-perf.asd
+-rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-perf.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-posix.asd
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-posix.fasl
 -rw-r--r--	root/root	usr/lib/sbcl/contrib/sb-queue.asd
