@@ -1,7 +1,8 @@
 # Description: TeXstudio is an integrated writing environment for creating LaTeX documents.
 # URL: https://www.texstudio.org/
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: desktop-file-utils gtk hunspell imagemagick qt5 poppler quazip5
+# Depends on: hunspell poppler qt6-svg qt6-tools quazip6
+
 name=texstudio
 version=4.7.2
 release=1
@@ -10,11 +11,12 @@ source=(https://github.com/texstudio-org/$name/archive/$version/$name-$version.t
 build() {
 	cd $name-$version
 
-	qmake-qt5 PREFIX=/usr USE_SYSTEM_HUNSPELL=1 USE_SYSTEM_QUAZIP=1 \
-		QUAZIP_INCLUDE="/usr/include/QuaZip-Qt5-1.4 /usr/include/QuaZip-Qt5-1.4/quazip" \
-		QUAZIP_LIB="-L/usr/lib -lquazip1-qt5"
-	make
-	make INSTALL_ROOT=$PKG install
+	cmake -Bbuild \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DQT_VERSION_MAJOR=6
 
-	find $PKG \( -name "COPYING" -o -name "CHANGELOG.txt" -o -name "AUTHORS" \) -delete
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+
+	find $PKG \( -name "COPYING" -o -name "CHANGELOG.txt" -o -name "AUTHORS" -o -name "README*" \) -delete
 }
