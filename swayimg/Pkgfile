@@ -4,7 +4,7 @@
 # Depends on: json-c libexif librsvg libwebp libxkbcommon wayland-protocols
 
 name=swayimg
-version=2.1
+version=2.2
 release=1
 source=(https://github.com/artemsen/$name/archive/v${version}/$name-$version.tar.gz)
 
