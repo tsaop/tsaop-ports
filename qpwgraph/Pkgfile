@@ -1,0 +1,21 @@
+# Description: PipeWire Graph Qt GUI Interface
+# URL: https://gitlab.freedesktop.org/rncbc/qpwgraph
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake pipewire qt6-base qt6-svg
+
+name=qpwgraph
+version=0.7.1
+release=1
+source=(https://gitlab.freedesktop.org/rncbc/$name/-/archive/v${version}/$name-$version.tar.gz)
+
+build() {
+	cd $name-v${version}-*
+
+	cmake -Bbuild \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DQT_VERSION_MAJOR=6
+
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
