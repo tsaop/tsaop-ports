@@ -1,0 +1,22 @@
+# Description: The Intel® Media SDK
+# URL: https://github.com/Intel-Media-SDK/MediaSDK
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake ninja libva
+
+name=libmfx
+version=22.5.4
+release=1
+source=(https://github.com/Intel-Media-SDK/MediaSDK/archive/refs/tags/intel-mediasdk-$version.tar.gz)
+
+build() {
+  cd MediaSDK-intel-mediasdk-$version
+  cmake -Bbuild -GNinja \
+	  -DCMAKE_BUILD_TYPE=Release \
+	  -DCMAKE_INSTALL_PREFIX=/usr \
+	  -DCMAKE_INSTALL_LIBDIR=lib \
+	  -DBUILD_SAMPLES=OFF \
+	  -DBUILD_TUTORIALS=OFF
+
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+}
