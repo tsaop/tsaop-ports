@@ -1,10 +1,10 @@
 # Description: A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more.
 # URL: https://github.com/flightlessmango/MangoHud
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: dbus glslang python3-mako spdlog vulkan-loader-32 git
+# Depends on: dbus glslang python3-mako spdlog vulkan-loader-32 git wayland libxkbcommon
 
 name=mangohud
-version=0.7.1
+version=0.7.2
 release=1
 source=(https://github.com/flightlessmango/MangoHud/archive/v${version}/$name-$version.tar.gz
 	x86-linux-gnu)
@@ -17,14 +17,14 @@ build() {
 		-Dwith_xnvctrl=disabled \
 		--buildtype release
 
-	meson build32 -Dprefix=/usr \
-		-Dlibdir=/usr/lib32 \
-		-Dwith_xnvctrl=disabled \
-		--cross $SRC/x86-linux-gnu \
-		--buildtype release
+#	meson build32 -Dprefix=/usr \
+#		-Dlibdir=/usr/lib32 \
+#		-Dwith_xnvctrl=disabled \
+#		--cross $SRC/x86-linux-gnu \
+#		--buildtype release
 
 	DESTDIR=$PKG ninja -C build64 install
-	DESTDIR=$PKG ninja -C build32 install
+#	DESTDIR=$PKG ninja -C build32 install
 
 	rm -rf $PKG/usr/share/doc
 }
