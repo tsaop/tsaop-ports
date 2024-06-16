@@ -6,7 +6,7 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/d/
 drwxr-xr-x	root/root	usr/include/d/dmd/
--rw-r--r--	root/root	usr/include/d/dmd/__builtins.di
+-rw-r--r--	root/root	usr/include/d/dmd/__importc_builtins.di
 drwxr-xr-x	root/root	usr/include/d/dmd/core/
 -rw-r--r--	root/root	usr/include/d/dmd/core/atomic.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/attribute.d
@@ -88,6 +88,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/util/
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/vararg/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/vararg/aarch64.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/vararg/sysv_x64.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/interpolation.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/lifetime.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/math.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/memory.d
@@ -107,6 +108,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/stdc/
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdc/math.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdc/signal.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdc/stdarg.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/stdc/stdatomic.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdc/stddef.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdc/stdint.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/stdc/stdio.d
@@ -203,7 +205,9 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/freebsd/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/err.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/execinfo.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/ifaddrs.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/mqueue.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/freebsd/net/
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/net/if_.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/net/if_dl.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/freebsd/netinet/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/freebsd/netinet/in_.d
@@ -256,6 +260,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/linux/sys/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/sys/file.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/sys/inotify.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/sys/mman.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/sys/mount.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/sys/prctl.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/sys/signalfd.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/linux/sys/socket.d
@@ -576,6 +581,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/odbc/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib.d
 drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/ChangeLog
+-rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/LICENSE
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/README
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/adler32.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/compress.c
@@ -598,8 +604,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/doc/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/inflate.h
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/inftrees.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/inftrees.h
--rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/linux.mak
--rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/osx.mak
 drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/test/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/test/example.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/test/infcover.c
@@ -607,8 +611,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/zlib/test/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/trees.c
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/trees.h
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/uncompr.c
--rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/win32.mak
--rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/win64.mak
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/zconf.h
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/zlib.3
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/zlib/zlib.h
@@ -810,6 +812,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/windows/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdruntime.a
 -rw-r--r--	root/root	usr/lib/libphobos2.a
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.106.0
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.106 -> libphobos2.so.0.106.0
--rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.106.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.109.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.109 -> libphobos2.so.0.109.0
+-rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.109.0
