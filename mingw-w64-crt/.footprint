@@ -50,6 +50,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcabinet.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcap.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcfgmgr32.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libchakrart.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libclasspnp.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libclfsw32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libclusapi.a
@@ -57,6 +58,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcomctl32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcomdlg32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libconnect.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcoremessaging.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcredui.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcrtdll.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libcrypt32.a
@@ -144,13 +146,16 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdhcpcsvc.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdhcpcsvc6.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdhcpsapi.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdiagnosticdataquery.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdinput.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdinput8.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdirectml.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdismapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdlcapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdloadhelper.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdmoguids.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdnsapi.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdnsperf.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdpapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdplayx.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdpnaddr.a
@@ -164,6 +169,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdwmapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdwrite.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdxapi.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdxcore.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdxerr8.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdxerr9.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libdxgi.a
@@ -196,12 +202,15 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libhid.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libhidclass.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libhidparse.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libhrtfapo.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libhtmlhelp.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libhttpapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libicmui.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libicu.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libigmpagnt.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libimagehlp.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libimm32.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libinkobjcore.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libiphlpapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libiscsidsc.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libkernel32.a
@@ -229,6 +238,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmgmtapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmincore.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmincore_downlevel.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmingw32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmingwex.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmingwthrd.a
@@ -238,6 +248,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmprapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmqrt.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsacm32.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsajapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmscms.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsctf.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsctfmonitor.a
@@ -296,6 +307,9 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libolepro32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libolesvr32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libolethk32.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libonecore.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libonecore_apiset.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libonecoreuap_apiset.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libopends60.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libopengl32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libp2p.a
@@ -320,6 +334,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/librasapi32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/librasdlg.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libresutil.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/librometadata.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/librpcdce4.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/librpcdiag.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/librpchttp.a
@@ -367,6 +382,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libucrt.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libucrtapp.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libucrtbase.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libuiautomationcore.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/liburl.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/liburlmon.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libusbcamd.a
@@ -396,6 +412,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwdsupgcompl.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwdsutil.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwebauthn.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwebservices.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwebsocket.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwecapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwer.a
@@ -405,8 +422,12 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwimgapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwin32k.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwin32spl.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindows.ai.machinelearning.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindows.data.pdf.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindows.networking.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindowsapp.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindowscodecs.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindowscoreheadless_apiset.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwinhttp.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwininet.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwinmm.a
@@ -426,6 +447,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwow32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libws2_32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwsdapi.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwsmsvc.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwsnmp32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwsock32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwst.a
@@ -447,12 +469,14 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxapofx1_5.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxapofxd1_5.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxaudio2_8.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxaudio2_9.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxinput.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxinput1_1.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxinput1_2.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxinput1_3.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxinput1_4.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxinput9_1_0.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxinputuap.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libxmllite.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/txtmode.o
 drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/
@@ -546,6 +570,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcertcli.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcfgbkend.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcfgmgr32.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libchakrart.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libchtskdic.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcimwin32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libclasspnp.a
@@ -575,6 +600,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcomuid.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libconnect.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libconsole.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcoremessaging.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcorpol.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcredui.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libcrypt32.a
@@ -666,11 +692,13 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdhcpcsvc.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdhcpcsvc6.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdhcpsapi.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdiagnosticdataquery.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdigest.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdimsntfy.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdimsroam.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdinput.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdinput8.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdirectml.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdiskcopy.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdismapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdloadhelper.a
@@ -681,6 +709,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdmutil.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdmvdsitf.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdnsapi.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdnsperf.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdnsrslvr.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdpapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdpnaddr.a
@@ -702,6 +731,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libduser.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdwmapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdwrite.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdxcore.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdxerr8.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdxerr9.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libdxgi.a
@@ -766,6 +796,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libhnetwiz.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libhostmib.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libhotplug.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libhrtfapo.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libhtmlhelp.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libhtrn_jis.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libhttpapi.a
@@ -783,6 +814,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libicm32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libicmp.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libicmui.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libicu.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libicwconn.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libicwdial.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libicwdl.a
@@ -821,6 +853,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libinfoctrs.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libinfosoft.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libinitpki.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libinkobjcore.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libinput.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libinseng.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libiphlpapi.a
@@ -893,6 +926,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmigism.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmiglibnt.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmincore.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmincore_downlevel.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmingw32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmingwex.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmingwthrd.a
@@ -927,6 +961,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsadcs.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsado15.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsafd.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsajapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsasn1.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmscat32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmscms.a
@@ -995,6 +1030,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmtxex.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmtxoci.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmydocs.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libnanosrv.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libncobjapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libncrypt.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libncxpnt.a
@@ -1060,6 +1096,9 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/liboledb32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/liboledlg.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libolesvr32.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libonecore.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libonecore_apiset.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libonecoreuap_apiset.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libopends60.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libopengl32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libosuninst.a
@@ -1123,6 +1162,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libresutils.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libriched20.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/librnr20.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/librometadata.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libroutetab.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/librpcdiag.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/librpchttp.a
@@ -1233,6 +1273,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libucrtbase.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libudhisapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libufat.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libuiautomationcore.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libumandlg.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libumdmxfrm.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libumpnpmgr.a
@@ -1291,6 +1332,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebcheck.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebclnt.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebhits.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebservices.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwebsocket.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwecapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwer.a
@@ -1301,8 +1343,12 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwiaservc.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwiashext.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwimgapi.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindows.ai.machinelearning.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindows.data.pdf.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindows.networking.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindowsapp.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindowscodecs.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindowscoreheadless_apiset.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwinfax.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwinhttp.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwinhvemulation.a
@@ -1345,6 +1391,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwshatm.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwshbth.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwslapi.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwsmsvc.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwsock32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwtsapi32.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libx3daudio.a
@@ -1364,12 +1411,14 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxapofx1_5.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxapofxd1_5.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxaudio2_8.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxaudio2_9.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxinput.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxinput1_1.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxinput1_2.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxinput1_3.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxinput1_4.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxinput9_1_0.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxinputuap.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libxmllite.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libzoneoc.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/txtmode.o
