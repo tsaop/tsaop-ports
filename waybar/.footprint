@@ -28,10 +28,14 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-idle-inhibitor.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-image.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-inhibitor.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-jack.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-memory.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-menu.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-mpd.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-network.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-niri-language.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-niri-window.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-niri-workspaces.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-power-profiles-daemon.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-privacy.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-pulseaudio-slider.5.gz
