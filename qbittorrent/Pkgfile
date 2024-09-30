@@ -4,7 +4,7 @@
 # Depends on: libtorrent-rasterbar qt6-base qt6-tools qt6-svg
 
 name=qbittorrent
-version=4.6.7
+version=5.0.0
 release=1
 source=(https://sourceforge.net/projects/$name/files/$name/$name-$version/$name-$version.tar.xz)
 
@@ -17,4 +17,6 @@ build() {
 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
+
+	rm -rf $PKG/usr/share/man/ru
 }
