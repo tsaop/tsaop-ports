@@ -1,17 +1,27 @@
-# Description: A modular Wayland compositor library
-# URL: https://github.com/swaywm/wlroots
-# Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: libdisplay-info libliftoff libxkbcommon seatd xorg-xcb-util-error xorg-xcb-util-renderutil xorg-xcb-util-wm xorg-xwayland libinput
+# Description: A modular Wayland compositor library.
+# URL: https://gitlab.freedesktop.org/wlroots/wlroots/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: libcap libdisplay-info libinput libxkbcommon mesa seatd wayland-protocols xorg-libpixman xorg-xcb-util-image xorg-xcb-util-wm xorg-libxcomposite xorg-server xorg-xcb-util-error xorg-xcb-util-renderutil xorg-xinput libliftoff xorg-xwayland
 
 name=wlroots
-version=0.17.3
+version=0.18.1
 release=1
-source=(https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/$version/$name-$version.tar.bz2)
+source=(https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/$version/wlroots-$version.tar.bz2)
 
 build() {
-	cd $name-$version
-	meson setup build -Dprefix=/usr \
-		-Dexamples=false
+  prt-get isinst xorg-xwayland && PKGMK_WLROOTS+=' -D xwayland=enabled' || PKGMK_WLROOTS+=' -D xwayland=disabled'
+  prt-get isinst xorg-server xorg-xcb-util-renderutil && WLROOTS_BACKENDS+=',x11'
+  prt-get isinst libinput && WLROOTS_BACKENDS+=',libinput'
 
-	DESTDIR=$PKG ninja -C build install
+  meson setup $name-$version build $PKGMK_WLROOTS \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D backends=drm$WLROOTS_BACKENDS \
+    -D examples=false
+
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 }
