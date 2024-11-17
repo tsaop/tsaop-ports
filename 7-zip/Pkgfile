@@ -1,0 +1,18 @@
+# Description: File archiver with a high compression ratio
+# URL: https://www.7-zip.org/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on:
+
+name=7-zip
+version=24.08
+release=1
+source=(https://www.7-zip.org/a/7z${version/./}-src.tar.xz)
+
+build() {
+  cd CPP/7zip/Bundles/Alone2
+  make -f makefile.gcc
+
+  install -dm755 $PKG/usr/bin
+  install -m755 _o/7zz $PKG/usr/bin
+  ln -svf 7zz $PKG/usr/bin/7z
+}
