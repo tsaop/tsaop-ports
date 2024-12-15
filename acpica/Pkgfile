@@ -4,12 +4,13 @@
 # Depends on: bison flex
 
 name=acpica
-version=20240827
+version=20241212
+_fullver="R2024_12_12"
 release=1
-source=(https://github.com/acpica/acpica/archive/refs/tags/version-$version.tar.gz)
+source=(https://github.com/acpica/acpica/releases/download/${_fullver}/$name-unix2-$version.tar.gz)
 
 build() {
-	cd $name-version-$version
+	cd $name-unix2-$version
 	make clean
 	NOWERROR=TRUE make
 	make DESTDIR=$PKG install
