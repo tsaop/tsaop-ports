@@ -4,7 +4,7 @@
 # Depends on: dbus linux-pam polkit python3-jinja2
 
 name=elogind
-version=252.9
+version=255.5
 release=1
 source=(https://github.com/$name/$name/archive/v${version}/$name-$version.tar.gz)
 
@@ -13,9 +13,11 @@ build() {
 	
 	meson -Dprefix=/usr \
 		-Dsysconfdir=/etc \
+		-Dlibexecdir=/usr/lib/elogind \
+		-Dpamlibdir=/lib/security \
 		-Dlocalstatedir=/var \
 		-Dzshcompletiondir=no \
-		-Ddefault-hierarchy=legacy \
+		-Ddefault-hierarchy=hybrid \
 		-Dcgroup-controller=elogind \
 		build
 
