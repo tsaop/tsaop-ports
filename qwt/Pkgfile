@@ -1,7 +1,7 @@
 # Description: Qt Widgets for Technical Applications
 # URL: http://qwt.sourceforge.net/
 # Maintainer: Tsaop, leeroy at cock dot li
-# Depends on: qt5
+# Depends on: qt6-base qt6-svg
 
 name=qwt
 version=6.2.0
@@ -14,15 +14,15 @@ build() {
 	sed -e '/^\s*QWT_INSTALL_PREFIX/ s|=.*|= /usr|' \
 		-e '/^QWT_INSTALL_DOCS/ s|/doc|/share/doc/qwt|' \
 	  	-e '/^QWT_INSTALL_HEADERS/ s|include|&/qwt|' \
-		-e '/^QWT_INSTALL_PLUGINS/ s|plugins/designer|lib/qt5/&|' \
-		-e '/^QWT_INSTALL_FEATURES/ s|features|lib/qt5/mkspecs/&|' \
+		-e '/^QWT_INSTALL_PLUGINS/ s|plugins/designer|lib/qt6/&|' \
+		-e '/^QWT_INSTALL_FEATURES/ s|features|lib/qt6/mkspecs/&|' \
 		-i qwtconfig.pri
 
-	qmake-qt5 PREFIX=/usr
+	qmake6 PREFIX=/usr
 
 	make
 	make INSTALL_ROOT=$PKG install
 
-	mv $PKG/usr/share/doc/qwt/man $PKG/usr/share
+#	mv $PKG/usr/share/doc/qwt/man $PKG/usr/share
 	rm -rf $PKG/usr/share/doc
 }
