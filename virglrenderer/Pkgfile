@@ -9,13 +9,13 @@ release=1
 source=()
 
 build() {
-	git clone --depth=1 git://anongit.freedesktop.org/$name
+	git clone --depth=1 https://gitlab.freedesktop.org/virgl/$name
 	cd $name
-	mkdir build; cd build
 
-	meson -Dprefix=/usr \
-	..
+	meson setup build -Dprefix=/usr \
+		-Dlibexecdir=/usr/lib \
+		-Dvenus=true
 
-	ninja
-	DESTDIR=$PKG ninja install
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
 }
