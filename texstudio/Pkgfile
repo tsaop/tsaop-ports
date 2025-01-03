@@ -4,7 +4,7 @@
 # Depends on: hunspell poppler qt6-svg qt6-tools quazip6
 
 name=texstudio
-version=4.8.4
+version=4.8.5
 release=1
 source=(https://github.com/texstudio-org/$name/archive/$version/$name-$version.tar.gz)
 
