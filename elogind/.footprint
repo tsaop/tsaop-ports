@@ -1,17 +1,29 @@
+drwxr-xr-x	root/root	bin/
+-rwxr-xr-x	root/root	bin/elogind-inhibit
+-rwxr-xr-x	root/root	bin/loginctl
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/elogind/
 -rw-r--r--	root/root	etc/elogind/logind.conf
 -rw-r--r--	root/root	etc/elogind/sleep.conf
-drwxr-xr-x	root/root	etc/elogind/sleep.conf.d/
--rw-r--r--	root/root	etc/elogind/sleep.conf.d/10-elogind.conf
+drwxr-xr-x	root/root	etc/pam.d/
+-rw-r--r--	root/root	etc/pam.d/elogind-user
 drwxr-xr-x	root/root	lib/
+drwxr-xr-x	root/root	lib/elogind/
+-rwxr-xr-x	root/root	lib/elogind/libelogind-shared-252.so
+lrwxrwxrwx	root/root	lib/libelogind.so -> libelogind.so.0
+lrwxrwxrwx	root/root	lib/libelogind.so.0 -> libelogind.so.0.35.0
+-rwxr-xr-x	root/root	lib/libelogind.so.0.35.0
 drwxr-xr-x	root/root	lib/security/
 -rwxr-xr-x	root/root	lib/security/pam_elogind.so
+drwxr-xr-x	root/root	lib/udev/
+drwxr-xr-x	root/root	lib/udev/rules.d/
+-rw-r--r--	root/root	lib/udev/rules.d/70-power-switch.rules
+-rw-r--r--	root/root	lib/udev/rules.d/70-uaccess.rules
+-rw-r--r--	root/root	lib/udev/rules.d/71-seat.rules
+-rw-r--r--	root/root	lib/udev/rules.d/73-seat-late.rules
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/busctl
--rwxr-xr-x	root/root	usr/bin/elogind-inhibit
--rwxr-xr-x	root/root	usr/bin/loginctl
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/elogind/
 lrwxrwxrwx	root/root	usr/include/elogind/_sd-common.h -> systemd/_sd-common.h
@@ -48,22 +60,12 @@ drwxr-xr-x	root/root	usr/lib/elogind/
 -rwxr-xr-x	root/root	usr/lib/elogind/elogind
 -rwxr-xr-x	root/root	usr/lib/elogind/elogind-cgroups-agent
 -rwxr-xr-x	root/root	usr/lib/elogind/elogind-uaccess-command
--rwxr-xr-x	root/root	usr/lib/elogind/libelogind-shared-255.so
 drwxr-xr-x	root/root	usr/lib/elogind/system-shutdown/
+-rw-r--r--	root/root	usr/lib/elogind/system-shutdown/.keep_dir (EMPTY)
 drwxr-xr-x	root/root	usr/lib/elogind/system-sleep/
-lrwxrwxrwx	root/root	usr/lib/libelogind.so -> libelogind.so.0
-lrwxrwxrwx	root/root	usr/lib/libelogind.so.0 -> libelogind.so.0.38.0
--rwxr-xr-x	root/root	usr/lib/libelogind.so.0.38.0
-drwxr-xr-x	root/root	usr/lib/pam.d/
--rw-r--r--	root/root	usr/lib/pam.d/elogind-user
+-rw-r--r--	root/root	usr/lib/elogind/system-sleep/.keep_dir (EMPTY)
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libelogind.pc
-drwxr-xr-x	root/root	usr/lib/udev/
-drwxr-xr-x	root/root	usr/lib/udev/rules.d/
--rw-r--r--	root/root	usr/lib/udev/rules.d/70-power-switch.rules
--rw-r--r--	root/root	usr/lib/udev/rules.d/70-uaccess.rules
--rw-r--r--	root/root	usr/lib/udev/rules.d/71-seat.rules
--rw-r--r--	root/root	usr/lib/udev/rules.d/73-seat-late.rules
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/bash-completion/
 drwxr-xr-x	root/root	usr/share/bash-completion/completions/
@@ -77,6 +79,3 @@ drwxr-xr-x	root/root	usr/share/dbus-1/system.d/
 drwxr-xr-x	root/root	usr/share/polkit-1/
 drwxr-xr-x	root/root	usr/share/polkit-1/actions/
 -rw-r--r--	root/root	usr/share/polkit-1/actions/org.freedesktop.login1.policy
-drwxr-xr-x	root/root	var/
-drwxr-xr-x	root/root	var/lib/
-drwxr-xr-x	root/root	var/lib/elogind/
