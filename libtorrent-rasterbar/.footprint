@@ -9,7 +9,6 @@ drwxr-xr-x	root/root	usr/include/libtorrent/
 -rw-r--r--	root/root	usr/include/libtorrent/assert.hpp
 drwxr-xr-x	root/root	usr/include/libtorrent/aux_/
 -rw-r--r--	root/root	usr/include/libtorrent/aux_/alert_manager.hpp
--rw-r--r--	root/root	usr/include/libtorrent/aux_/aligned_storage.hpp
 -rw-r--r--	root/root	usr/include/libtorrent/aux_/aligned_union.hpp
 -rw-r--r--	root/root	usr/include/libtorrent/aux_/alloca.hpp
 -rw-r--r--	root/root	usr/include/libtorrent/aux_/allocating_handler.hpp
@@ -286,8 +285,8 @@ drwxr-xr-x	root/root	usr/lib/cmake/LibtorrentRasterbar/
 -rw-r--r--	root/root	usr/lib/cmake/LibtorrentRasterbar/LibtorrentRasterbarTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/LibtorrentRasterbar/LibtorrentRasterbarTargets.cmake
 lrwxrwxrwx	root/root	usr/lib/libtorrent-rasterbar.so -> libtorrent-rasterbar.so.2.0
-lrwxrwxrwx	root/root	usr/lib/libtorrent-rasterbar.so.2.0 -> libtorrent-rasterbar.so.2.0.10
--rwxr-xr-x	root/root	usr/lib/libtorrent-rasterbar.so.2.0.10
+lrwxrwxrwx	root/root	usr/lib/libtorrent-rasterbar.so.2.0 -> libtorrent-rasterbar.so.2.0.11
+-rwxr-xr-x	root/root	usr/lib/libtorrent-rasterbar.so.2.0.11
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libtorrent-rasterbar.pc
 drwxr-xr-x	root/root	usr/lib/python3.10/
