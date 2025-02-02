@@ -22,9 +22,9 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/wimlib.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libwim.la
-lrwxrwxrwx	root/root	usr/lib/libwim.so -> libwim.so.15.23.0
-lrwxrwxrwx	root/root	usr/lib/libwim.so.15 -> libwim.so.15.23.0
--rwxr-xr-x	root/root	usr/lib/libwim.so.15.23.0
+lrwxrwxrwx	root/root	usr/lib/libwim.so -> libwim.so.15.26.0
+lrwxrwxrwx	root/root	usr/lib/libwim.so.15 -> libwim.so.15.26.0
+-rwxr-xr-x	root/root	usr/lib/libwim.so.15.26.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/wimlib.pc
 drwxr-xr-x	root/root	usr/share/
