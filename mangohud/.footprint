@@ -5,8 +5,8 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/mangohud/
 -rwxr-xr-x	root/root	usr/lib/mangohud/libMangoHud.so
--rwxr-xr-x	root/root	usr/lib/mangohud/libMangoHud_dlsym.so
 -rwxr-xr-x	root/root	usr/lib/mangohud/libMangoHud_opengl.so
+-rwxr-xr-x	root/root	usr/lib/mangohud/libMangoHud_shim.so
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/
