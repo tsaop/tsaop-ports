@@ -1,5 +1,5 @@
 23bc5ff22fe4f9a208d65fbbfd489ad9  30-dbus.launch
-e809d7aa905ad82adeaf1d59db5445b1  dbus-1.14.6.tar.xz
-bf567c5e6650b609d4dd8e48efb18864  dbus-enable-elogind.patch
-0722a89ba6d0502a6070e7b90c217146  disable-ax-macro.patch
+e4e02e37d9adfa56aed1336a9a1bb886  dbus-1.16.0-enable-elogind.patch
+97832e6f0a260936d28536e5349c22e5  dbus-1.16.2.tar.xz
+51a52d31f257ce19b1a4f8bd71a7de68  fix-daemon-location.patch
 c51f2067699af541512233bbdd48dec4  rc.dbus
