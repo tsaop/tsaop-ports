@@ -6,8 +6,8 @@
 name=mingw-w64-crt
 version=12.0.0
 release=1
-_gccver=12.4.0
-_binutilsver=2.39
+_gccver=14.2.0
+_binutilsver=2.43.1
 
 source=(https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/mingw-w64-v${version}.tar.bz2
 	https://ftp.gnu.org/gnu/gcc/gcc-${_gccver}/gcc-${_gccver}.tar.xz
