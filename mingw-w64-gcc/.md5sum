@@ -1,3 +1,3 @@
 952f614886b13fae748544e894119b04  0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch
-fd7779aee878db67456575922281fa71  gcc-12.4.0.tar.xz
-f2b56e8da688eba89838d414470da85f  isl-0.26.tar.xz
+2268420ba02dc01821960e274711bde0  gcc-14.2.0.tar.xz
+11ee9d335b227ea2e8579c4ba6e56138  isl-0.27.tar.xz
