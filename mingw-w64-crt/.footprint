@@ -42,6 +42,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libavifil32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libavrt.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbcrypt.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbcryptprimitives.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbits.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbluetoothapis.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libbootvid.a
@@ -263,13 +264,19 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcp120_app.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcp60.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr100.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr100d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr110.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr110d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr120.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr120_app.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr120d.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr40d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr70.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr70d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr71.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr71d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr80.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr80d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr90.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcr90d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt-os.a
@@ -277,6 +284,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt10.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt20.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrt40.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvcrtd.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsvfw32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmswsock.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libmsxml2.a
@@ -290,6 +298,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libnetjoin.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libnetutils.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libnewdev.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libninput.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libnormaliz.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libntdll.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libntdllcrt.a
@@ -382,6 +391,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libucrt.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libucrtapp.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libucrtbase.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libucrtbased.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libuiautomationcore.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/liburl.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/liburlmon.a
@@ -394,7 +404,9 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libusp10.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libuuid.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libuxtheme.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libvcruntime140.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libvcruntime140_app.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libvcruntime140d.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libvdmdbg.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libversion.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libvfw32.a
@@ -419,9 +431,11 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwevtapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwevtfwd.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwiadss.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwiaguid.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwimgapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwin32k.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwin32spl.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwinbrand.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindows.ai.machinelearning.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindows.data.pdf.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwindows.networking.a
@@ -446,6 +460,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwofutil.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwow32.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libws2_32.a
+-rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwscapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwsdapi.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwsmsvc.a
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/libwsnmp32.a
@@ -553,6 +568,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbatmeter.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbatt.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbcrypt.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbcryptprimitives.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbits.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbluetoothapis.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libbootvid.a
@@ -1009,11 +1025,14 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcp120_app.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcp60.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr100.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr100d.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr110.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr110d.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr120.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr120_app.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr120d.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr80.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr80d.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr90.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcr90d.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libmsvcrt-os.a
@@ -1053,6 +1072,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libnetui1.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libnetui2.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libnewdev.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libninput.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libnntpapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libnormaliz.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libnpptools.a
@@ -1271,6 +1291,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libucrt.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libucrtapp.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libucrtbase.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libucrtbased.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libudhisapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libufat.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libuiautomationcore.a
@@ -1295,7 +1316,9 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libutildll.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libuuid.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libuxtheme.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libvcruntime140.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libvcruntime140_app.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libvcruntime140d.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libvdsutil.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libverifier.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libversion.a
@@ -1339,10 +1362,12 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwevtapi.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwevtfwd.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwiadss.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwiaguid.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwiarpc.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwiaservc.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwiashext.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwimgapi.a
+-rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwinbrand.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindows.ai.machinelearning.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindows.data.pdf.a
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/libwindows.networking.a
