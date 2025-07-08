@@ -4,7 +4,7 @@
 # Depends on:
 
 name=7-zip
-version=24.09
+version=25.00
 release=1
 source=(https://www.7-zip.org/a/7z${version/./}-src.tar.xz)
 
