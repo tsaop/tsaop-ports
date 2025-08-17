@@ -20,6 +20,7 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/waybar-disk.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-dwl-tags.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-dwl-window.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/waybar-ext-workspaces.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-gamemode.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-hyprland-language.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/waybar-hyprland-submap.5.gz
