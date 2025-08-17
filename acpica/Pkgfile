@@ -4,10 +4,9 @@
 # Depends on: bison flex
 
 name=acpica
-version=20250404
-_fullver="R2025_04_04"
+version=20250807
 release=1
-source=(https://github.com/acpica/acpica/releases/download/${_fullver}/$name-unix2-$version.tar.gz)
+source=(https://github.com/acpica/acpica/releases/download/$version/$name-unix2-$version.tar.gz)
 
 build() {
 	cd $name-unix2-$version
