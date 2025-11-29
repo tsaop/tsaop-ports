@@ -41,7 +41,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/array/
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/backtrace/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/dwarf.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/elf.d
--rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/handler.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/libunwind.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/macho.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/backtrace/unwind.d
@@ -60,6 +59,8 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/elf/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/execinfo.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/gc/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/bits.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/blkcache.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/blockmeta.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/gc/impl/
 drwxr-xr-x	root/root	usr/include/d/dmd/core/internal/gc/impl/conservative/
 -rw-r--r--	root/root	usr/include/d/dmd/core/internal/gc/impl/conservative/gc.d
@@ -394,6 +395,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/windows/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/aclui.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/basetsd.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/basetyps.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/bcrypt.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/cderr.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/cguid.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/com.d
@@ -560,7 +562,9 @@ drwxr-xr-x	root/root	usr/include/d/dmd/core/sys/windows/stdc/
 -rw-r--r--	root/root	usr/include/d/dmd/core/sys/windows/wtypes.d
 drwxr-xr-x	root/root	usr/include/d/dmd/core/thread/
 -rw-r--r--	root/root	usr/include/d/dmd/core/thread/context.d
--rw-r--r--	root/root	usr/include/d/dmd/core/thread/fiber.d
+drwxr-xr-x	root/root	usr/include/d/dmd/core/thread/fiber/
+-rw-r--r--	root/root	usr/include/d/dmd/core/thread/fiber/base.d
+-rw-r--r--	root/root	usr/include/d/dmd/core/thread/fiber/package.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/thread/osthread.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/thread/package.d
 -rw-r--r--	root/root	usr/include/d/dmd/core/thread/threadbase.d
@@ -573,6 +577,9 @@ drwxr-xr-x	root/root	usr/include/d/dmd/etc/
 drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/curl.d
 drwxr-xr-x	root/root	usr/include/d/dmd/etc/c/odbc/
+-rw-r--r--	root/root	usr/include/d/dmd/etc/c/odbc/odbc32.d
+-rw-r--r--	root/root	usr/include/d/dmd/etc/c/odbc/odbc64.d
+-rw-r--r--	root/root	usr/include/d/dmd/etc/c/odbc/package.d
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/odbc/sql.d
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/odbc/sqlext.d
 -rw-r--r--	root/root	usr/include/d/dmd/etc/c/odbc/sqltypes.d
@@ -733,6 +740,7 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/internal/math/
 drwxr-xr-x	root/root	usr/include/d/dmd/std/internal/test/
 -rw-r--r--	root/root	usr/include/d/dmd/std/internal/test/dummyrange.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/internal/test/range.d
+-rw-r--r--	root/root	usr/include/d/dmd/std/internal/test/sumtype_example_overloads.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/internal/test/uda.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/internal/unicode_comp.d
 -rw-r--r--	root/root	usr/include/d/dmd/std/internal/unicode_decomp.d
@@ -812,6 +820,6 @@ drwxr-xr-x	root/root	usr/include/d/dmd/std/windows/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdruntime.a
 -rw-r--r--	root/root	usr/lib/libphobos2.a
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.109.0
-lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.109 -> libphobos2.so.0.109.0
--rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.109.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so -> libphobos2.so.0.111.0
+lrwxrwxrwx	root/root	usr/lib/libphobos2.so.0.111 -> libphobos2.so.0.111.0
+-rwxr-xr-x	root/root	usr/lib/libphobos2.so.0.111.0
