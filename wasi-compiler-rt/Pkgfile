@@ -1,0 +1,37 @@
+# Description: WASI LLVM compiler runtime
+# URL: https://compiler-rt.llvm.org/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: cmake clang
+
+name=wasi-compiler-rt
+version=21.1.8
+release=1
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/${name/wasi-/}-$version.src.tar.xz
+    https://github.com/llvm/llvm-project/releases/download/llvmorg-$name/cmake-$version.src.tar.xz
+    wasi-sdk.cmake
+    WASI.cmake)
+
+build() {
+  mv cmake{-$version.src,}
+  mkdir -p cmake/Platform
+  cp $SRC/WASI.cmake cmake/Platform
+
+  cmake -Bbuild -GNinja \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_C_COMPILER_WORKS=ON \
+    -DCMAKE_CXX_COMPILER_WORKS=ON \
+    -DCMAKE_MODULE_PATH=$SRC/cmake \
+    -DCMAKE_TOOLCHAIN_FILE=$SRC/wasi-sdk.cmake \
+    -DCOMPILER_RT_BAREMETAL_BUILD=ON \
+    -DCOMPILER_RT_INCLUDE_TESTS=OFF \
+    -DCOMPILER_RT_HAS_FPIC_FLAG=OFF \
+    -DCOMPILER_RT_DEFAULT_TARGET_ONLY=ON \
+    -DCOMPILER_RT_OS_DIR=wasi \
+    -DWASI_SDK_PREFIX=/usr \
+    -DCMAKE_C_FLAGS="-fno-exceptions --sysroot=/usr/share/wasi-sysroot" \
+    -DCMAKE_INSTALL_PREFIX=/usr/lib/clang/${version%%.*}/ \
+    compiler-rt-$version.src/lib/builtins
+
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+}

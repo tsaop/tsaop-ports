@@ -1,0 +1,4 @@
+5e3f732817a42ff53c61909cea76fd59  WASI.cmake
+fb75e927effbedba72de1f421154fd0c  cmake-21.1.8.src.tar.xz
+4659411fe5f4d78fc987ad7be6318b27  compiler-rt-21.1.8.src.tar.xz
+a179eb31bb3e54b015864cb8ec793d59  wasi-sdk.cmake

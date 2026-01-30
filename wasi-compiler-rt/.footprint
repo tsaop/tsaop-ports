@@ -1,0 +1,7 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/clang/
+drwxr-xr-x	root/root	usr/lib/clang/21/
+drwxr-xr-x	root/root	usr/lib/clang/21/lib/
+drwxr-xr-x	root/root	usr/lib/clang/21/lib/wasi/
+-rw-r--r--	root/root	usr/lib/clang/21/lib/wasi/libclang_rt.builtins-wasm32.a
