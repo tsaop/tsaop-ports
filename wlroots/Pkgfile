@@ -1,7 +1,7 @@
 # Description: A modular Wayland compositor library.
 # URL: https://gitlab.freedesktop.org/wlroots/wlroots/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: libcap libdisplay-info libinput libxkbcommon mesa seatd wayland-protocols xorg-libpixman xorg-xcb-util-image xorg-xcb-util-wm xorg-libxcomposite xorg-server xorg-xcb-util-error xorg-xcb-util-renderutil xorg-xinput libliftoff xorg-xwayland
+# Depends on: libcap libdisplay-info libinput libxkbcommon mesa seatd wayland-protocols xorg-libpixman xorg-xcb-util-image xorg-xcb-util-wm xorg-libxcomposite xorg-server xorg-xcb-util-errors xorg-xcb-util-renderutil xorg-xinput libliftoff xorg-xwayland
 
 name=wlroots
 version=0.19.0
