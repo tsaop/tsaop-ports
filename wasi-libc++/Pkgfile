@@ -1,0 +1,103 @@
+# Description: WASI LLVM C++ standard library
+# URL: https://libcxx.llvm.org/
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: wasi-libc wasi-compiler-rt
+
+name=wasi-libc++
+version=21.1.8
+release=1
+targets=(wasm32-wasi wasm32-wasip1 wasm32-wasip1-threads wasm32-wasip2)
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz
+  no-normalize-triple.diff
+  wasi-sdk.cmake
+  WASI.cmake)
+
+build() {
+
+  cd llvm-project-$version.src
+  patch -Np1 -i $SRC/no-normalize-triple.diff
+  cd $SRC
+
+  mkdir -p cmake/Platform
+  cp WASI.cmake cmake/Platform
+
+  local sanitize_flags=(
+    -r
+    -e 's/-march=x86-64 ?//'
+    -e 's/-march=znver4 ?//'
+  )
+
+  CFLAGS="$(<<<"$CFLAGS" sed "${sanitize_flags[@]}")"
+  CXXFLAGS="$(<<<"$CXXFLAGS" sed "${sanitize_flags[@]}")"
+
+  cd llvm-project-$version.src
+
+  for target in ${targets[@]}; do
+
+    local want_threads="OFF"
+    local extra_cflags=""
+
+    case "$target" in
+      *-threads)
+        want_threads="ON"
+        extra_cflags="-pthread"
+        ;;
+    esac
+
+    local cmake_options=(
+      -S runtimes
+      -B build-$target
+      -G Ninja
+      -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi" 
+      -DLLVM_ENABLE_PER_TARGET_RUNTIME_DIR=ON 
+      -DCMAKE_BUILD_TYPE=MinSizeRel 
+      -DCMAKE_MODULE_PATH="$SRC/cmake"
+      -DCMAKE_TOOLCHAIN_FILE="$SRC"/wasi-sdk.cmake 
+      -DCMAKE_C_COMPILER_WORKS=ON 
+      -DCMAKE_CXX_COMPILER_WORKS=ON 
+      -DCMAKE_C_FLAGS="$CFLAGS $extra_cflags -fno-exceptions --sysroot=/usr/share/wasi-sysroot --target=$target" 
+      -DCMAKE_CXX_FLAGS="$CXXFLAGS $extra_cflags -fno-exceptions --sysroot=/usr/share/wasi-sysroot --target=$target" 
+      -DCMAKE_ASM_COMPILER_TARGET="$target" 
+      -DCMAKE_CXX_COMPILER_TARGET="$target" 
+      -DCMAKE_C_COMPILER_TARGET="$target" 
+      -DCMAKE_AR=/usr/bin/llvm-ar 
+      -DCMAKE_RANLIB=/usr/bin/llvm-ranlib 
+      -DLLVM_DEFAULT_TARGET_TRIPLE="$target" 
+      -DCMAKE_STAGING_PREFIX=/usr/share/wasi-sysroot 
+      -DCXX_SUPPORTS_CXX11=ON 
+      -DLIBCXX_ABI_VERSION=2 
+      -DLIBCXX_BUILD_EXTERNAL_THREAD_LIBRARY=OFF 
+      -DLIBCXX_CXX_ABI=libcxxabi 
+      -DLIBCXX_CXX_ABI_INCLUDE_PATHS=libcxxabi/include 
+      -DLIBCXX_ENABLE_EXCEPTIONS=OFF 
+      -DLIBCXX_ENABLE_EXPERIMENTAL_LIBRARY=OFF 
+      -DLIBCXX_ENABLE_FILESYSTEM=OFF 
+      -DLIBCXX_ENABLE_SHARED=OFF 
+      -DLIBCXX_ENABLE_THREADS=$want_threads 
+      -DLIBCXX_HAS_EXTERNAL_THREAD_API=OFF 
+      -DLIBCXX_HAS_MUSL_LIBC=ON 
+      -DLIBCXX_HAS_PTHREAD_API=$want_threads
+      -DLIBCXX_HAS_WIN32_THREAD_API=OFF 
+      -DLIBCXX_INCLUDE_TESTS=OFF
+      -DLIBCXXABI_BUILD_EXTERNAL_THREAD_LIBRARY=OFF 
+      -DLIBCXXABI_ENABLE_EXCEPTIONS=OFF 
+      -DLIBCXXABI_ENABLE_PIC=OFF 
+      -DLIBCXXABI_ENABLE_SHARED=OFF 
+      -DLIBCXXABI_ENABLE_THREADS=$want_threads
+      -DLIBCXXABI_HAS_EXTERNAL_THREAD_API=OFF
+      -DLIBCXXABI_HAS_PTHREAD_API=$want_threads
+      -DLIBCXXABI_HAS_WIN32_THREAD_API=OFF 
+      -DLIBCXXABI_INCLUDE_TESTS=OFF
+      -DLIBCXXABI_LIBCXX_INCLUDES="$SRC"/build-libcxx/include/c++/v1 
+      -DLIBCXXABI_LIBCXX_PATH=libcxx 
+      -DLIBCXXABI_SILENT_TERMINATE:BOOL=ON 
+      -DLIBCXXABI_USE_LLVM_UNWINDER=OFF 
+      -DUNIX=ON 
+      -DWASI_SDK_PREFIX=/usr 
+    )
+    
+    cmake "${cmake_options[@]}"
+    ninja -C build-$target cxx cxxabi
+    DESTDIR=$PKG ninja -C build-$target install-cxx install-cxxabi
+  done
+}
