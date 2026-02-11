@@ -4,7 +4,7 @@
 # Depends on: cmake pipewire qt6-base qt6-svg
 
 name=qpwgraph
-version=0.8.1
+version=0.9.9
 release=1
 source=(https://gitlab.freedesktop.org/rncbc/$name/-/archive/v${version}/$name-$version.tar.gz)
 
