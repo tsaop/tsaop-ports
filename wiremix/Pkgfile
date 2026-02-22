@@ -1,0 +1,17 @@
+# Description: Simple TUI audio mixer for PipeWire
+# URL: https://github.com/tsowell/wiremix
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: pipewire rust
+
+name=wiremix
+version=0.9.0
+release=1
+source=(https://github.com/tsowell/wiremix/archive/v${version}/$name-$version.tar.gz)
+
+build() {
+  [[ ! -e $PKGMK_SOURCE_DIR/rust ]] && mkdir $PKGMK_SOURCE_DIR/rust
+
+  cargo build --release --manifest-path $name-$version/Cargo.toml
+
+  install -Dt $PKG/usr/bin $name-$version/target/release/wiremix
+}
