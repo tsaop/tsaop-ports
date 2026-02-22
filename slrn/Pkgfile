@@ -1,0 +1,26 @@
+# Description: Usenet newsreader
+# URL: https://slrn.info
+# Maintainer: Tsaop, leeroy at cock dot li
+# Depends on: slang
+
+name=slrn
+version=1.0.3a
+release=1
+source=(https://jedsoft.org/releases/$name/$name-$version.tar.bz2
+  slrn-1.0.2-make.patch
+  slrn-1.0.3-configure.patch)
+
+build() {
+  cd $name-${version/a/}
+  patch -Np1 -i $SRC/slrn-1.0.2-make.patch
+  patch -Np1 -i $SRC/slrn-1.0.3-configure.patch
+
+  ./configure --prefix=/usr \
+    --with-ssl \
+    --disable-nls
+
+  make 
+  make DESTDIR=$PKG install
+
+  rm -rf $PKG/usr/share/doc
+}
