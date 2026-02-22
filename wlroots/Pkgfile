@@ -4,14 +4,17 @@
 # Depends on: libcap libdisplay-info libinput libxkbcommon mesa seatd wayland-protocols xorg-libpixman xorg-xcb-util-image xorg-xcb-util-wm xorg-libxcomposite xorg-server xorg-xcb-util-errors xorg-xcb-util-renderutil xorg-xinput libliftoff xorg-xwayland
 
 name=wlroots
-version=0.19.0
+version=0.19.2
 release=1
-source=(https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/$version/wlroots-$version.tar.bz2)
+source=(https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/$version/wlroots-$version.tar.bz2
+        fix-missing-switch.patch)
 
 build() {
   prt-get isinst xorg-xwayland && PKGMK_WLROOTS+=' -D xwayland=enabled' || PKGMK_WLROOTS+=' -D xwayland=disabled'
   prt-get isinst xorg-server xorg-xcb-util-renderutil && WLROOTS_BACKENDS+=',x11'
   prt-get isinst libinput && WLROOTS_BACKENDS+=',libinput'
+
+  patch -Np1 -i $SRC/fix-missing-switch.patch -d $name-$version
 
   meson setup $name-$version build $PKGMK_WLROOTS \
     --prefix=/usr \
